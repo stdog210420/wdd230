@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Georgia:wght@600&family=Merienda:wght@900&display=swap');
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: repeat(8, fr); 
+    background-color: black;
+}
+
+header {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    background-color: #fff;
+    border-radius: 15px 15px 0px 0px; 
+}
+
+img {
+    max-width: 400px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border-radius: 15px 15px 15px 15px; 
+    /* align-self: center;
+    justify-self: center; */
+
+}
+#me {
+    padding-top: 15px;
+    text-align: center;
+    font-family: "Merienda", Helvetica, sans-serif;
+    font-size: 20px;
+}
+main {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 15px 15px; 
+    grid-column: 1/4;
+    grid-row: 3/6;
+    background-color: #fff;
+    z-index: -1;
+ }
+.card {
+    padding-top: 15px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: steelblue;
+}
+
+h2 {
+    margin-top: 0px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Merienda", Times, Helvetica;
+    color: black;
+}
+ul li {
+    display: block;
+    padding: 10px;
+    margin:15px;
+    text-align: left;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    overflow: hidden;
+}
+
+
+
+nav {
+    margin: 0;
+    padding-top: 20px;
+    background-color: #fff;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    align-self: baseline;
+}
+
+nav a {
+    background-color: steelblue;
+    display: grid;
+    column-gap: 1px;  
+    justify-content: space-evenly;
+    padding: 10px;
+}
+h3 {
+    margin-top: 0;
+    padding-top: 0px;
+    background-color: steelblue;
+    padding-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    align-self: baseline;
+}
+
+footer{
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    grid-column: 1/4;
+    grid-row: 7/8;
+    text-align: center;
+    align-self: baseline;
+}
+footer p{
+    display: grid;
+}
+
+
+
+
+
+
+
