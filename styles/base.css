@@ -15,7 +15,7 @@ header {
 }
 
 img {
-    max-width: 400px;
+    max-width: 80%;
     grid-column: 2/3;
     grid-row: 1/2;
     border-radius: 15px 15px 15px 15px; 
