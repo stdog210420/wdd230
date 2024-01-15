@@ -3,7 +3,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: repeat(8, fr); 
+    grid-template-rows: repeat(8, 1fr); 
     background-color: black;
 }
 
