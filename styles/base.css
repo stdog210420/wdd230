@@ -3,7 +3,6 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: repeat(8, 1fr); 
     background-color: black;
 }
 
@@ -106,7 +105,6 @@ footer{
     height: 100%;
     background-color: #fff;
     grid-column: 1/4;
-    grid-row: 7/8;
     text-align: center;
     align-self: baseline;
 }
