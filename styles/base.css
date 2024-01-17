@@ -76,21 +76,21 @@ ul li {
 nav {
     margin: 0;
     padding-top: 20px;
-    background-color: #fff;
+    background-color: #4682b4;
     color: #4682b4;
     font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    align-self: baseline;
-    /* direction: inherit; */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 nav a {
     background-color: #4682b4;
     color: #fff;
-    display: grid;
-    column-gap: 1px;  
-    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
     padding: 10px;
 }
 h3 {
