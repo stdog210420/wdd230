@@ -4,6 +4,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     background-color: black;
+
 }
 
 header {
@@ -94,7 +95,7 @@ h3 {
     color: #fff;
     font-size: 30px;
     text-align: center;
-    align-self: baseline;
+    align-self: center;
 }
 
 footer{
