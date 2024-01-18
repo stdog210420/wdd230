@@ -1,10 +1,14 @@
 @media screen and (min-width: 500px){
-    nav, .content{
+    nav{
         flex-direction: row;
     }
     nav a{
         width:fit-content;
     }
+    .content{
+        flex-direction: column;       
+    }
+
 }
 
 
