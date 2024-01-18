@@ -12,9 +12,8 @@ header {
 
 .me {
     margin:0 auto;
-    padding-top: 10px;
+    padding: 10px 10px;
     display:flex;
-    /* grid-template-columns: 1fr; */
     max-width :60%;
     max-height: 60%;
     align-items: center;
@@ -24,18 +23,11 @@ header {
 
 img {
     border-radius: 15px 15px 15px 15px; 
-    /* grid-column: 1/2;
-    grid-row: 1/2; */
-
 }
 
 h1{
     font-family: "Merienda", Helvetica, sans-serif;
-    font-size: 20px;
-    /* grid-column: 1/2;
-    grid-row: 1/2; */
-    /* text-align: center;
-    justify-content: center; */
+    font-size: 2rem;
 }
 main {
     width: 100%;
@@ -45,7 +37,8 @@ main {
     z-index: -1;
 }
 .card {
-    padding-top: 15px;
+    margin:0 auto;
+    padding: 10px 10px;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
@@ -53,9 +46,9 @@ main {
 }
 
 h2 {
-    margin-top: 0px;
+    margin:0 auto;
+    padding: 20px 20px;
     text-align: center;
-    justify-items: start;
     font-size: 30px;
     font-family: "Merienda", Times, Helvetica;
     color: black;
@@ -75,14 +68,13 @@ ul li {
 
 nav {
     margin: 0;
-    padding-top: 20px;
     background-color: #2e517f;
     color: #2e517f;
     font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     align-items: center;
-    display: flex;
     justify-content: center;
+    display: flex;
     flex-direction: column;
 }
 
@@ -92,12 +84,20 @@ nav a {
     width: 100%;
     text-align: center;
     padding: 10px;
+    text-decoration: none;
 }
+
+nav a:hover{
+    /* border: 1px solid#ffffff; */
+    background-color: #fff;
+    color: #2e517f;
+}
+
 h3 {
     margin-top: 0;
     padding-top: 0px;
     background-color: #2e517f;
-    padding-bottom: 20px;
+    padding: 10px 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #fff;
     font-size: 30px;
