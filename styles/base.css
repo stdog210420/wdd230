@@ -49,6 +49,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-decoration: none;
 }
 
 .card {
@@ -60,7 +61,6 @@ h2 {
     color: #2e517f;
 }
 
-
 ul li {
     margin:0 auto;
     padding: 10px 10px;
@@ -69,7 +69,13 @@ ul li {
     font-family: Georgia, 'Times New Roman', Times, serif;
     /* color: gray; */
     overflow: hidden;
+}
+
+ul a{
     text-decoration: none;
+}
+ul a:hover{
+    text-decoration: dashed;   
 }
 
 
