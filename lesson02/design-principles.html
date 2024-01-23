@@ -5,38 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/normalize.css">
 </head>
 <body>
     <div class="gridarea">
         <header>
-            <picture class="himage">
-                <img class="icon" src="#" alt="logo">
-            </picture>
-            <h1>CSS Grid example: grid-area</h1>
+            <h1>Design Principles Document</h1>
+            <h2>Phoebe Lin</h2>
         </header>
         <main>
-            <section>
-                <h2>Column 1 Heading</h2>
-                <ul>
-                    <li><a href="#">The Tired Iguana</a></li>
-                    <li><a href="#">Lewiston Capital</a></li>
-                    <li><a href="#">Ground Flight</a></li>
-                    <li><a href="#">Flex Not</a></li>
-                    <li><a href="#">Principle Based</a></li>
-                    <li><a href="#">80/20 Rule</a></li>
-                    <li><a href="#">What Not</a></li>
-                </ul>
+            <section class="card">
+                <div class="title">
+                    <h2>Visual Hierarchy</h2>
+                </div>
+                <div class="content">
+                    <p>Apple Inc.</p>
+                    <a href="https://www.apple.com/tw/">https://www.apple.com/tw/</a>
+                    <picture class="himage"><img class="icon" src="images/apple.png" alt="logo"></picture>
+                    <p>Apple's website employs the visual hierarchy principle to guide users' attention to important content. 
+                        In the mobile view, it cleverly places new product releases, featured items, and the latest updates at the top of the page. 
+                        It attracts users' attention through large images and clear headlines, creating a distinct visual hierarchy.</p>
+                </div>
             </section>
-            <section>
-                <h2>Column 2 Heading</h2>
-                <picture>
-                    <img class="colimage" src="https://placekitten.com/300/230" alt="placeholder image">
-                </picture>
+            <section class="card">
+                <div class="title">
+                    <h2>Hick's Law</h2>
+                </div>
+                <div class="content">
+                    <p>National Geographic</p>
+                    <a href="https://www.nationalgeographic.com/">https://www.nationalgeographic.com/</a>
+                    <picture class="himage"><img class="icon" src="images/geographic.png" alt="logo"></picture>
+                    <p>National Geographic's website utilizes the rule of thirds by placing focal points at the intersections. 
+                        For instance, captivating images and headlines are positioned in the upper and left parts of the screen, 
+                        creating a balanced and engaging layout.</p>
+                </div>
             </section>
-            <section>
-                <h2>Column 3 Heading</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto libero quibusdam quidem adipisci non eligendi nemo sunt sapiente dolores omnis? Molestiae laboriosam necessitatibus officiis recusandae tempora unde aspernatur tetur quis dolorum recusandae 
-                </p>
+            <section class="card">
+                <div class="title">
+                    <h2>White Space and Clean Design</h2>
+                </div>
+                <div class="content">
+                    <p>Amazon</p>
+                    <a href="https://www.amazon.com/">https://www.amazon.com/</a>
+                    <picture class="himage"><img class="icon" src="images/amazon.png" alt="logo"></picture>
+                    <p>Amazon's website employs the principle of proximity by placing related product elements close to each other, 
+                        forming visual groups. This approach makes it easier for users to understand the relevance of different products.</p>
+                </div>
             </section>
         </main>
     </div>
