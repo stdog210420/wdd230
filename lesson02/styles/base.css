@@ -5,7 +5,6 @@
 	box-sizing: border-box;
 }
 body {
-	font-size: 16px;
     font-family: "Raleway", "Georgia", sans-serif;
 	grid-template: auto 1fr auto/ auto 1fr auto;
 }
@@ -23,13 +22,14 @@ header,footer {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	grid-column: 1/4;
+	/* grid-column: 1/4; */
 }
 
 /* phone or baseline views **************************/
 
 main {
-	max-width: 480px;
+	font-size: 1rem;
+	max-width: 767px;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: auto 1fr auto;
@@ -40,7 +40,6 @@ main {
 }
 
 .card {
-	max-width: 480px;
 	margin: 0.5rem;
 	grid-column: 2/3;
 	border: 1px solid #3b5527;
@@ -50,7 +49,7 @@ main {
 	border-radius: 15px 15px 0px 0px;
 	background-color: #efefee;
 }
-h2{
+.card h2{
 	margin: 0 auto;
 	background-color: #39562A;
 	padding: 1rem 0;
@@ -60,14 +59,13 @@ h2{
 	font-weight: bold;
 	font-size: 1.5rem;
 }
-h3{
+.content h3{
 	font-weight: bold;
 }
-h3,.content p, a{
-	padding-top: 0.5rem 0.5rem;
+.content h3,.content p, a{
+	padding-top: 0.5rem;
 
 }
-
 img{
 	width: 100%;
 }
@@ -98,6 +96,14 @@ img{
 	.card:last-of-type{
 		grid-column-end:span 2;
 	} 
+	.himage {
+		display: block;
+	}
+	.himage img {
+		width: 100%;
+		height: auto;
+		border: 1px solid #bbb;
+	}
 
 }
 
@@ -108,20 +114,39 @@ img{
 	}
 	main {
 		min-width: 1025px;
-		grid-template-columns: auto 1fr 1fr 1fr auto;
+		grid-template-columns: auto 1fr auto;
 	}
 	/* the first and third block start from second column */
 	.card:first-of-type,.card:nth-of-type(2), .card:last-of-type{
 		grid-column-end:span 1;
 		}
 	.card:nth-of-type(1){
-		grid-column-start: 1;
+		grid-column: 1/2;
 	}
 	.card:nth-of-type(2){
-		grid-column-start: 2;
+		grid-column: 2/3;
 	}
 	.card:nth-of-type(3){
-		grid-column-start: 3;
+		grid-column: 3/4;
 	}
+	main h2{
+		margin: 0 auto;
+		background-color: #39562A;
+		padding: 1rem 0;
+		text-align: center;
+		justify-content: center;
+		color: #fff;
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+	main h3,.content p, a{
+		padding-top: 0.5rem;
+		font-size: 1rem;
+	
+	}main h3{
+		font-weight: bold;
+	}
+	
+	
 }
 
