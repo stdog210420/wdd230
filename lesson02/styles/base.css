@@ -12,7 +12,6 @@ body {
 header, main, footer {
 	border: 1px solid #333;
 	box-shadow: 0 0 10px #000;
-	display: grid;
 }
 header,footer {
 	background-color: #3b5527;
@@ -29,6 +28,7 @@ header,footer {
 
 /* phone or baseline views **************************/
 main {
+	max-width: 480px;
 	grid-column: 2/3;
 	margin: 0 auto;
 	display: grid;
@@ -40,6 +40,7 @@ main {
 }
 
 .card {
+	max-width: 480px;
 	margin: 0.5rem;
 	border: 1px solid #3b5527;
 	padding: 0 1rem;
@@ -73,9 +74,11 @@ h3{
 img{
 	width: 100%;
 }
+
 /* Tablet Views ******************************/
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px)  {
+
 	body{
 		font-size: 18px;
 	}
@@ -101,7 +104,7 @@ img{
 }
 
 /* Desktop Views ****************************/
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
 	body {
 		font-size: 20px;
 	}
