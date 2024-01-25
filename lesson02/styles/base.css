@@ -83,24 +83,31 @@ img{
 	body{
 		font-size: 18px;
 	}
-	main {
+	/* main {
 		grid-template-columns: auto 1fr 1fr auto;
-	}
+	} */
 	/* the first and third block start from second column */
-	.card:first-of-type, .card:last-of-type{
+	/* .card:first-of-type, .card:last-of-type{
 		grid-column-start: 2;
 	}
 	.card:nth-of-type(2){
 		grid-column-start: 3;
-	}
+	} */
 	/* the first and second block span one column */
-	.card:not(.card:last-of-type){
+	.card {
+        grid-column: span 1;
+    }
+    .card:last-of-type {
+        grid-column: span 2;
+    }
+
+	/* .card:not(.card:last-of-type){
 		grid-column-end:span 1;
 	}
 	/*the third block span 2 columns*/
 	.card:last-of-type{
 		grid-column-end:span 2;
-	}
+	} */
 
 }
 
