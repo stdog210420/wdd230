@@ -107,5 +107,21 @@ img{
 	body {
 		font-size: 20px;
 	}
+	main {
+		grid-template-columns: auto 1fr auto;
+	}
+	/* the first and third block start from second column */
+	.card:first-of-type,.card:ninth-of-type(2), .card:last-of-type{
+		grid-column-end:span 1;
+		}
+	.card:ninth-of-type(1){
+		grid-column-start: 1;
+	}
+	.card:ninth-of-type(2){
+		grid-column-start: 2;
+	}
+	.card:ninth-of-type(3){
+		grid-column-start: 3;
+	}
 }
 
