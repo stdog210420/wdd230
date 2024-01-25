@@ -24,6 +24,9 @@ header,footer {
 	flex-direction: column;
 	/* grid-column: 1/4; */
 }
+h1, h2{
+	padding-bottom: 10px;
+}
 
 /* phone or baseline views **************************/
 
@@ -63,7 +66,7 @@ main {
 	font-weight: bold;
 }
 .content h3,.content p, a{
-	padding-top: 0.5rem;
+	padding: 1rem;
 
 }
 img{
@@ -132,7 +135,7 @@ img{
 		font-size: 1.5rem;
 	}
 	main h3,.content p, a{
-		padding-top: 0.5rem;
+		padding: 1rem;
 		font-size: 1rem;
 	
 	}main h3{
