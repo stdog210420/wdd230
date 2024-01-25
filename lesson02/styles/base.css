@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Georgia:wght@600&family=Merienda:wght@900&display=swap&family=Raleway&display=swap');
-.gridarea{
+*{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -42,7 +42,7 @@ main {
 .card {
 	max-width: 480px;
 	margin: 0.5rem;
-	/* grid-column: 2/3; */
+	grid-column: 2/3;
 	border: 1px solid #3b5527;
 	padding: 0 1rem;
 	box-shadow: 0 0 30px #485214;
@@ -80,6 +80,7 @@ img{
 		font-size: 18px;
 	}
 	main {
+		min-width: 481px;
 		grid-template-columns: auto 1fr 1fr auto;
 	}
 	/* the first and third block start from second column */
@@ -106,7 +107,8 @@ img{
 		font-size: 20px;
 	}
 	main {
-		grid-template-columns: auto 1fr auto;
+		min-width: 1025px;
+		grid-template-columns: auto 1fr 1fr 1fr auto;
 	}
 	/* the first and third block start from second column */
 	.card:first-of-type,.card:nth-of-type(2), .card:last-of-type{
