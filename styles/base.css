@@ -61,6 +61,7 @@ nav a:hover{
     /* border: 1px solid#ffffff; */
     background-color: #fff;
     color: #2e517f;
+    width: 100%;
 }
 
 
@@ -181,7 +182,7 @@ iframe{
     #menu.open::before {
         content: "❤️";
     }
-    /* when the button is clicked - the open class is toggled (added/removed) */
+    
     nav {
         margin: 1rem auto;
         align-items: center;
@@ -211,5 +212,6 @@ iframe{
         /* border: 1px solid#ffffff; */
         background-color: #fff;
         color: #2e517f;
+        width:100%;
     }
 }
