@@ -5,7 +5,11 @@
     nav a{
         width:fit-content;
     }
+    nav a:not(#menu),
+    nav.open a:not(#menu){
+        display: block;
+        width: fit-content;
+    }
+
 
 }
-
-
