@@ -109,11 +109,11 @@ img{
 	body {
 		font-size: 20px;
 	}
-	main {
+	/* main {
 		grid-template-columns: auto 1fr auto;
-	}
+	} */
 	/* the first and third block start from second column */
-	.card:first-of-type,.card:nth-of-type(2), .card:last-of-type{
+	/* .card:first-of-type,.card:nth-of-type(2), .card:last-of-type{
 		grid-column-end:span 1;
 		}
 	.card:nth-of-type(1){
@@ -124,6 +124,6 @@ img{
 	}
 	.card:nth-of-type(3){
 		grid-column-start: 3;
-	}
+	} */
 }
 
