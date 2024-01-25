@@ -22,7 +22,7 @@ header,footer {
 	justify-content: center;
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: column;
+	flex-direction: row;
 	grid-column: 1/4;
 }
 
