@@ -61,7 +61,7 @@ nav a:hover{
     /* border: 1px solid#ffffff; */
     background-color: #fff;
     color: #2e517f;
-    width: 100%;
+    /* width: 100%; */
 }
 
 
@@ -212,6 +212,6 @@ iframe{
         /* border: 1px solid#ffffff; */
         background-color: #fff;
         color: #2e517f;
-        width:100%;
+        /* width:100%; */
     }
 }
