@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Georgia:wght@600&family=Merienda:wght@900&display=swap&family=Raleway&display=swap');
-*{
+.gridarea{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -22,7 +22,7 @@ header,footer {
 	justify-content: center;
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: row;
+	flex-direction: column;
 	grid-column: 1/4;
 }
 
