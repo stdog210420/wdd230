@@ -30,12 +30,21 @@ Fonts are separated by a & */
 
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
-
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body {
-  margin: 0 auto;
-  padding: 4em;
   font-size: 18px;
   text-align: center;
+  background-color: #fff;
+
+}
+main{
+  width: 100%;
+	margin: 0.5rem;
+
 }
 img {
   display: block;
@@ -48,22 +57,19 @@ h1, h2, h3, h4, h5, h6,.Navigation {
   font-size: 1.5rem;
   font-weight: bold;
 }
-h2, h3 {
-  text-align: center;
-}
 hr {
   height: 3px;
   margin: 35px 0;
   background: var(--accent1-color);
 }
 header {
-  padding: 1em;
-  text-align: center;
-  color: var(--headline-color-on-color);
   background-color: var(--paragraph-background-color);
 }
-header > h1, header > h2 {
-  color: var(--headline-color-on-color);
+header > h1, header > h2, header > h3 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1em;
+  color: var(--paragraph-color-on-white);
 }
 p, .scenarios, a {
   font-family: var(--paragraph-font);
