@@ -31,11 +31,12 @@ Fonts are separated by a & */
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 *{
-	margin: 0;
-	padding: 0;
+
 	box-sizing: border-box;
 }
 body {
+  margin: 1rem;
+  padding: 1rem;
   font-size: 18px;
   text-align: center;
   background-color: #fff;
@@ -45,9 +46,6 @@ body {
 }
 main{
   width: 100%;
-	margin: 2rem;
-  padding: 1rem;
-
 }
 img {
   display: block;
@@ -171,6 +169,8 @@ nav a:hover {
 @media screen and (max-width: 670px){
 
   body{
+    align-items: center;
+    justify-content: center;
     display: block;
     height: auto;
     font-size: 14px;
