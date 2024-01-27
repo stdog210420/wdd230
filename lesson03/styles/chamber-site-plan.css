@@ -65,18 +65,24 @@ hr {
 }
 header, footer {
   background-color: var(--paragraph-background-color);
+  padding: 1rem 0 1rem 0;
 }
+
 header > h1, header > h2, header > h3 {
   font-size: 2rem;
   text-align: center;
-  padding: 1em;
   color: var(--paragraph-color-on-white);
+}
+
+p{
+  line-height: normal;
+  letter-spacing: 0.1em; 
+  text-align: center;
 }
 p, .scenarios, .wireframes {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color-on-white);
   padding: 1em;
-  line-height: normal;
 }
 
 ol li{
