@@ -72,10 +72,11 @@ header > h1, header > h2, header > h3 {
   padding: 1em;
   color: var(--paragraph-color-on-white);
 }
-p, .scenarios, a {
+p, .scenarios, .wireframes {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color-on-white);
   padding: 1em;
+  line-height: normal;
 }
 
 ol li{
@@ -86,6 +87,11 @@ li::before{
   display: inline-block;
   margin-right: 5px; /* 調整與文本之間的間距 */
 }
+
+.wireframes::before{
+  content:"📭";
+}
+
 .colors {
   width: 100%;
   min-width: 350px;
@@ -118,7 +124,7 @@ li::before{
   }
 
 
-.font, .font-title{
+.font, .font-title, .wireframes{
     font-family: var(--heading-font);
 }
 .font-paragraph{
