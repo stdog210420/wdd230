@@ -32,7 +32,6 @@ Fonts are separated by a & */
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
 body {
-  max-width: 960px;
   margin: 0 auto;
   padding: 4em;
   font-size: 18px;
