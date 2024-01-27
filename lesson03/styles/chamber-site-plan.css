@@ -43,8 +43,8 @@ body {
 }
 main{
   width: 100%;
-	margin: 0.5rem;
-
+	margin: 2rem;
+  padding: 1rem;
 }
 img {
   display: block;
@@ -75,6 +75,15 @@ p, .scenarios, a {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color-on-white);
   padding: 1em;
+}
+
+ol li{
+  overflow: hidden;
+}
+li::before{
+  content: "🛩️"; /* Unicode 字符 ☑️ */
+  display: inline-block;
+  margin-right: 5px; /* 調整與文本之間的間距 */
 }
 .colors {
   width: 100%;
