@@ -46,7 +46,7 @@ img {
 h1, h2, h3, h4, h5, h6,.Navigation {
   font-family: var(--heading-font);
   color: var(--headline-color-on-white);
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 h2, h3 {
@@ -149,4 +149,14 @@ nav a:link, nav a:visited {
 nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
+}
+/* mobile view */
+@media screen and (max-width: 670px){
+
+  nav, .content{
+    flex-direction: row;
+  }
+  nav a{
+      width:fit-content;
+  }
 }
