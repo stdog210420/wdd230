@@ -40,11 +40,14 @@ body {
   text-align: center;
   background-color: #fff;
   overflow-wrap: break-word;
+  align-items: center;
+  justify-content: center;
 }
 main{
   width: 100%;
 	margin: 2rem;
   padding: 1rem;
+
 }
 img {
   display: block;
