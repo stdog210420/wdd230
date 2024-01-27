@@ -39,7 +39,7 @@ body {
   font-size: 18px;
   text-align: center;
   background-color: #fff;
-
+  overflow-wrap: break-word;
 }
 main{
   width: 100%;
@@ -167,6 +167,16 @@ nav a:hover {
 /* mobile view */
 @media screen and (max-width: 670px){
 
+  body{
+    display: block;
+    height: auto;
+    font-size: 14px;
+    padding:1rem;
+    overflow-wrap: break-word;
+  }
+  p{
+    overflow-wrap: break-word;
+  }
   nav, .content{
     flex-direction: row;
   }
