@@ -1,0 +1,152 @@
+
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a & */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap');
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #1F4736  ;
+  --secondary-color: #E7EFE7  ;
+  --accent1-color: #3C0211;
+  --accent2-color: #FEECED;
+
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Montserrat", "Lato", Helvetica;
+  --paragraph-font: "Open Sans", Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #1F4736  ;  /* headlines on a white background */ 
+  --headline-color-on-color: #E7EFE7 ;/* headlines on a colored background */  
+  --paragraph-color-on-white: #3C0211; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #FEECED;/* paragraph text on a colored background */ 
+  --paragraph-background-color: #E7EFEa;
+  --nav-link-color: #1F4736;
+  --nav-background-color: #E7EFE7;
+  --nav-hover-link-color: #3C0211;
+  --nav-hover-background-color: #FEECED;
+}
+
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  text-align: center;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
+h1, h2, h3, h4, h5, h6,.Navigation {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+  font-size: 18px;
+  font-weight: bold;
+}
+h2, h3 {
+  text-align: center;
+}
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--headline-color-on-color);
+  background-color: var(--paragraph-background-color);
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+p, .scenarios, a {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  padding: 1em;
+}
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #1F4736;
+  color:#fff;
+}
+.colors td{
+  width: 25%;
+  height: 3em;
+  color:#fff;
+}
+
+.Typography {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    text-align: center;
+  }
+  .Typography th {
+    background-color: #3C0211;
+    color:#fff;
+  }
+  .Typography td{
+    width: 33%;
+    height: 3em;
+  }
+
+
+.font, .font-title{
+    font-family: var(--heading-font);
+}
+.font-paragraph{
+    font-family: var(--paragraph-font);
+}
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2, .font, .font-paragraph, .font-title{
+  background-color: var(--accent2-color);
+}
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+nav  {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem auto;
+  align-items: center;
+}
+nav a {
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
+}
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
