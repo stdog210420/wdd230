@@ -1,0 +1,73 @@
+
+/* Tablet Views ******************************/
+
+@media screen and (min-width: 481px) {
+
+	body{
+		font-size: 18px;
+	}
+	main {
+		grid-template-columns: auto 1fr 1fr auto;
+	}
+	/* the first and third block start from second column */
+	.card:first-of-type, .card:last-of-type{
+		grid-column-start: 2;
+	}
+	.card:nth-of-type(2){
+		grid-column-start: 3;
+	}
+	/* the first and second block span one column */
+	.card:not(.card:last-of-type){
+		grid-column-end:span 1;
+	}
+	/*the third block span 2 columns*/
+	.card:last-of-type{
+		grid-column-end:span 2;
+	} 
+	.himage {
+		display: block;
+	}
+	.himage img {
+		width: 100%;
+		height: auto;
+		border: 1px solid #bbb;
+	}
+
+}
+
+/* Desktop Views ****************************/
+@media screen and (min-width: 1025px) {
+	body {
+		font-size: 20px;
+	}
+	main {
+		grid-template-columns: auto 1fr 1fr 1fr auto;
+	}
+	/* the first and third block start from second column */
+	.card:first-of-type{
+		grid-column: 2 / span 1;
+	}
+	.card:not(.card:first-of-type){
+		grid-column:span 1;
+		}
+	main h2{
+		margin: 0 auto;
+		background-color: #39562A;
+		padding: 1rem 0;
+		text-align: center;
+		justify-content: center;
+		color: #fff;
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+	main h3,.content p, a{
+		padding: 1rem;
+		font-size: 1rem;
+	
+	}main h3{
+		font-weight: bold;
+	}
+	
+	
+}
+
