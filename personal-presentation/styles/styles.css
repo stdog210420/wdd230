@@ -135,6 +135,7 @@ picture img {
     border-radius: 5%;
     border: 1px solid #ccc;
     box-shadow: 0 0 30px #777;
+    color: rgb(103, 101, 101);
 }
 
 section {
