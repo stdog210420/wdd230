@@ -243,25 +243,71 @@ li::before{
   content:"📭";
 }
 
-  /* mobile view */
-  @media screen and (max-width: 670px){
-  
-    body{
+/* mobile view */
+@media screen and (max-width: 670px){
+
+  .me {
+      margin:0 auto;
+      padding: 5px 5px;
+      display:flex;
+      max-width :30%;
+      max-height: 30%;
       align-items: center;
       justify-content: center;
-      display: block;
-      height: auto;
-      font-size: 14px;
-      padding:1rem;
-      overflow-wrap: break-word;
-    }
-    p{
-      overflow-wrap: break-word;
-    }
-    nav, .content{
-      flex-direction: row;
-    }
-    nav a{
-        width:fit-content;
-    }
+      gap:1rem;
   }
+
+  #menu {
+      /* font-size: 1.5rem; */
+      font-weight:700;
+      text-decoration: none;
+      padding: .5rem .75rem;
+      border: 0;
+      background: var(--headline-color-on-color);
+      color: #fff;
+      display: block;
+      position: absolute;/*將menu定位為絕對位置*/
+      top: 0; /*頂部距離為0 */
+      right: 0; /*右側距離為0 */
+  }
+
+  #menu::before {
+      content: "☰";
+  }
+
+  #menu.open::before {
+      content: "❤️";
+  }
+  
+  nav {
+      margin: 1rem auto;
+      align-items: center;
+      background-color: var(--headline-color-on-white);
+      color: var(--headline-color-on-white);
+      font-size: 30px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #menu.open {
+      display: block; /* 添加 .open 類時顯示 */
+  }
+
+  nav.open a {
+      display: block;
+  }
+  
+  nav a {
+      /* border: 1px solid#ffffff; */
+      display: none;
+      background-color: var(--headline-color-on-white);
+      color: var(--headline-color-on-color);
+      text-decoration: none;
+      width:fit-content;
+  }
+  nav a:hover{
+      /* border: 1px solid#ffffff; */
+      background-color: var(--headline-color-on-color);
+      color: var(--headline-color-on-white);
+      /* width:100%; */
+  }
+}

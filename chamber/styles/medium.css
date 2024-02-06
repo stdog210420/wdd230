@@ -1,0 +1,61 @@
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #1F4736  ;
+    --secondary-color: #E7EFE7  ;
+    --accent1-color: #3C0211;
+    --accent2-color: #FEECED;
+  
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Montserrat", "Lato", Helvetica;
+    --paragraph-font: "Open Sans", Helvetica, sans-serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: #1F4736  ;  /* headlines on a white background */ 
+    --headline-color-on-color: #E7EFE7 ;/* headlines on a colored background */  
+    --paragraph-color-on-white: #3C0211; /* paragraph text on a white background */ 
+    --paragraph-color-on-color: #FEECED;/* paragraph text on a colored background */ 
+    --paragraph-background-color: #E7EFEa;
+    --nav-link-color: #1F4736;
+    --nav-background-color: #E7EFE7;
+    --nav-hover-link-color: #3C0211;
+    --nav-hover-background-color: #FEECED;
+  }
+/* Tablet Views ******************************/
+
+@media screen and (min-width: 481px) {
+
+	body{
+		font-size: 18px;
+	}
+	main {
+		grid-template-columns: auto 1fr 1fr auto;
+	}
+	/* the first and third block start from second column */
+	.card:first-of-type, .card:last-of-type{
+		grid-column-start: 2;
+	}
+	.card:nth-of-type(2){
+		grid-column-start: 3;
+	}
+	/* the first and second block span one column */
+	.card:not(.card:last-of-type){
+		grid-column-end:span 1;
+	}
+	/*the third block span 2 columns*/
+	.card:last-of-type{
+		grid-column-end:span 2;
+	} 
+	.himage {
+		display: block;
+	}
+	.himage img {
+		width: 100%;
+		height: auto;
+		border: 1px solid var(--headline-color-on-color);
+	}
+
+}
+
+
+
