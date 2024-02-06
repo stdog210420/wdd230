@@ -47,9 +47,10 @@ body {
   background-color: #fff;
   overflow-wrap: break-word;
 	grid-template: auto 1fr auto/ auto 1fr auto;
+  background-color: var(--paragraph-background-color);
 }
 header {
-  /* background-color: var(--paragraph-background-color); */
+
 
 	box-shadow: 0 0 10px var(--primary-color);
 }
