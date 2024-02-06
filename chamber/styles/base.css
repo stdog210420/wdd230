@@ -35,6 +35,9 @@
   width: 100px;
   height: 80px;
   border-radius: 50%; 
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
 }
 body {
   margin: 0;
@@ -45,13 +48,10 @@ body {
   overflow-wrap: break-word;
 	grid-template: auto 1fr auto/ auto 1fr auto;
 }
-header, footer {
+header {
   /* background-color: var(--paragraph-background-color); */
-  padding: 25px 50px;
-  display: flex;
-  justify-content: space-around;
-	border: 1px solid #333;
-	box-shadow: 0 0 10px #000;
+
+	box-shadow: 0 0 10px var(--primary-color);
 }
 
 header > h1 {
@@ -62,12 +62,24 @@ header > h1 {
 header{
   align-items: center;
   justify-content: center;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-around;
 }
 .content {
   margin: 0 auto;
   z-index: -4; 
 }
+#menu {
+  display: none; /* hide hamburger button */
+}
+#menu::before {
+  content: "☰";
+}
 
+#menu.open::before {
+  content: "❤️";
+}
 nav {
   /* background-color: var(--nav-hover-background-color); */
   line-height: 3em;
@@ -90,7 +102,6 @@ nav a:link, nav a:visited {
 nav a:hover {
   color: var(--nav-link-color);
   background-color: var(--nav-hover-background-color);
-  margin: 0 auto;
 }
 
 #hero {
@@ -129,8 +140,8 @@ button {
 
   background-color:var(--nav-link-color) ;
   color: #ffff;
-  box-shadow: 0 0 30px #212020;
-  border: 1px solid #7b716d;
+  box-shadow: 0 0 30px var(--secondary-color);
+  /* border: 1px solid #7b716d; */
 }
 .book{
   color: #fff;
@@ -140,14 +151,44 @@ button:hover, .book:hover{
   background-color:  var(--nav-hover-link-color);
   text-decoration: none;
 }
-main{
+.home-grid{
+    padding: 10px;
     width: 100%;
-    grid-template-columns: auto 1fr auto;
-  }
-.logo {
-  display: block;
-  margin: 0 auto;
-  max-width: 300px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;    
+    gap:10px;
+}
+.big-event, .event-img{
+  grid-template-columns: 1/2;
+  grid-template-rows: 1/2 ;
+  /* border: 1px solid #333; */
+  box-shadow: 0 0 10px var(--primary-color);  
+  padding-bottom: 10px;
+}
+img{
+  width: 50%;
+}
+.big-event, .weather{
+  padding-top: 10px;
+}
+.weather{
+  grid-template-columns: 2/3;
+  grid-template-rows: 1/2 ;
+  /* border: 1px solid #333; */
+  box-shadow: 0 0 10px var(--primary-color);  
+}
+.spotlight{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-column: span 2;
+  /* border: 1px solid #333; */
+  box-shadow: 0 0 10px var(--primary-color);  
+}
+#spot-message{
+  grid-template-columns: (1, span 2);
+  padding-bottom:10px;
 }
 h1, h2, h3, h4, h5, h6,.Navigation {
   font-family: var(--heading-font);
@@ -165,9 +206,31 @@ p{
   padding: 1em;
 }
 
-ol li{
-  overflow: hidden;
+footer{
+  margin:auto 0 auto 0;
 }
+#footer-grid{
+  padding-top: 30px;
+  font-family: var(--paragraph-font);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  list-style: none;
+  font-size: 17px;
+}
+
+#footer-logo img{
+  grid-template-columns: 1/2;
+  padding-bottom: 10px;
+}
+
+#name{
+  font-size: 17px;
+}
+#footer-message{
+  display: flex;
+  flex-direction: column;
+}
+
 li::before{
   content: "🛩️"; /* Unicode 字符 ☑️ */
   display: inline-block;
@@ -177,61 +240,6 @@ li::before{
 .wireframes::before{
   content:"📭";
 }
-
-.colors {
-  width: 100%;
-  min-width: 350px;
-  margin: 30px auto;
-  text-align: center;
-}
-.colors th {
-  background-color: #1F4736;
-  color:#fff;
-}
-.colors td{
-  width: 25%;
-  height: 3em;
-  color:#fff;
-}
-
-.Typography {
-    width: 100%;
-    min-width: 350px;
-    margin: 30px auto;
-    text-align: center;
-  }
-  .Typography th {
-    background-color: #3C0211;
-    color:#fff;
-  }
-  .Typography td{
-    width: 33%;
-    height: 3em;
-  }
-  
-  
-  .font, .font-title, .wireframes{
-      font-family: var(--heading-font);
-  }
-  .font-paragraph{
-      font-family: var(--paragraph-font);
-  }
-  .primary {
-    background-color: var(--primary-color);
-  }
-  .secondary {
-    background-color: var(--secondary-color);
-  }
-  .accent1 {
-    background-color: var(--accent1-color);
-  }
-  .accent2, .font, .font-paragraph, .font-title{
-    background-color: var(--accent2-color);
-  }
-  p.colored {
-    background-color: var(--paragraph-background-color);
-    color: var(--paragraph-color-on-color);
-  }
 
   /* mobile view */
   @media screen and (max-width: 670px){
