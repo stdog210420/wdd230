@@ -10,19 +10,7 @@
 
   /* change the values below to your chosen font(s) */
   --heading-font: "Montserrat", "Lato", Helvetica;
-  --paragraph-font: "Open Sans", Helvetica, sans-serif;
-
-  /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #1F4736  ;  /* headlines on a white background */ 
-  --headline-color-on-color: #E7EFE7 ;/* headlines on a colored background */  
-  --paragraph-color-on-white: #3C0211; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: #FEECED;/* paragraph text on a colored background */ 
-  --paragraph-background-color: #E7EFEa;
-  --nav-link-color: #1F4736;
-  --nav-background-color: #E7EFE7;
-  --nav-hover-link-color: #3C0211;
-  --nav-hover-background-color: #FEECED;
-}
+  --paragraph-font: "Open Sans", Helvetica, sans-serif;}
 
 #logo_link  {
   padding-top: 5px;
@@ -39,7 +27,7 @@
   margin: 0 auto;
   max-width: 300px;
   box-shadow: 0 0 30px var(--accent2-color);
-    border: 1px solid var(--paragraph-background-color);
+  border: 1px solid var(--secondary-color);
 }
 body {
   margin: 0;
@@ -49,7 +37,7 @@ body {
   background-color: #fff;
   overflow-wrap: break-word;
 	grid-template: auto 1fr auto/ auto 1fr auto;
-  background-color: var(--paragraph-background-color);
+  background-color: var(--secondary-color);
   font-family: var(--paragraph-font);
 }
 header {
@@ -60,7 +48,7 @@ header {
 header > h1 {
   font-size: 2rem;
   text-align: center;
-  color: var(--paragraph-color-on-white);
+  color: var(--accent1-color);
 }
 header{
   align-items: center;
@@ -86,7 +74,7 @@ header{
   content: "❤️";
 }
 nav {
-  /* background-color: var(--nav-hover-background-color); */
+  /* background-color: var(--accent2-color); */
   line-height: 3em;
   text-align: center;
   font-size: 1.2em;
@@ -102,15 +90,15 @@ nav a {
   text-decoration: none;
 }
 nav a:link, nav a:visited {
-  color: var(--nav-hover-link-color);
-
+  color:var(--primary-color);
 }
 
 nav a:hover{
-  background-color: var(--headline-color-on-color);
+  background-color: var(--secondary-color);
+  color: var(--accent1-color);
 }
 nav a:hover::after{
-  color: var(--nav-link-color);
+
   font-family: "Lato";
 }
 
@@ -150,14 +138,14 @@ nav a:hover::after{
 }
 h1, h2, h3, h4, h5, h6,.navigation a{
   font-family: var(--heading-font);
-  color: var(--headline-color-on-white);
+  color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 .button-box a{
   font-family: var(--heading-font);
-  color:var(--headline-color-on-color);
+  color:var(--secondary-color);
   font-weight: bold;
 }
 .button-box{
@@ -171,8 +159,8 @@ h1, h2, h3, h4, h5, h6,.navigation a{
   padding: 20px;
   border-radius: 50%; 
   max-width: 80px;
-  background-color:var(--nav-link-color) ;
-  box-shadow: 0 0 30px var(--nav-link-color); 
+  background-color:var(--primary-color) ;
+  box-shadow: 0 0 30px var(--primary-color); 
   text-decoration: none;
 }
 
@@ -182,9 +170,9 @@ h1, h2, h3, h4, h5, h6,.navigation a{
   padding: 20px;
   border-radius: 50%;
   max-width: 80px;
-  background-color:  var(--nav-hover-link-color);
+  background-color:  var(--accent1-color);
   color:var(--accent2-color);
-  box-shadow: 0 0 30px var(--nav-hover-link-color); 
+  box-shadow: 0 0 30px var(--accent1-color); 
   text-decoration: none;
   font-weight: bold;
 }
@@ -233,7 +221,7 @@ p{
   letter-spacing: 0.1em; 
   text-align: center;
   font-family: var(--paragraph-font);
-  color: var(--paragraph-color-on-white);
+  color: var(--accent1-color);
   padding: 1em;
   font-size: 1.5rem;
 }
@@ -241,57 +229,39 @@ p{
 footer{
   margin:auto;
   box-shadow: 0 0 10px var(--primary-color);  
+
 }
+
 #footer-grid{
+  margin: 0 10px 0 10px;
   padding-top: 30px;
   font-family: var(--paragraph-font);
   display: grid;
   grid-template-columns: 2fr 1fr;
   list-style: none;
-  font-size: 17px;
-  text-decoration: none;
+
   background-color: #fff;
 }
-/* hr {
-  border-top: 0.5px solid var(--accent1-color);
-  max-width: 80%;
-} */
-#footer-logo img{
+#footer-logo img, #logo-message, .footer-message{
   grid-column: 1/2;
-  padding-bottom: 10px;
-}
+  padding: 10px;
+  font-size: 17px; 
+  text-decoration: none;
 
-#name{
-  font-size: 17px;
 }
-#footer-message{
+.footer-message{
+  grid-column: 2/3;
   display: flex;
   flex-direction: column;
 }
 
-li::before{
-  content: "🛩️"; /* Unicode 字符 ☑️ */
-  display: inline-block;
-  margin-right: 5px; /* 調整與文本之間的間距 */
-}
-
-.wireframes::before{
-  content:"📭";
+#name{
+  font-size: 14px;
 }
 
 /* mobile view */
 @media screen and (max-width: 670px){
 
-  .me {
-      margin:0 auto;
-      padding: 5px 5px;
-      display:flex;
-      max-width :30%;
-      max-height: 30%;
-      align-items: center;
-      justify-content: center;
-      gap:1rem;
-  }
 
   #menu {
       /* font-size: 1.5rem; */
@@ -299,8 +269,8 @@ li::before{
       text-decoration: none;
       padding: .5rem .75rem;
       border: 0;
-      background: var(--headline-color-on-color);
-      color: #fff;
+      background: var(--secondary-color);
+      color: var(--primary-color);
       display: block;
       position: absolute;/*將menu定位為絕對位置*/
       top: 0; /*頂部距離為0 */
@@ -318,8 +288,8 @@ li::before{
   nav {
       margin: 1rem auto;
       align-items: center;
-      background-color: var(--headline-color-on-white);
-      color: var(--headline-color-on-white);
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
       font-size: 30px;
       font-family: Georgia, 'Times New Roman', Times, serif;
   }
@@ -335,15 +305,15 @@ li::before{
   nav a {
       /* border: 1px solid#ffffff; */
       display: none;
-      background-color: var(--headline-color-on-white);
-      color: var(--headline-color-on-color);
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
       text-decoration: none;
       width:fit-content;
   }
   nav a:hover{
       /* border: 1px solid#ffffff; */
-      background-color: var(--headline-color-on-color);
-      color: var(--headline-color-on-white);
+      background-color: var(--accent2-color);
+      color: var(--accent1-color);
       /* width:100%; */
   }
 }
