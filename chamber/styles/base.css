@@ -38,20 +38,22 @@
   display: block;
   margin: 0 auto;
   max-width: 300px;
+  box-shadow: 0 0 30px var(--accent2-color);
+    border: 1px solid var(--paragraph-background-color);
 }
 body {
   margin: 0;
   padding: 0;
-  font-size: 22px;
+  font-size: 17px;
   text-align: center;
   background-color: #fff;
   overflow-wrap: break-word;
 	grid-template: auto 1fr auto/ auto 1fr auto;
   background-color: var(--paragraph-background-color);
+  font-family: var(--paragraph-font);
 }
 header {
-
-
+  font-family: var(--heading-font);
 	box-shadow: 0 0 10px var(--primary-color);
 }
 
@@ -68,8 +70,10 @@ header{
   justify-content: space-around;
 }
 .content {
+  font-family: var(--paragraph-font);
   margin: 0 auto;
   z-index: -4; 
+  font-size: 1rem;
 }
 #menu {
   display: none; /* hide hamburger button */
@@ -99,10 +103,28 @@ nav a {
 }
 nav a:link, nav a:visited {
   color: var(--nav-hover-link-color);
+
 }
-nav a:hover {
+
+nav a:hover{
+  background-color: var(--headline-color-on-color);
+}
+nav a:hover::after{
   color: var(--nav-link-color);
-  background-color: var(--nav-hover-background-color);
+  font-family: "Lato";
+}
+
+#home:hover::after{
+  content: "📭";
+}
+#discover:hover::after{
+  content: "🔎";
+}
+#directory:hover::after{
+  content: "🛩️";
+}
+#join:hover::after{
+  content: "🎯";
 }
 
 #hero {
@@ -126,31 +148,45 @@ nav a:hover {
   width: 100% ;
 
 }
+h1, h2, h3, h4, h5, h6,.navigation a{
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
-button {
+.button-box a{
+  font-family: var(--heading-font);
+  color:var(--headline-color-on-color);
+  font-weight: bold;
+}
+.button-box{
+  text-align: center;
+}
+.book {
   /* This extra margin represent roughly the same space as the space
      between the labels and their text fields */
-  margin:0 auto;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border-radius: 40px 40px 40px 40px;
-  font-family: "Caveat", Helvetica, sans-serif;
-  font-size: 1em;
-  text-align: center;
-
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 50%; 
+  max-width: 80px;
   background-color:var(--nav-link-color) ;
-  color: #ffff;
-  box-shadow: 0 0 30px var(--secondary-color);
-  /* border: 1px solid #7b716d; */
-}
-.book{
-  color: #fff;
+  box-shadow: 0 0 30px var(--nav-link-color); 
   text-decoration: none;
 }
-button:hover, .book:hover{
+
+.book:hover{
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 50%;
+  max-width: 80px;
   background-color:  var(--nav-hover-link-color);
+  color:var(--accent2-color);
+  box-shadow: 0 0 30px var(--nav-hover-link-color); 
   text-decoration: none;
+  font-weight: bold;
 }
 .home-grid{
     padding: 10px;
@@ -191,12 +227,6 @@ img{
   grid-column: 1/ span 2;
   padding-bottom:10px;
 }
-h1, h2, h3, h4, h5, h6,.Navigation {
-  font-family: var(--heading-font);
-  color: var(--headline-color-on-white);
-  font-size: 1.5rem;
-  font-weight: bold;
-}
 
 p{
   line-height: normal;
@@ -205,10 +235,12 @@ p{
   font-family: var(--paragraph-font);
   color: var(--paragraph-color-on-white);
   padding: 1em;
+  font-size: 1.5rem;
 }
 
 footer{
-  margin:auto 0 auto 0;
+  margin:auto;
+  box-shadow: 0 0 10px var(--primary-color);  
 }
 #footer-grid{
   padding-top: 30px;
@@ -220,9 +252,9 @@ footer{
   text-decoration: none;
   background-color: #fff;
 }
-/* #line{
-  color:var(--headline-color-on-white);
-  background-color: var(--headline-color-on-white);
+/* hr {
+  border-top: 0.5px solid var(--accent1-color);
+  max-width: 80%;
 } */
 #footer-logo img{
   grid-column: 1/2;
