@@ -10,6 +10,29 @@
         display: block;
         width: fit-content;
     }
-
-
+    .hero{
+        margin: 0;
+        padding: 0.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero img{
+        width: 100%;
+        height: 100%;
+    }
+    .herolabel{
+        top: 450px;
+        left: 100px;
+        padding: 1.5rem;
+        box-shadow: 0 0 3rem #fff;
+    }
+    .herolabel p {
+        margin: 0;
+        padding: .25rem;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    main{
+        max-width: 960vw;
+    }
 }
