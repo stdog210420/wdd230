@@ -75,7 +75,7 @@ nav a:hover{
 
 .hero img {
 	object-fit: cover;
-
+    width:100%;
 }
 
 .herolabel {
@@ -241,6 +241,7 @@ iframe{
         color: #2e517f;
         /* width:100%; */
     }
+
     .herolabel{
         top: 200px;
         left: 30px;
