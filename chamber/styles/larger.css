@@ -11,65 +11,60 @@
   }
 /* Desktop Views ****************************/
 @media screen and (min-width: 1025px) {
+	body {
+		font-size: 17px;
+	}
+	header {
+		display: flex;
+		justify-content: space-around;
+	}
+	nav {
+		display: flex;
+		justify-content: space-around;
+	}
 	#menu {
 	display: none; /* hide hamburger button */
 	}
-
-	body {
-		font-size: 20px;
-	}
-	#hero {
-		display: grid;
-		grid-template-columns: 1fr 3fr 1fr;
-		margin-top: -100px; 
-	  }
-	  
-	  #hero-box{
-		grid-column: 1/4;
-		grid-row: 1/3;
-		z-index: -1;
-	  }
-	  #hero-msg{
-		grid-column: 2/3;
-		grid-row: 1/2;
-		margin-top: 100px;
-	  
-	  }
+    nav a{
+        width:fit-content;
+    }
+    nav a:not(#menu),
+    nav.open a:not(#menu){
+        display: block;
+        width: fit-content;
+    }
 	.home-grid{
 		padding: 10px;
 		width: 100%;
 		display: grid;
-		grid-template-columns: auto 2fr 1fr auto;
-	  
-		gap:10px;
-	}
-	.big-event, .event-img{
-		grid-column: 1/3;
-		grid-row: 1/2 ;
-		/* border: 1px solid #333; */
-		box-shadow: 0 0 10px var(--primary-color);  
-		padding-bottom: 10px;
-	  }
-	  img{
-		width:100%;
-	  }
-	  .big-event, .weather{
-		padding-top: 10px;
-	  }
-	  .weather{
-		grid-column: 2/3;
-		grid-row: 1/2 ;
-		/* border: 1px solid #333; */
-		box-shadow: 0 0 10px var(--primary-color);  
-	  }
-	  .spotlight{
+		grid-template-columns: 2fr 1fr 1fr ;
+		grid-template-rows: 1fr;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		grid-column: 1/span 2;
-		/* border: 1px solid #333; */
-		box-shadow: 0 0 10px var(--primary-color);  
+	}
+	.big-event{
+		grid-column: 1/2;
+		grid-row: 1/2 ;
+		display:inline-block;
+	}
+	.weather{
+		grid-column: 2/3;
+		grid-row: 1/2 ;
+		display:inline-block;
+
+	}
+	.spotlight{
+		grid-column: 3/4;
+		grid-row: 1/2 ;
+		display:inline-block;
+
+	}
+	  img{
+		width:100%;
 	  }
+	
+
 	  #spot-message{
 		grid-column: 1/ span 2;
 		padding-bottom:10px;
@@ -95,13 +90,12 @@
 		background-color: #fff;
 	  }
 
-	#footer-logo img{
-	grid-column: 1/2;
-	padding-bottom: 10px;
+	.footer-logo img{
+		grid-column: 1/2;
+		padding-bottom: 10px;
 	}
 	
 	#footer-message{
-	  display: flex;
-	  flex-direction: column;
+	  grid-column: 2/3;
 	}
 }

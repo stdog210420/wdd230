@@ -23,95 +23,42 @@
   }
 /* Tablet Views ******************************/
 
-@media screen and (min-width: 481px) {
+@media screen and ((min-width: 670px) and (max-width: 1024px)) {
 
 	body{
-		font-size: 16px;
+		font-size: 15px;
 	}
 	#menu {
 		display: none; /* hide hamburger button */
 		}
-		
-	#hero {
-		display: grid;
-		grid-template-columns: 1fr 3fr 1fr;
-		margin-top: -100px; 
-	  }
-	  
-	  #hero-box{
-		grid-column: 1/4;
-		grid-row: 1/3;
-		z-index: -1;
-	  }
-	  #hero-msg{
-		grid-column: 2/3;
-		grid-row: 1/2;
-		margin-top: 100px;
-	  
-	  }
-	
-	nav {
-		margin: 1rem auto;
-		align-items: center;
-		background-color: var(--headline-color-on-color);
-		color: var(--headline-color-on-white);
-		font-size: 14px;
-		font-family: Georgia, 'Times New Roman', Times, serif;
-	}
-  
-	nav a {
-		/* border: 1px solid#ffffff; */
-		display: none;
-		background-color: var(--headline-color-on-white);
-		color: var(--headline-color-on-color);
-		text-decoration: none;
-		width:fit-content;
-	}
-	nav a:hover{
-		/* border: 1px solid#ffffff; */
-		background-color: var(--headline-color-on-color);
-		color: var(--headline-color-on-white);
-		/* width:100%; */
-	}
 	.home-grid{
 		padding: 10px;
 		width: 100%;
 		display: grid;
-		grid-template-columns: auto 2fr 1fr auto;
-		
+		grid-template-columns: 2fr 1fr;
 		gap:10px;
 	}
-	.big-event, .event-img{
-		grid-column: 1/3;
+	.big-event{
+		grid-column: 1/2;
 		grid-row: 1/2 ;
-		/* border: 1px solid #333; */
-		box-shadow: 0 0 10px var(--primary-color);  
-		padding-bottom: 10px;
-		}
-		img{
+	}
+	img{
 		width:100%;
-		}
-		.big-event, .weather{
-		padding-top: 10px;
-		}
-		.weather{
+	}
+	.weather{
 		grid-column: 2/3;
 		grid-row: 1/2 ;
-		/* border: 1px solid #333; */
-		box-shadow: 0 0 10px var(--primary-color);  
-		}
-		.spotlight{
+	}
+	.spotlight{
 		justify-content: center;
 		align-items: center;
 		text-align: center;
 		grid-column: 1/span 2;
-		/* border: 1px solid #333; */
-		box-shadow: 0 0 10px var(--primary-color);  
-		}
-		#spot-message{
-		grid-column: 1/ span 2;
-		padding-bottom:10px;
-		}
+		grid-row: 2/3 ;
+	}
+	#spot-message{
+	grid-column: 1/ span 2;
+	}
 	main h2{
 		margin: 0 auto;
 		background-color: var(--headline-color-on-color);
@@ -142,6 +89,40 @@
 	  display: flex;
 	  flex-direction: column;
 	}
+	header{
+		display: block;
+	  }
+	nav{
+		gap: 0;
+		display: block; 
+		}
+		#menu {
+			text-decoration: none;
+			padding: .5rem .75rem;
+			border: 0;
+			display: block;
+			position: absolute;/*將menu定位為絕對位置*/
+			top: 0; /*頂部距離為0 */
+			right: 0; /*右側距離為0 */
+		}
+		
+		  #menu::before {
+			  content: "☰";
+		  }
+		
+		  #menu.open::before {
+			  content: "❤️";
+		  }
+		  #hero-msg{
+			margin-top: -40px;
+		  }
+		  #menu.open {
+			  display: block; /* 添加 .open 類時顯示 */
+		  }
+		
+		  nav.open a {
+			  display: block;
+		  }
 }
 
 
