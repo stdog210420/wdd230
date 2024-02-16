@@ -22,7 +22,7 @@
     <div class="content">
         <header>
             <a id="logo_link" href="index.html">
-                <img class="logo" src="images/logo.png" alt="The Chamber of Commerce" >
+                <img class="logo" src="images/logo.webp" alt="The Chamber of Commerce" >
             </a>
             <h1>Tainan Food Machinery Industry Chamber of Commerce</h1>
              <nav class="navigation">
@@ -33,12 +33,17 @@
             </nav>
             <button id="menu"></button>
             <div id="mode">
-                😎
+                🕶️
             </div>
         </header>
         <div id="hero">
             <div id="hero-box">
-                <img id="hero-img" src="images/hero.png" alt="The Tainan Automation Machinery and Smart Manufacturing Exhibition">
+                <picture id="hero-img">
+                    <source media="(max-width: 500px)" srcset="images/hero-small.webp">
+                    <source media="(max-width: 1000px)" srcset="images/hero-medium.webp">
+                    <img src="images/hero-larger.webp" alt="It's group chating with each other." width="1500" height="943">
+                </picture>
+                <!-- <img id="hero-img" src="images/hero.webp" alt="The Tainan Automation Machinery and Smart Manufacturing Exhibition"> -->
             </div>
             <section id="hero-msg">
                 <h2 class="home-title">Let's find treasure.</h2>
@@ -57,7 +62,7 @@
                     <p class="card-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Atque praesentium molestias fuga. Exercitationem molestias ratione quia 
                         asperiores cum accusantium accusamus inventore culpa ipsum rerum expedita quasi animi dolor, placeat autem?.</p>
-                    <img class="event-img" src="images/event.jpg" alt="The Tainan Automation Machinery and Smart Manufacturing Exhibition">
+                    <img class="event-img" src="images/event.webp" alt="The Tainan Automation Machinery and Smart Manufacturing Exhibition">
 
                 </div>              
             </section>
@@ -79,7 +84,7 @@
         <footer>
             <div id="footer-grid">
                 <div class="footer-logo">
-                    <a  href="index.html"><img class="logo" src="images/logo.png" alt="The Chamber of Commerce" ></a>
+                    <a  href="index.html"><img class="logo" src="images/logo.webp" alt="The Chamber of Commerce" ></a>
                     <p class="footer-logo">Tainan Food Machinery Industry Chamber of Commerce</p>
                 </div>
                 <div class="footer-message">

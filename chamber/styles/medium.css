@@ -49,6 +49,9 @@
 		grid-column: 1/2;
 		grid-row: 1/2 ;
 	}
+	.hero-box img{
+		max-width: 1000;
+	  }
 	img{
 		width:100%;
 	}
