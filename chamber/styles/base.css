@@ -224,7 +224,7 @@ hr {
   content:"❄️";
   font-size: 2em; /* 將 emoji 大小放大為原始大小的兩倍 */
 }
-#humidity::before{
+#humid::before{
   content:"💧";
   font-size: 2em; /* 將 emoji 大小放大為原始大小的兩倍 */
 }
