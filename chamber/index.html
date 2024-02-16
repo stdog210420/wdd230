@@ -69,9 +69,20 @@
             <div class="weather">
                 <h5>Current Weather</h5>
                 <hr>
-                <p id="degree">31 °C  - partly cloudy</p>
-                <p id="humidity">Humidity: 35%</p>
-                <p id="chill">Wild Chill: NA</p>
+                <span id="degree"><label for="temperature">Temperature (°C): </label>
+                    <input type="number" id="temperature" required>
+                </span>
+                <br><br>
+                <span id="wind"><label for="windSpeed">Wind Speed (mph): </label>
+                    <input type="number" id="windSpeed" required>
+                </span>
+                <br><br>
+                <span id="humidity"><label for="humidity">Humidity (%): </label>
+                    <input type="number" id="humidity" required>
+                </span>
+                <P id="windChillResult">WindChill: </P>
+                <button type="button" onclick="calculateWindChill()">Calculate</button>
+                <br><br>
             </div>
             <section class="spotlight">
                 <h6>Member Spotlights</h6>
