@@ -72,8 +72,7 @@ header > h1 {
 	right: 1rem;
 	font-size: 3rem;
 	cursor: pointer;
-	font-size: 2rem;
-
+	/* font-size: 2em; */
 }
 nav {
   /* background-color: var(--accent2-color); */
@@ -180,6 +179,9 @@ p{
   background-color:var(--primary-color) ;
   box-shadow: 0 0 30px var(--primary-color); 
 }
+.button-box a{
+  font-size: 1rem;
+}
 
 .book:hover{
   background-color:  var(--accent1-color);
@@ -283,6 +285,13 @@ nav a {
   }
   header{
     display: block;
+  }
+  #mode {
+    margin-top: 1rem;
+    position:absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
   }
   nav{
     gap: 0;

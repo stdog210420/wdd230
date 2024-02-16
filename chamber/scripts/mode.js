@@ -8,7 +8,7 @@ const join= document.querySelector("#join");
 const namemark= document.querySelector("#name");
 
 modeButton.addEventListener("click", () => {
-	if (modeButton.textContent.includes("🕶️")) {
+	if (modeButton.textContent.includes("😎")) {
 		body.style.background = "#E7EFE7";
 		content.style.color = "#3C0211";
 		home.style.color = "#3C0211";
@@ -16,7 +16,7 @@ modeButton.addEventListener("click", () => {
 		directory.style.color = "#3C0211";
         join.style.color = "#3C0211";
         namemark.style.color = "#3C0211";
-		modeButton.textContent = "🔆";
+		modeButton.textContent = "😀";
 	} else {
 		body.style.background = "#1F4736";
 		content.style.color = "#FEECED";
@@ -25,6 +25,6 @@ modeButton.addEventListener("click", () => {
 		directory.style.color = "#FEECED";
         join.style.color = "#FEECED";
         namemark.style.color = "#FEECED";
-		modeButton.textContent = "🕶️";
+		modeButton.textContent = "😎";
 	}
 });
