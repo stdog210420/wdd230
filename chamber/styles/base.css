@@ -294,9 +294,7 @@ nav a {
     right: 2rem;
     cursor: pointer;
   }
-  .hero-img{
-    max-width: 500px;
-  }
+
   nav{
     gap: 0;
     display: block; 
