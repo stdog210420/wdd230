@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap');
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #1F4736  ;
+  --secondary-color: #E7EFE7  ;
+  --accent1-color: #3C0211;
+  --accent2-color: #FEECED;
+
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Montserrat", "Lato", Helvetica;
+  --paragraph-font: "Open Sans", Helvetica, sans-serif;}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    overflow-wrap: break-word;
+    background-color: #E7EFE7 ;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    color: var(--accent1-color);
+}
+
+ main{
+    grid-column: 2/3;
+}
+.lazy{
+    margin: 0 auto;
+    padding: 0 0 1em 1em;
+    display: flex;
+    flex-direction: row;
+    opacity: 0; /* Initially set opacity to 0 */
+    animation: fadeInAnimation 10s ease-in forwards; /* Apply the fade-in animation */
+}
+@keyframes fadeInAnimation {
+    from {
+      opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+      opacity: 1; /* End with opacity 1 */
+    }
+  }
+header,footer{
+    grid-column: 1/4;
+    text-align: center;
+}
