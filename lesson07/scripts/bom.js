@@ -5,6 +5,8 @@ const button = document.querySelector('button');
 //The array declaration initializes the chaptersArray variable with the list of chapters returned by the getChapterList() function 
 //or an empty array if the function call returns null or undefined.
 let chaptersArray = getChapterList() || [];
+//确保 getChapterList() 返回一个数组
+// chaptersArray = Array.from(chaptersArray);
 chaptersArray.foreach(chapter =>{displayList(chapter)});
 
 //check if the input is empty, if not, then
