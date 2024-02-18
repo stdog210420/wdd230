@@ -7,7 +7,8 @@ const button = document.querySelector('button');
 let chaptersArray = getChapterList() || [];
 //确保 getChapterList() 返回一个数组
 // chaptersArray = Array.from(chaptersArray);
-chaptersArray.foreach(chapter =>{displayList(chapter)});
+chaptersArray.forEach(chapter =>{
+  displayList(chapter);});
 
 //check if the input is empty, if not, then
 //call displayList with the input.value argument,
@@ -35,7 +36,7 @@ function displayList(item){
   let deleteButton = document.createElement('button');
   li.textContent = item; // note the use of the displayList parameter 'item'
   deleteButton.textContent = '❌';
-  deletebutton.classList.add('delete'); // this references the CSS rule .delete{width:fit-content;} to size the delete button
+  deleteButton.classList.add('delete'); // this references the CSS rule .delete{width:fit-content;} to size the delete button
   li.append(deleteButton);
   list.append(li);
   deleteButton.addEventListener('click', function () {
