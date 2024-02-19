@@ -324,7 +324,7 @@ nav a {
   }
   #menu {
       text-decoration: none;
-      padding: .5rem .75em;
+      padding: .5rem .75rem;
       border: 0;
       display: block;
       position: absolute;/*將menu定位為絕對位置*/
