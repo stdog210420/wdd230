@@ -324,12 +324,12 @@ nav a {
   }
   #menu {
       text-decoration: none;
-      padding: .5rem .75rem;
+      padding: .5rem .75em;
       border: 0;
       display: block;
       position: absolute;/*將menu定位為絕對位置*/
-      top: 0; /*頂部距離為0 */
-      right: 0; /*右側距離為0 */
+      top: 0.5rem; /*頂部距離為0 */
+      right: 0.5rem; /*右側距離為0 */
   }
 
   #menu::before {
