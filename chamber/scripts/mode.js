@@ -9,7 +9,7 @@ const namemark= document.querySelector("#name");
 
 modeButton.addEventListener("click", () => {
 	if (modeButton.textContent.includes("🕶️")) {
-		body.style.background = "#E7EFE7";
+		body.style.background = "#fff";
 		content.style.color = "#3C0211";
 		home.style.color = "#3C0211";
 		discover.style.color = "#3C0211";
