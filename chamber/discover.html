@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Phoebe Lin">
+    <meta name="description" content="WDD230-Web Frontend Development-this page is a home page of the Chamber of Commerce - Sin Yi Lin.">
+    <title>Phoebe Lin-WDD230-Chamber</title>
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="WDD230-Web Frontend Development-this page is a home page of the Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/ballet.jpg">
+    <meta property="og:url" content="https://stdog210420.github.io/wdd230/">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/logo.webp" alt="The Chamber of Commerce" >
+            </a>
+            <h1>Tainan Food Machinery Industry Chamber of Commerce</h1>
+             <nav class="navigation">
+                <a id="home" href="index.html" >Home</a>
+                <a id="discover" href="#">Discover</a>
+                <a id="directory" href="#">Directory</a>
+                <a id="join" href="#">Join</a>
+            </nav>
+            <button id="menu"></button>
+            <div id="mode">
+                🕶️
+            </div>
+        </header>
+        <div id="hero">
+            <div id="hero-box">
+                <picture >
+                    <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
+                    <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp">
+                    <img id="hero-img" src="images/hero-larger.webp" alt="It's group chating with each other." width="1200" height="800">
+                </picture>
+                <!-- <img id="hero-img" src="images/hero.webp" alt="The Tainan Automation Machinery and Smart Manufacturing Exhibition"> -->
+            </div>
+            <section id="hero-msg">
+                <h2 class="home-title">Let's find treasure.</h2>
+                <h3>Welcome to Tainan Food Machinery Industry Chamber</h3>
+                <div class="button-box">
+                    <a class="book" href="#">Join Now</a>
+                </div>
+            </section>
+        </div>
+
+        <main class="home-grid">
+            <picture id="demographics">
+                <label for="demographics">Demographics:</label>
+                <!-- <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
+                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp"> -->
+                <img id="hero-img" src="images/hero.webp" alt="It's group chating with each other." width="1200" height="800">
+            </picture>
+            <picture id="statistical-data">
+                <label for="statistical-data">Statistical Data:</label>
+                <!-- <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
+                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp"> -->
+                <img id="hero-img" src="images/hero.webp" alt="It's group chating with each other." width="1200" height="800">
+            </picture>
+            <picture id="event">
+                <label for="demographics">Event:</label>
+                <!-- <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
+                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp"> -->
+                <img id="hero-img" src="images/hero.webp" alt="It's group chating with each other." width="1200" height="800">
+            </picture>
+            <picture id="attraction1">
+                <label for="attraction1">Attraction:</label>
+                <!-- <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
+                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp"> -->
+                <img id="hero-img" src="images/hero.webp" alt="It's group chating with each other." width="1200" height="800">
+            </picture>
+            <picture id="attraction2">
+                <label for="attraction2">Attraction:</label>
+                <!-- <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
+                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp"> -->
+                <img id="hero-img" src="images/hero.webp" alt="It's group chating with each other." width="1200" height="800">
+            </picture>
+            <picture id="attraction3">
+                <label for="attraction3">Attraction:</label>
+                <!-- <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
+                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp"> -->
+                <img id="hero-img" src="images/hero.webp" alt="It's group chating with each other." width="1200" height="800">
+            </picture>
+
+
+        </main>
+        <footer>
+            <div id="footer-grid">
+                <div class="footer-logo">
+                    <a  href="index.html"><img class="logo" src="images/logo.webp" alt="The Chamber of Commerce" ></a>
+                    <p class="footer-logo">Tainan Food Machinery Industry Chamber of Commerce</p>
+                </div>
+                <div class="footer-message">
+                    <p  class="footer-message">info@tainanfoodmachinery.com.tw</p>
+                    <p  class="footer-message">(+668)123456798</p>
+                </div>
+            </div>
+            <p id="name"><span>&copy;<span id="year"> </span> |</span><span>Phoeb Lin |</span><span>This is a project for WDD 230 |</span><span id="lastModified">Last Modified</span></p>
+        </footer>
+    </div>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/mode.js"></script>
+    <script src="scripts/windchill.js"></script>
+</body>
+</html>

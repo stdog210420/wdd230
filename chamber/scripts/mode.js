@@ -19,6 +19,7 @@ modeButton.addEventListener("click", () => {
 		modeButton.textContent = "🔆";
 	} else {
 		body.style.background = "#1F4736";
+		// content.style.color = "#1F4736";
 		content.style.color = "#FEECED";
 		home.style.color = "#FEECED";
 		discover.style.color = "#FEECED";
