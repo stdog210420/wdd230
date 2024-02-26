@@ -201,6 +201,16 @@ p{
     grid-template-columns: auto 1fr auto;
     grid-template-rows:  auto 1fr auto;    
 }
+.discover{
+  margin-top: 0;
+  color:var(--accent2-color); 
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* padding: 20px; */
+}
+
 hr {
   color:var(--accent2-color); 
   width: 80%; /* 寬度為父元素寬度的一半 */
