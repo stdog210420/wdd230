@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Georgia:wght@600&family=Merienda:wght@900&display=swap&family=Great+Vibes&display=swap');
+:root {
+	--back:#9B287B ;
+  	--back2: hsl(317, 59%, 38%, 0.5);
+ 	 --foredark: #170F11;
+	--forelight: #FF6663;
+	--border: #5D0D4D;
+	--borderlight: hsl(317, 59%, 38%, 0.15);
+	--shadow: #FF6663;
+	--zebra: #FFFFFF;
+}
+body {
+    background-color: #FFFFFF;
+	text-align: center;
+	font-family: "Merienda", Arial, serif;
+}
+
+h1{
+	color:var(--border);
+}
+
+table {
+	margin: 10px auto;
+	border: thin solid var(--border);
+	box-shadow: 0 0 10px var(--shadow);
+	border-collapse: collapse;
+}
+#dark {
+	background-color: var(--border);
+}
+caption {
+	padding: 10px;
+	caption-side: bottom;
+	color: var(--back);
+	font-size: 1rem;
+}
+
+tr:first-child th {
+	background-color: var(--back);
+	color: var(--zebra);
+}
+
+.highlight{
+	background-color: var(--borderlight);	
+}
+th, td {
+	padding: 7px 15px;
+	border: 1px solid var(--borderlight);
+}
+
+th {
+	background-color: var(--back2);
+	font-size: larger;
+}
+
+td {
+	text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: var(--zebra);
+}
+
+footer{
+	margin-top: 30px;
+	font-size: small;
+	color: var(--foredark);
+}

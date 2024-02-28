@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Phoebe Lin">
+    <meta name="description" content="WDD230-Web Frontend Development-this page is HTML Tables for Data Presentation - Sin Yi Lin.">
+    <title>HTML Tables for Data Presentation</title>
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="WDD230-Web Frontend Development-this page is HTML Tables for Data Presentation">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/ballet.jpg">
+    <meta property="og:url" content="https://stdog210420.github.io/wdd230/">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/tablebuild.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1>HTML Tables for Data Presentation</h1>
+
+        </header>
+        <main>
+            <table>
+                <caption>Table 1: Account Feature Comparison</caption>
+                <thead>
+                    <tr>
+                        <th id="dark" colspan="4" scope="colgroup">ACME Wildwest Services</th>
+                    </tr>
+                    <tr>
+                        <th scope="col" id="dark"></th>
+                        <th scope="col">Basic</th>
+                        <th scope="col">Premium</th>
+                        <th scope="col">Deluxe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Feature 1</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Feature 2</td>
+                        <td class="highlight">❌</td>
+                        <td class="highlight">✔️</td>
+                        <td class="highlight">✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Feature 3</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>✔️</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </main>
+        <footer>
+            <p id="name"><span>&copy;<span id="year"> </span> |</span><span>Phoeb Lin |</span><span>This is a project for WDD 230 |</span><span id="lastModified">Last Modified</span></p>
+        </footer>
+    </div>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/mode.js"></script>
+    <script src="scripts/windchill.js"></script>
+</body>
+</html>
