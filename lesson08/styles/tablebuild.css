@@ -26,7 +26,7 @@ table {
 	box-shadow: 0 0 10px var(--shadow);
 	border-collapse: collapse;
 }
-#dark {
+.dark {
 	background-color: var(--border);
 	border: var(--border);
 }
