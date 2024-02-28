@@ -28,6 +28,7 @@ table {
 }
 #dark {
 	background-color: var(--border);
+	border: var(--border);
 }
 caption {
 	padding: 10px;
