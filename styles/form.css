@@ -124,7 +124,7 @@ input::placeholder {
 
 
 #keyphrase:invalid, #keyphrase2:invalid {
-	background-color: var(--secondary-color)0f3;
+	background-color: var(--secondary-color);
 	animation: shaketext 500ms;
 }
 
