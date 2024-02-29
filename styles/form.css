@@ -234,15 +234,12 @@ footer {
     text-align: center;
 }
 
-/* @-moz-document url-prefix() {
-    .star-rating input:checked ~ label:before {
-    font-size: 36px;
-    line-height: 21px;
-    }
-  }  */
 /* mobile view */
 @media screen and (max-width: 500px){
 
+    main{
+        max-width: 350px;
+    }
     .me {
         margin:0 auto;
         padding: 5px 5px;
@@ -306,5 +303,9 @@ footer {
         background-color: var(--secondary-color);
         color: var(--primary-color);
         /* width:100%; */
+    }
+
+    .form, #rangevalue {
+        font-size: 10px;       
     }
 }
