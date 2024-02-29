@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Georgia:wght@600&family=Merienda:wght@900&display=swap&family=Great+Vibes&display=swap');
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #2e517f  ;
+    --secondary-color: #fff ;
+    --third-color: black;
+    --fourth-color: navy;
+      /* change the values below to your chosen font(s) */
+    --heading-font: "Montserrat", "Lato", Helvetica;
+    --paragraph-font: "Open Sans", Helvetica, sans-serif;}
+
 
 body {
-    background-color: black;
+    background-color: var(--third-color);
     /* font-size:30px; */
 }
 
 header {
-    background-color: #fff;
+    background-color:  var(--secondary-color);
     border-radius: 15px 15px 0px 0px; 
 }
 
@@ -32,7 +42,9 @@ h1{
 main {
 	margin: 20px auto;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	background-color: #fff;
+	background-color: var(--secondary-color);
+    width: 500px;
+    border-radius: 15px;
 }
 #menu {
     display: none; /* hide hamburger button */
@@ -41,8 +53,8 @@ main {
 
 nav {
     margin: 0;
-    background-color: #2e517f;
-    color: #2e517f;
+    background-color: var(--primary-color);
+    color: var(--primary-color);
     font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     align-items: center;
@@ -53,8 +65,8 @@ nav {
 
 
 nav a {
-    background-color: #2e517f;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     width: 100%;
     text-align: center;
     padding: 10px;
@@ -62,8 +74,8 @@ nav a {
 }
 
 nav a:hover{
-    /* border: 1px solid#ffffff; */
-    background-color: #fff;
+    /* border: 1px solidvar(--secondary-color)fff; */
+    background-color: var(--secondary-color);
     color: rgb(46, 81, 127);
     /* width: 100%; */
 }
@@ -72,7 +84,7 @@ form {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-    align-items: center;
+    align-items: left;
     justify-content: center;
 }
 
@@ -87,7 +99,7 @@ select {
 	padding: 10px;
 	margin-bottom: 10px;
 	border: 0;
-	border-bottom: 1px solid navy;
+	border-bottom: 1px solid var(--fourth-color);
 	font-size: 1.5rem;
 }
 button {
@@ -97,7 +109,7 @@ button {
 }
 
 label {
-	color: navy;
+	color: var(--fourth-color);
 	font-size: 1.5rem;
 }
 
@@ -112,7 +124,7 @@ input::placeholder {
 
 
 #keyphrase:invalid, #keyphrase2:invalid {
-	background-color: #fff0f3;
+	background-color: var(--secondary-color)0f3;
 	animation: shaketext 500ms;
 }
 
@@ -127,7 +139,7 @@ input::placeholder {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 40px auto;
     position: relative;
   }
@@ -162,14 +174,38 @@ input::placeholder {
     content:"\2605";
     font-size: 1.5em;
   }
-  .confirmation {
-    display: block;
-    border-radius: 20px;
-    background-color: #2e517f;
-    text-align: center;
-    margin-top: 50px;
-    padding: 50px;
-    color: #fff;
+/*the range value.*/
+#rangevalue {
+	width: 180px;
+	margin: 5px;
+}
+
+#rangevalue {
+	font-size: 2rem;
+	color: var(--fourth-color);
+}
+
+#range-rating{
+    margin: 0 ;
+}
+#rangevalues {
+	display: flex;
+	margin: 0 ;
+	width: 200px;
+}
+
+#rangevalues option {
+    margin: 0 auto;
+	flex: 1 1 auto;
+}
+.confirmation {
+display: block;
+border-radius: 20px;
+background-color: var(--primary-color);
+text-align: center;
+margin-top: 50px;
+padding: 50px;
+color: var(--secondary-color);
 }
 .confirmation::after{
     content: "👩🏻‍🦳👨🏻‍🦳";
@@ -177,23 +213,24 @@ input::placeholder {
     margin-bottom: 50px;
 }
 #btnSubmit{
+    margin: 10px;
     display: block;
     background-color: #395d8d;
-    color: #fff;
+    color: var(--secondary-color);
     box-shadow: 0 0 0.5rem hsl(214, 47%, 34%, 0.9);
     border-radius: 20px; 
-    border-color: #2e517f;
+    border-color: var(--primary-color);
     text-decoration: none;
 }
 #btnSubmit:focus{
-    color: #fff;
+    color: var(--secondary-color);
 }
 footer {
     margin-top: 10px;
     width: 100%;
     height: 100%;
     padding:2px;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     text-align: center;
 }
 
@@ -223,8 +260,8 @@ footer {
         text-decoration: none;
         padding: .5rem .75rem;
         border: 0;
-        background: #2e517f;
-        color: #fff;
+        background: var(--primary-color);
+        color: var(--secondary-color);
         display: block;
         position: absolute;/*將menu定位為絕對位置*/
         top: 0; /*頂部距離為0 */
@@ -242,8 +279,8 @@ footer {
     nav {
         margin: 1rem auto;
         align-items: center;
-        background-color: #2e517f;
-        color: #2e517f;
+        background-color: var(--primary-color);
+        color: var(--primary-color);
         font-size: 30px;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
@@ -257,17 +294,17 @@ footer {
     }
     
     nav a {
-        /* border: 1px solid#ffffff; */
+        /* border: 1px solidvar(--secondary-color)fff; */
         display: none;
-        background-color: #2e517f;
-        color: #fff;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
         text-decoration: none;
         width:fit-content;
     }
     nav a:hover{
-        /* border: 1px solid#ffffff; */
-        background-color: #fff;
-        color: #2e517f;
+        /* border: 1px solidvar(--secondary-color)fff; */
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
         /* width:100%; */
     }
 }

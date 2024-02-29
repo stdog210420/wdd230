@@ -54,7 +54,7 @@
                 <input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" required placeholder="Please enter a valid email address">
             </div>
             <div class="form">
-                <label>Please rate your satisfaction(1~10)</label>
+                <label>  Please rate your satisfaction with this page</label>
                 <div class="star-rating">          
                     <input type="radio" id="star-a" name="stars" value="10"><label for="star-a"></label>
                     <input type="radio" id="star-b" name="stars" value="9"><label for="star-b"></label>
@@ -66,6 +66,24 @@
                     <input type="radio" id="star-h" name="stars" value="3"><label for="star-h"></label>
                     <input type="radio" id="star-i" name="stars" value="2"><label for="star-i"></label>
                     <input type="radio" id="star-j" name="stars" value="1"><label for="star-j"></label>
+                </div>
+            </div>
+            <div class="form">
+                <label>  Please score this page</label>
+                <div id="rangevalue">1</div>     
+                    <input type="range" id="range-rating" name="rangevalues" min="1" max="10" value="0" step="1" list="rangevalues">
+                    <datalist id="rangevalues">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </datalist>
                 </div>
             </div>
             <div class="form">
