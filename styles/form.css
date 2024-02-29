@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Georgia:wght@600&family=Merienda:wght@900&display=swap&family=Great+Vibes&display=swap');
 
 body {
-
     background-color: black;
     /* font-size:30px; */
 }
@@ -30,10 +29,15 @@ h1{
     font-family: "Merienda", Helvetica, sans-serif;
     font-size: 2rem;
 }
-
+main {
+	margin: 20px auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+}
 #menu {
     display: none; /* hide hamburger button */
 }
+
 
 nav {
     margin: 0;
@@ -63,117 +67,142 @@ nav a:hover{
     color: rgb(46, 81, 127);
     /* width: 100%; */
 }
-
-
-.hero {
-	margin: 10px auto;
+form {
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
 	position: relative;
-	border: 1px solid rgba(46, 81, 127, 0.1);
     align-items: center;
     justify-content: center;
 }
 
-.hero img {
-	object-fit: cover;
-}
-
-.herolabel {
-	position: absolute;
-	background: radial-gradient(#fff, rgb(46, 81, 127));
-	border: 1px solid rgba(0,0,0,.75);
-	opacity: 0.75;
-	/* Buenas */
-}
-
-.herolabel p {
-	margin: 0;
-	font-weight: 700;
+h1 {
+	margin: 20px;
 	font-size: 1.5rem;
-	font-family:"Great Vibes", serif;
 }
 
-main {
-    width: 100%;
-    height: 100%;
-    border-radius: 0px 0px 15px 15px; 
-    background-color: #fff;
-    z-index: -1;
+input,
+textarea,
+select {
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 0;
+	border-bottom: 1px solid navy;
+	font-size: 1.5rem;
+}
+button {
+	padding: 10px;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
 
+label {
+	color: navy;
+	font-size: 1.5rem;
 }
-h2 {
-    margin:0 auto;
-    padding: 20px 20px;
-    text-align: center;
-    font-size: 30px;
-    font-family: "Merienda", Times, Helvetica;
-    color: black;
+
+input:focus,
+textarea:focus {
+	outline: none;
 }
-.content{
+
+input::placeholder {
+	font-size: 16px;
+}
+
+
+#keyphrase:invalid, #keyphrase2:invalid {
+	background-color: #fff0f3;
+	animation: shaketext 500ms;
+}
+
+
+/* .form::before {
+	font-size: 10px;
+	content: "*️⃣";
+} */
+
+/* use reverse flexbox to take advantage of flex-direction: reverse */
+.star-rating {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-decoration: none;
-}
-
-.card {
-    margin:0 auto;
-    padding: 10px 10px;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px;
-    color: #2e517f;
-}
-
-
-ul li {
-    margin:0 auto;
-    padding: 10px 10px;
-    text-align: left;
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    /* color: gray; */
-    overflow: hidden;
-}
-
-ul a{
-    text-decoration: none;
-}
-ul a:hover{
-    text-decoration: dashed;   
-}
-
-h3 {
-    margin-top: 0;
-    padding-top: 0px;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 40px auto;
+    position: relative;
+  }
+  /* hide the inputs */
+  .star-rating input {
+    display: none;
+  }
+  /* set properties of all labels */
+  .star-rating > label {
+    transition: 0.2s ease;
+	color: gold;
+  }
+  /* give label a hover state */
+  .star-rating label:hover {
+    color: #ff69b4;
+    transition: 0.2s ease;
+  }
+  .star-rating label:active::before {
+    transform:scale(1.1);
+  }
+  
+  /* set shape of unselected label */
+  .star-rating label::after {
+    content: "\2606";
+    position: absolute;
+    top: 0px;
+    line-height: 16px;
+    font-size: 1.5em;
+  }
+  /* set full star shape for checked label and those that come after it */
+  .star-rating input:checked ~ label:after {
+    content:"\2605";
+    font-size: 1.5em;
+  }
+  .confirmation {
+    display: block;
+    border-radius: 20px;
     background-color: #2e517f;
-    padding: 10px 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #fff;
-    font-size: 30px;
     text-align: center;
+    margin-top: 50px;
+    padding: 50px;
+    color: #fff;
 }
-
+.confirmation::after{
+    content: "👩🏻‍🦳👨🏻‍🦳";
+    font-size: 10rem;
+    margin-bottom: 50px;
+}
+#btnSubmit{
+    display: block;
+    background-color: #395d8d;
+    color: #fff;
+    box-shadow: 0 0 0.5rem hsl(214, 47%, 34%, 0.9);
+    border-radius: 20px; 
+    border-color: #2e517f;
+    text-decoration: none;
+}
+#btnSubmit:focus{
+    color: #fff;
+}
 footer {
     margin-top: 10px;
     width: 100%;
     height: 100%;
     padding:2px;
     background-color: #fff;
+    text-align: center;
 }
 
-iframe{
-    border:0;
-    margin-top: 10px;
-    width: 100%;    
-    padding:2px;
-}
-#name{
-    display: flex;
-    /* text-align: center; */
-    align-items: center;
-    justify-content: center;
-}
-
+@-moz-document url-prefix() {
+    .star-rating input:checked ~ label:before {
+    font-size: 36px;
+    line-height: 21px;
+    }
+  } 
 /* mobile view */
 @media screen and (max-width: 500px){
 
@@ -240,21 +269,5 @@ iframe{
         background-color: #fff;
         color: #2e517f;
         /* width:100%; */
-    }
-
-    .herolabel{
-        top: 50px;
-        left: 30px;
-        padding: 0.25rem;
-        box-shadow: 0 0 1rem #fff;
-    }
-    .herolabel p {
-        margin: 0;
-        padding: .2rem;
-        font-weight: 700;
-        font-size: 1rem;
-    }
-    main{
-        max-width: 400vw;
     }
 }

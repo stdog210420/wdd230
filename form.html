@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Built Activity</title>
+    <meta name="author" content="Phoebe Lin">
+    <meta name="description" content="Form built">
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="Form built">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://imgur.com/DepUPO3">
+    <meta property="og:url" content="https://stdog210420.github.io/wdd230/">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <section class="me">
+            <img src="images/me.webp" alt="A photo of myself">
+            <h1>Phoebe Lin</h1>     
+        </section>
+        <nav class="navigation">
+            <a href="https://stdog210420.github.io/wdd230/"  title="Home">Home</a>
+            <a href="lesson03/chamber-site-plan.html"  title="Site Plan">Site Plan</a>
+            <a href="chamber/"  title="Chamber">Chamber</a>
+            <a href="https://www.byui.edu/"  title="BYU-Idaho">BYU-Idaho</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng" title="Scripture">Scripture</a>
+        </nav>        
+        <button id="menu"></button>
+    </header>
+
+    <main>
+        <form  action="record.html" method="get" class="formbuilt">
+            <div class="form">
+              <label for="name">*️⃣Enter your name: </label>
+              <input type="text" name="name" id="name" required placeholder="Please enter your full name">
+            </div>
+            <div class="form">
+              <label for="keyphrase">*️⃣Enter your password:</label>
+              <input type="text" name="keyphrase" id="keyphrase" pattern="[a-zA-Z -]{8,}" required placeholder="At least six characters long. No numbers.">
+            </div>
+            <div class="form">
+                <label for="keyphrase2">*️⃣Re-enter your password: </label>
+                <input type="text" name="keyphrase2" id="keyphrase2" pattern="[a-zA-Z -]{8,}" required placeholder="At least six characters long. No numbers.">
+            </div>
+            <div class="form">
+                <label for="email" class="email">*️⃣Email address:</label>
+                <input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" required placeholder="Please enter a valid email address">
+            </div>
+            <div class="form">
+                <label>Please rate your satisfaction(1~10)</label>
+                <div class="star-rating">          
+                    <input type="radio" id="star-a" name="stars" value="10"><label for="star-a"></label>
+                    <input type="radio" id="star-b" name="stars" value="9"><label for="star-b"></label>
+                    <input type="radio" id="star-c" name="stars" value="8"><label for="star-c"></label>
+                    <input type="radio" id="star-d" name="stars" value="7"><label for="star-d"></label>
+                    <input type="radio" id="star-e" name="stars" value="6"><label for="star-e"></label>
+                    <input type="radio" id="star-f" name="stars" value="5"><label for="star-f"></label>
+                    <input type="radio" id="star-g" name="stars" value="4"><label for="star-g"></label>
+                    <input type="radio" id="star-h" name="stars" value="3"><label for="star-h"></label>
+                    <input type="radio" id="star-i" name="stars" value="2"><label for="star-i"></label>
+                    <input type="radio" id="star-j" name="stars" value="1"><label for="star-j"></label>
+                </div>
+            </div>
+            <div class="form">
+                <button id="btnSubmit" type="submit">Subscribe</button>
+                <!-- <input type="hidden" value="43aster"> -->
+            </div>
+          </form>
+    </main>
+    <footer>
+        <p id="name"><span>&copy;<span id="year"> </span> |</span><span>Phoeb Lin |</span><span>Tainan City, Taiwan |</span><span id="lastModified">Last Modified</span></p>
+    </footer>
+ 
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/pagevisit.js"></script>
+</body>
+</html>
