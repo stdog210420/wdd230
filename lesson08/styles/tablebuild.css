@@ -26,10 +26,19 @@ table {
 	box-shadow: 0 0 10px var(--shadow);
 	border-collapse: collapse;
 }
+
+/*control the the first column tiltle which is empty*/
 .dark {
 	background-color: var(--border);
 	border: var(--border);
 }
+
+/*the table's title at the beginner*/
+tr:first-child th {
+	background-color: var(--border);
+	color: var(--zebra);
+}
+/*table's name at the bottom*/
 caption {
 	padding: 10px;
 	caption-side: bottom;
@@ -37,14 +46,7 @@ caption {
 	font-size: 1rem;
 }
 
-tr:first-child th {
-	background-color: var(--back);
-	color: var(--zebra);
-}
 
-.highlight{
-	background-color: var(--borderlight);	
-}
 th, td {
 	padding: 7px 15px;
 	border: 1px solid var(--borderlight);
@@ -59,6 +61,9 @@ td {
 	text-align: center;
 }
 
+tbody tr:nth-child(even) {
+	background-color:  var(--borderlight);
+}
 tbody tr:nth-child(odd) {
 	background-color: var(--zebra);
 }
