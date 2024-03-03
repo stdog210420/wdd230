@@ -33,7 +33,7 @@
         display: block;
         width: fit-content;
     }
-	.home-grid{
+	.home-grid, .content{
 		padding: 10px;
 		width: 100%;
 		display: grid;
