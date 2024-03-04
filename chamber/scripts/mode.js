@@ -20,9 +20,7 @@ modeButton.addEventListener("click", () => {
 		directory.style.color = "#3C0211";
         join.style.color = "#3C0211";
         namemark.style.color = "#3C0211";
-		// level.style.color = "#3C0211";
 		legend.style.color = "#3C0211";
-		// label.style.color = "#3C0211";
 		h2.style.color = "#1F4736";
 		h2.style.background = "#fff";
 
