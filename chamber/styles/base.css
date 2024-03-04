@@ -309,9 +309,9 @@ footer p{
 
 /*----------- FORM STYLING--------*/
 .form fieldset, .benefits{
-  margin: 1rem 0;
+  margin: 1rem 2%;
   border-radius: 6px;
-  padding: .5rem 2%;
+  padding: .5rem;
   font-size: 1rem;
 }
 
