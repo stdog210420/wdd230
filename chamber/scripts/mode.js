@@ -33,7 +33,6 @@ modeButton.addEventListener("click", () => {
 
 		// Loop through each label element
 		label.forEach(label => {
-			// 將文字顏色設置為紅色
 			label.style.color = "#3C0211";
 		});
 
@@ -47,6 +46,14 @@ modeButton.addEventListener("click", () => {
 		directory.style.color = "#FEECED";
         join.style.color = "#FEECED";
         namemark.style.color = "#FEECED";
+		level.forEach(level => {
+			level.style.color="#fff";
+		})
+
+		// Loop through each label element
+		label.forEach(label => {
+			label.style.color = "#fff";
+		});
 		modeButton.textContent = "🕶️";
 	}
 });
