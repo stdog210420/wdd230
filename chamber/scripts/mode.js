@@ -46,6 +46,9 @@ modeButton.addEventListener("click", () => {
 		directory.style.color = "#FEECED";
         join.style.color = "#FEECED";
         namemark.style.color = "#FEECED";
+		legend.style.color = "#fff";
+		h2.style.color = "#fff";
+		h2.style.background = "#1F4736";
 		level.forEach(level => {
 			level.style.color="#fff";
 		})
