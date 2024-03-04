@@ -283,7 +283,7 @@ button{
   width: 100%;
 }
 .formarea{
-  padding-left: 40px;
+  margin-left: 20px;
   grid-column: 1/2;
   grid-row: 4/5;
   justify-content: center;
