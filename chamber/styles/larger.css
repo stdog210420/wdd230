@@ -72,6 +72,9 @@
 		font-weight: bold;
 		font-size: 1.5rem;
 	}
+	.level h2{
+		font-size: 1.5rem;
+	}
 	.benefits{
 		margin-left: 20px;
 		grid-column: 1/span 2;
