@@ -6,6 +6,10 @@ const discover= document.querySelector("#discover");
 const directory= document.querySelector("#directory");
 const join= document.querySelector("#join");
 const namemark= document.querySelector("#name");
+const level= document.querySelectorAll(".level");
+const legend= document.querySelector(".form legend");
+const label=document.querySelectorAll(".form label");
+const h2= document.querySelector("#membership h2");
 
 modeButton.addEventListener("click", () => {
 	if (modeButton.textContent.includes("🕶️")) {
@@ -16,6 +20,23 @@ modeButton.addEventListener("click", () => {
 		directory.style.color = "#3C0211";
         join.style.color = "#3C0211";
         namemark.style.color = "#3C0211";
+		// level.style.color = "#3C0211";
+		legend.style.color = "#3C0211";
+		// label.style.color = "#3C0211";
+		h2.style.color = "#1F4736";
+		h2.style.background = "#fff";
+
+		// Loop through each level element
+		level.forEach(level => {
+			level.style.color="#3C0211";
+		})
+
+		// Loop through each label element
+		label.forEach(label => {
+			// 將文字顏色設置為紅色
+			label.style.color = "#3C0211";
+		});
+
 		modeButton.textContent = "🔆";
 	} else {
 		body.style.background = "#1F4736";
