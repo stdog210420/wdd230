@@ -244,11 +244,7 @@ button{
 	border: 1px solid var(--secondary-color);
 	box-shadow: 0 0 10px var(--secondary-color);
 }
-/* label p{
-  font-family: var(--paragraph-font);
-  font-size: 1em;
-  color: var(--accent1-color);
-} */
+
 .event-img{
   box-shadow: 0 0 10px var(--secondary-color);  
   width: 50%;
@@ -300,7 +296,7 @@ footer p{
 /*----------- FORM STYLING--------*/
 .form fieldset, .benefits{
   margin: 2rem 0;
-  border: 1px solid #ddd;
+  border: 1px solid var(--secondary-color);
   border-radius: 6px;
   padding: .5rem 2%;
   font-size: 1rem;
@@ -315,7 +311,7 @@ footer p{
 .form label, .level{
   display:block;
   padding-top: 1rem;
-  color: var(--secondary-color);
+  color: #fff;
   font-size: 1rem;
 }
 
@@ -343,10 +339,11 @@ footer p{
 .form input[type="email"],
 .form input[type="url"],
 .form input[type="date"],
+.form textarea,
 .form select,
 .form input[type="number"]
 {
-  background-color: #f6f4f4;
+  background-color: #fff;
   display: block;
   border: solid 1px #999;
   border-radius: 6px;
@@ -356,16 +353,10 @@ footer p{
   max-width: 400px;
 }
 
-.form input[type="radio"],
-.form input[type="checkbox"]
-{
-  margin-right: 6px;
-}
-
 .form input[type="submit"]
 {
   border: none;
-  background-image: linear-gradient(#8e1212,  var(--accent1-color));
+  background-image: linear-gradient(#dc1818,  var(--accent1-color));
   color: #fff;
   border-radius: 6px;
   padding: .8rem;
@@ -380,7 +371,7 @@ footer p{
 }
 
 .form input:required:valid{
-  border-left: solid 8px green
+  border-left: solid 8px green;
 }
 #footer-grid{
   margin: 0 10px 0 10px;
@@ -390,7 +381,7 @@ footer p{
 
 }
 /* thank you page ***********************************/
-#thank, footer{
+#thank, #thankfooter{
   margin-top: 10px;
   background-color: #fff;
   text-align: center;
