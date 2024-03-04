@@ -298,31 +298,31 @@ footer p{
 }
 
 /*----------- FORM STYLING--------*/
-.wf1 fieldset, .benefits{
+.form fieldset, .benefits{
   margin: 2rem 0;
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: .5rem 2%;
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
-.wf1 legend {
+.form legend {
   color: #fff;
   padding: 0.5rem;
+  font-size: 1.5rem;
 }
 
-.wf1 label, .level{
+.form label, .level{
   display:block;
   padding-top: 1rem;
   color: var(--secondary-color);
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 .level li{
   margin: 1rem 0 1rem 1rem;
   padding-left: 1rem;
   line-height: 1rem;
-  color: var(--secondary-color);
 }
 
 .level li::marker{
@@ -338,13 +338,13 @@ footer p{
   border-radius: 15px;
 }
 
-.wf1 input[type="text"],
-.wf1 input[type="tel"],
-.wf1 input[type="email"],
-.wf1 input[type="url"],
-.wf1 input[type="date"],
-.wf1 select,
-.wf1 input[type="number"]
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="email"],
+.form input[type="url"],
+.form input[type="date"],
+.form select,
+.form input[type="number"]
 {
   background-color: #f6f4f4;
   display: block;
@@ -356,13 +356,13 @@ footer p{
   max-width: 400px;
 }
 
-.wf1 input[type="radio"],
-.wf1 input[type="checkbox"]
+.form input[type="radio"],
+.form input[type="checkbox"]
 {
   margin-right: 6px;
 }
 
-.wf1 input[type="submit"]
+.form input[type="submit"]
 {
   border: none;
   background-image: linear-gradient(#8e1212,  var(--accent1-color));
@@ -375,11 +375,11 @@ footer p{
   box-shadow: 1px 1px 4px #999;
 }
 
-.wf1 input:required{
+.form input:required{
   border-left: solid 8px red;
 }
 
-.wf1 input:required:valid{
+.form input:required:valid{
   border-left: solid 8px green
 }
 #footer-grid{
