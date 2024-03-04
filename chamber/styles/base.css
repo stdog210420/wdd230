@@ -278,14 +278,13 @@ button{
 
 .benefits{
   margin-left: 20px;
-  grid-column: 1/2;
+
   width: 100%;
 }
 .formarea{
   padding-left: 40px;
   justify-content: center;
   align-items: center;
-  grid-column: 2/3;
   width: 100%;
   max-width: 500px;
 }

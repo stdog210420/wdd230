@@ -77,6 +77,21 @@
 		font-weight: bold;
 		font-size: 1.5rem;
 	}
+	.benefits{
+		margin-left: 20px;
+		grid-column: 1/span 2;
+		grid-row: 3/4;
+		width: 100%;
+	  }
+	  .formarea{
+		margin-right: 20px;
+		justify-content: center;
+		align-items: center;
+		grid-column: 3/4;
+		grid-row: 3/4;
+		width: 100%;
+		max-width: 400px;
+	  }
 	#footer-grid{
 		padding-top: 30px;
 		font-family: var(--paragraph-font);
