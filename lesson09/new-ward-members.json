@@ -1,0 +1,37 @@
+{
+    "wardInformation" :
+      {
+        "familyName": "Lin",
+        "moveInDate": "1997-09-26",
+        "numberOfPeople": 5,
+        "visitedByBishopric": true,
+        "familyMembers": 
+        [
+            {
+                "name": "Jin Xing",
+                "gender": "Male",
+                "birthdate": "1955-04-08"
+            },
+            {
+                "name": "Tsui Yun",
+                "gender": "Female",
+                "birthdate": "1963-10-20"
+            },
+            {
+                "name": "Bo Zhi",
+                "gender": "Male",
+                "birthdate": "1987-02-19"
+            },
+            {
+                "name": "Sin Yi",
+                "gender": "Female",
+                "birthdate": "1988-07-23"
+            },
+            {
+                "name": "Guan Ting",
+                "gender": "Male",
+                "birthdate": "1990-10-14"
+            }
+        ]
+      }
+  }

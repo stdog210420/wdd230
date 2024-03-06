@@ -72,6 +72,24 @@
 		font-weight: bold;
 		font-size: 1.5rem;
 	}
+
+	.pictures{
+		margin: 20px;
+		grid-column: 1/span 2;
+		grid-row: 3/4;
+	  }
+	  .pictures img{
+		width: 80%;  
+		height: 80%;  
+	  }
+	  .victors{
+		margin-left: 20px;
+		grid-column: 3/4;
+		grid-row: 3/4;
+		text-align: left;
+		width: 100%;
+		max-width: 400px;
+	  }
 	.level h2{
 		font-size: 1.5rem;
 	}
