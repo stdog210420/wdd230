@@ -1,0 +1,145 @@
+{
+    "lessons": 
+    [
+      {
+        "lesson": "01",
+        "links": [
+          {
+            "url":"lesson01/holygrail.html",
+            "title":"Holy Layout"
+          },
+          {
+            "url":"lesson01/design.html",
+            "title":"JS Pen"
+          }
+        ]
+      },
+      {
+        "lesson": "02",
+        "links": [
+          {
+            "url":"lesson02/media-query.html",
+            "title":"Media Query"
+          },
+          {
+            "url":"lesson02/design-principles.html",
+            "title":"Design Principle Document"
+          }
+        ]
+      },
+      {
+        "lesson": "03",
+        "links": [
+          {
+            "url":"lesson03/images/css_combination.webp",
+            "title":"CSS Combinators"
+          },
+          {
+            "url":"https://codepen.io/Phoebe-Lin-the-bashful/pen/VwRMdNQ",
+            "title":"CSS Pseudo-elements"
+          },
+          {
+            "url":"https://codepen.io/Phoebe-Lin-the-bashful/pen/bGZojdX",
+            "title":"Responsive Hamburger Menu"
+          }
+        ]
+      },
+      {
+        "lesson": "04",
+        "links": [
+          {
+            "url":"https://codepen.io/Phoebe-Lin-the-bashful/pen/eYXVoLG",
+            "title":"CSS Pseudo-Classes"
+          }
+        ]
+      },
+      {
+        "lesson": "05",
+        "links": [
+          {
+            "url":"https://stdog210420.github.io/wdd230/lesson05/bom.html",
+            "title":"Book of Mormon Favorite Chapters Application"
+          }
+        ]
+      },
+      {
+        "lesson": "06",
+        "links": [
+          {
+            "url":"https://stdog210420.github.io/wdd230/lesson06/images/landscape.webp",
+            "title":"WebP"
+          },
+          {
+            "url":"https://stdog210420.github.io/wdd230/lesson06/responsive-images.html",
+            "title":"Responsive-Images"
+          }
+        ]
+      },
+      {
+        "lesson": "07",
+        "links": [
+          {
+            "url":"https://stdog210420.github.io/wdd230/lesson07/lazyload.html",
+            "title":"Lazy Loading Demostration"
+          },
+          {
+            "url":"https://codepen.io/Phoebe-Lin-the-bashful/pen/JjzzPzj",
+            "title":"localStorage Demonstration"
+          },
+          {
+            "url":"https://stdog210420.github.io/wdd230/lesson07/bom.html",
+            "title":"Web Storage API - bom enhancement"
+          }
+        ]
+      },
+      {
+        "lesson": "08",
+        "links": [
+          {
+            "url":"https://stdog210420.github.io/wdd230/lesson08/tablebuild.html",
+            "title":"HTML Tables"
+          },
+          {
+            "url":"https://stdog210420.github.io/wdd230/form.html",
+            "title":"Form"
+          },
+          {
+            "url":"https://stdog210420.github.io/wdd230/lesson08/Form-start",
+            "title":"Form-start"
+          }
+        ]
+      },
+      {
+        "lesson": "09",
+        "links": [
+          {
+            "url":"https://stdog210420.github.io/wdd230/lesson09/new-ward-members.json",
+            "title":"JSON"
+          },
+          {
+            "url":"https://stdog210420.github.io/wdd230/lesson09/prophets.html",
+            "title":"The Fetch API"
+          }
+        ]
+      },
+
+      {
+        "lesson": "10",
+        "links": [
+          {
+            "url":"",
+            "title":""
+          },
+          {
+            "url":"",
+            "title":""
+          },
+          {
+            "url":"",
+            "title":""
+          }
+        ]
+      }
+    ]
+}
+
