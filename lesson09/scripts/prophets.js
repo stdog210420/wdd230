@@ -25,9 +25,13 @@ const cards = document.querySelector('#cards');
             let fullName = document.createElement("h2"); 
             //create an img element and store it in a variable named "portrait", 
             let portrait = document.createElement("img");  
-    
+            let birthday= document.createElement("p");
+            let birthplace = document.createElement("p");    
+        
             // Build the h2 content out to show the prophet's full name
             fullName.textContent = `${prophet.name} ${prophet.lastname}`; // fill in the blank
+            birthday.textContent = `Date of Birth: ${prophet.birthdate}`;
+            birthplace.textContent = `Place of Birth: ${prophet.birthplace}`;
             // Build the image portrait by setting all the relevant attributes  
             portrait.setAttribute('src', prophet.imageurl);
             portrait.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastname}`); // fill in the blank
@@ -36,6 +40,8 @@ const cards = document.querySelector('#cards');
             portrait.setAttribute('height', '440');        
             // Append the section(card) with the created elements
             card.appendChild(fullName); //fill in the blank
+            card.appendChild(birthday);
+            card.appendChild(birthplace);
             card.appendChild(portrait);
             cards.appendChild(card);
          }); // end of arrow function and forEach loop        

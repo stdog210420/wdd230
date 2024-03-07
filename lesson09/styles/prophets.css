@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Georgia:wght@600&family=Merienda:wght@900&display=swap&family=Great+Vibes&display=swap');
+
 body {
   font-size: 16px;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: "Georgia", Helvetica, sans-serif;
 }
 
 header,
@@ -13,14 +14,10 @@ footer {
 
 main {
   margin-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 h1 {
-  color: #000;
-  border-bottom: 1px solid #eee;
+  color: rgb(2, 2, 124);
   text-shadow: 0 0 15px #777;
   text-align: center;
 }
@@ -30,44 +27,57 @@ h1::after{
   content: "🧔🏻";
 }
 
-h2 {
-  color: navy;
-  margin: 0 0 1rem 0;
-	border-bottom: 1px solid #bbb;
-  text-align: center;
+#cards {
+  padding: 10px;
+  background-color: #ccc;
+  box-shadow: 0 0 30px #333;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
-
+h2 {
+  color: navy;
+  margin: 1rem 0 1rem 0;
+	/* border-bottom: 1px solid #bbb; */
+  text-align: center;
+  /* letter-spacing: 1px; */
+  font-size: 1.5rem;
+  max-width: 240px;
+  width: fit-content;
+  font-weight: 700;
+}
 
 section {
   margin: 0.25rem;
   padding: 0.35rem;
-  background-color: #eee;
-  border: 1px solid #bbb;
+  background-color: rgb(160, 166, 189);
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+section > p {
+  margin: 0 auto 10px;
+  padding: 1px;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
 img {
+  margin: 10px;
   width: auto;
-	max-width: 325px;
-  box-shadow: 0 0 30px #777;
-  height: 200px;
-  border: 1px solid #333;
-}
-#card {
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-  border: 1px solid #ccc;
-  background-color: lightyellow;
-  padding: 0.25rem;
+	max-width: 320px;
+  border-radius: 3px; /* 可选：添加圆角 */
+  box-shadow: 0 0 30px #000;
+  height: 320px;
+  display: block;
 
 }
-
-#card > section {
-  width: 0.75rem;
-  height: 0.75rem;
-  border: 1px solid #bbb;
+li > img {
+  width: auto;
+  height: 30px;
 }
+
 footer {
   border-top: 1px solid #555;
   padding: 20px;
