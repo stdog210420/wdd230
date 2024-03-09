@@ -1,4 +1,4 @@
-const linksURL = "https://stdog210420.github.io/wdd230/chamber/data/members.json";
+const url = "https://stdog210420.github.io/wdd230/chamber/data/members.json";
 
 const cards = document.querySelector('.card');
 
@@ -9,5 +9,7 @@ async function getMemberData() {
     const data  = await response.json();
     //Add a console.table() expression method to check the data response at this point in the console window.
     // displayMembers(data.members); // note that we reference the prophets array of the JSON data object, not just the object
-    console.table(data.members);// temporary testing of data retreival
+    console(data);// temporary testing of data retreival
 }  
+
+getMemberData();
