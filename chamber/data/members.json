@@ -1,0 +1,68 @@
+
+{
+  "companies": [
+    {
+      "name": "ABC Corporation",
+      "address": "123 Main Street, Cityville, USA",
+      "phone": "+1 (123) 456-7890",
+      "website": "https://www.abccorp.com",
+      "image": "abc_corp_logo.png",
+      "membership_level": "Gold",
+      "other_information": "Leading provider of innovative solutions for the tech industry."
+    },
+    {
+      "name": "XYZ Enterprises",
+      "address": "456 Elm Avenue, Townsville, USA",
+      "phone": "+1 (234) 567-8901",
+      "website": "https://www.xyzenterprises.com",
+      "image": "xyz_enterprises_logo.png",
+      "membership_level": "Silver",
+      "other_information": "Specializing in sustainable energy solutions and eco-friendly products."
+    },
+    {
+      "name": "Smith & Sons Manufacturing",
+      "address": "789 Oak Street, Villageton, USA",
+      "phone": "+1 (345) 678-9012",
+      "website": "https://www.smithandsonsmanufacturing.com",
+      "image": "smith_and_sons_logo.png",
+      "membership_level": "Bronze",
+      "other_information": "Family-owned business with a legacy of craftsmanship in manufacturing."
+    },
+    {
+      "name": "Global Solutions Inc.",
+      "address": "101 Maple Drive, Cityborough, USA",
+      "phone": "+1 (456) 789-0123",
+      "website": "https://www.globalsolutionsinc.com",
+      "image": "global_solutions_logo.png",
+      "membership_level": "Gold",
+      "other_information": "Provider of comprehensive business solutions for enterprises worldwide."
+    },
+    {
+      "name": "Tech Innovations Co.",
+      "address": "202 Cedar Lane, Metropolis, USA",
+      "phone": "+1 (567) 890-1234",
+      "website": "https://www.techinnovationsco.com",
+      "image": "tech_innovations_logo.png",
+      "membership_level": "Silver",
+      "other_information": "Pioneering the future with cutting-edge technology and digital solutions."
+    },
+    {
+      "name": "Nature's Bounty Organics",
+      "address": "303 Pine Street, Greentown, USA",
+      "phone": "+1 (678) 901-2345",
+      "website": "https://www.naturesbountyorganics.com",
+      "image": "natures_bounty_logo.png",
+      "membership_level": "Bronze",
+      "other_information": "Promoting health and wellness through organic, sustainable products."
+    },
+    {
+      "name": "Sunshine Retail Group",
+      "address": "404 Sunflower Avenue, Sunnyvale, USA",
+      "phone": "+1 (789) 012-3456",
+      "website": "https://www.sunshineretailgroup.com",
+      "image": "sunshine_retail_logo.png",
+      "membership_level": "Gold",
+      "other_information": "Delivering smiles with quality products and exceptional service."
+    }
+  ]
+}

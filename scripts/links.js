@@ -38,7 +38,11 @@ function displayLinks(weeks){
 
             if (lesson.links.length  > 1) {
                 linkElement.textContent = link.title + " |";
-            } else{
+            } 
+            else if (lesson.links.length  = 1){
+                linkElement.textContent = link.title  ;
+            }
+            else{
                     linkElement.textContent = link.title  ;
                 }
             linkItem.appendChild(linkElement);
