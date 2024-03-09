@@ -20,13 +20,14 @@ const cards = document.querySelector('.card');
 function displayLinks(weeks){
     // card build code goes here
     weeks.lessons.forEach((lesson)=> {
-        //create a section element and store it in a variable named card using createElement(),
-        // let listItem = document.createElement("section"); 
 
         let linkList = document.createElement("ul");
         let linkItem = document.createElement("li");  
         linkItem.textContent = `Week ${lesson.lesson}: `;    
         // 增加連結
+        // 如果不是第一個連結，則在前面添加 " | "
+
+
         lesson.links.forEach(link => {
             let linkElement = document.createElement("a");
             if (link.url.includes("codepen")) {
@@ -34,31 +35,18 @@ function displayLinks(weeks){
             } else {
                 linkElement.href = baseURL + link.url;
             }
-            linkElement.textContent = link.title;
-            linkItem.appendChild(linkElement);
-            linkList.appendChild(linkItem);
-        });
 
+            if (lesson.links.length  > 1) {
+                linkElement.textContent = link.title + " |";
+            } else{
+                    linkElement.textContent = link.title  ;
+                }
+            linkItem.appendChild(linkElement);
         linkList.appendChild(linkItem);
         cards.appendChild(linkList); 
-        // cards.appendChild(listItem); 
-        }
+        })
+     }
     );    
 }
 
-    // let listItem = document.createElement("li");  
-    // let linkurl = document.createElement("a");
-    // let weekNumber = document.createElement("p");
-    // let weekContent = document.createElement("p");
-    // linkurl.setAttribute("href", url);
-    // let spanTag = document.createElement("span");
-    // spanTag.setAttribute("class", "divider");
-    // spanTag.textContent = "|";
-    // weekNumber.textContent = `Week ${week.lesson}`;
-    // linkurl.innerHTML =  `${week.links.url}`;
-    // weekContent.textContent = `Week ${week.links.title}`;   
-    // listItem.appendChild(linkurl);
-    // listItem.appendChild(weekNumber); 
-    // listItem.appendChild(weekContent);  
-    // listItem.appendChild(spanTag); 
-    // cards.appendChild(listItem); 
+
