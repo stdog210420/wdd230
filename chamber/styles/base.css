@@ -325,7 +325,7 @@ button{
   margin: 10px;
 }
 .cards > section {
-  background-color: var(--secondary-color);
+  background-color: #fff;
   box-shadow: 0 0 20px #232826;
   margin: 0.25rem;
   padding: 0.35rem;

@@ -110,8 +110,8 @@
 	  }
 
 	.cards > section{
-	display: flex;
-	flex-direction: column;
+		display: flex;
+		flex-direction: column;
     }
 	#footer-grid{
 		padding-top: 30px;
