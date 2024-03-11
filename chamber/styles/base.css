@@ -317,7 +317,7 @@ button{
 .cards {
   padding: 10px;
   background-color: var(--secondary-color);
-  box-shadow: 0 0 30px #333;
+  box-shadow: 0 0 30px #fff;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   color: var(--accent1-color);
@@ -328,7 +328,7 @@ button{
 .cards > section {
   margin: 0.25rem;
   padding: 0.35rem;
-  border: 1px solid #000;
+  border: 1px solid var(--primary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -348,7 +348,7 @@ section > p {
 	max-width: 340px;
   border-radius: 3px; /* 可选：添加圆角 */
   box-shadow: 0 0 30px #000;
-  height: 440px;
+  height: auto;
   display: block;
 
 }

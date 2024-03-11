@@ -23,7 +23,7 @@ const displayMembers = (members) => {
         let companyName = document.createElement("h4");
         let address = document.createElement("p");  
         let phone = document.createElement("p");  
-        let website= document.createElement("a");
+        let website = document.createElement("a");
         let logo = document.createElement("img"); 
         let membership = document.createElement("p");  
         let information = document.createElement("p");  
@@ -31,6 +31,7 @@ const displayMembers = (members) => {
         address.textContent = `${member.address}`;
         phone.textContent = `${member.phone}`;
         website.href= member.website;
+        website.textContent= member.website;
         logo.setAttribute('src', member.image);
         logo.setAttribute('alt', `Logo of ${member.name}`); // fill in the blank
         logo.setAttribute('loading', 'lazy');
