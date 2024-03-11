@@ -316,8 +316,6 @@ button{
 
 .cards {
   padding: 10px;
-  background-color: var(--secondary-color);
-  box-shadow: 0 0 30px #fff;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   color: var(--accent1-color);
@@ -327,9 +325,10 @@ button{
   margin: 10px;
 }
 .cards > section {
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 20px #232826;
   margin: 0.25rem;
   padding: 0.35rem;
-  border: 1px solid var(--primary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -343,20 +342,21 @@ section > p {
   letter-spacing: 1px;
 
 }
-.cards > img {
-  margin: 10px;
-  width: auto;
-	max-width: 340px;
-  border-radius: 3px; /* 可选：添加圆角 */
-  box-shadow: 0 0 30px #000;
+.cards > section > img {
+  width: 100%;
+  padding: 10px;
+	align-items: center;
+  justify-content: center;
   height: auto;
-  display: block;
 
 }
-/* li > img {
-  width: auto;
-  height: 440px;
-} */
+#member{
+  padding-top: 10px;
+  font-weight: 700;
+}
+#member::before{
+  content: "🪙";
+}
 footer{
   margin:auto;
   grid-column: 1/4;

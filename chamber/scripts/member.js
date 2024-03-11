@@ -37,12 +37,13 @@ const displayMembers = (members) => {
         logo.setAttribute('loading', 'lazy');
         logo.setAttribute('width', '340');
         membership.textContent = `${member.membership_level}`;
+        membership.setAttribute('id','member')
         information.textContent = `${member.other_information}`;
+        card.appendChild(logo); //fill in the blank
         card.appendChild(companyName); //fill in the blank
         card.appendChild(address);
         card.appendChild(phone);
         card.appendChild(website);
-        card.appendChild(logo); //fill in the blank
         card.appendChild(membership);
         card.appendChild(information);
         cards.appendChild(card);
