@@ -319,6 +319,7 @@ button{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   color: var(--accent1-color);
+  grid-template-columns: 1/4;
 }
 .cards > section > h4 {
   text-align: center;
@@ -340,7 +341,7 @@ section > p {
   font-size: 1rem;
   text-align: center;
   letter-spacing: 1px;
-
+  word-wrap: break-word; /* 允许文本在单词内换行 */
 }
 .cards > section > img {
   width: 100%;
