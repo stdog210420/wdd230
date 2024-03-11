@@ -322,8 +322,9 @@ button{
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   color: var(--accent1-color);
 }
-.cards > h2 {
-  color: var(--accent1-color);
+.cards > section > h4 {
+  text-align: center;
+  margin: 10px;
 }
 .cards > section {
   margin: 0.25rem;
