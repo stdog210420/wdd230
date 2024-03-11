@@ -108,6 +108,11 @@
 		width: 100%;
 		max-width: 400px;
 	  }
+
+	.cards > section{
+	display: flex;
+	flex-direction: column;
+    }
 	#footer-grid{
 		padding-top: 30px;
 		font-family: var(--paragraph-font);
