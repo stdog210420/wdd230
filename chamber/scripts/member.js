@@ -1,6 +1,6 @@
 const url = "https://stdog210420.github.io/wdd230/chamber/data/members.json";
 
-const cards = document.querySelector('.card');
+const cards = document.querySelector('.cards');
 
 async function getMemberData() {
     //Store the response from the fetch() method in a const variable named "response"
@@ -8,8 +8,50 @@ async function getMemberData() {
     //Convert the response to a JSON object using the .json method and store the results in a const variable named "data".
     const data  = await response.json();
     //Add a console.table() expression method to check the data response at this point in the console window.
-    // displayMembers(data.members); // note that we reference the prophets array of the JSON data object, not just the object
-    console(data);// temporary testing of data retreival
+    displayMembers(data.companies); // note that we reference the prophets array of the JSON data object, not just the object
+    console.table(data.companies);// temporary testing of data retreival
 }  
 
 getMemberData();
+
+const displayMembers = (members) => {
+    // card build code goes here
+        members.forEach((member)=> {
+        //create a section element and store it in a variable named card using createElement(),
+        let card= document.createElement("section");  
+        //create an h2 element and store it in a variable named "companyName",
+        let companyName = document.createElement("h2");
+        let address = document.createElement("p");  
+        let phone = document.createElement("p");  
+        let website= document.createElement("a");
+        let logo = document.createElement("img"); 
+        let membership = document.createElement("p");  
+        let information = document.createElement("p");  
+        companyName.textContent = `${member.name}`; // fill in the blank
+        address.textContent = `${member.address}`;
+        phone.textContent = `${member.phone}`;
+        website.href= member.website;
+        logo.setAttribute('src', member.image);
+        logo.setAttribute('alt', `Logo of ${member.name}`); // fill in the blank
+        logo.setAttribute('loading', 'lazy');
+        logo.setAttribute('width', '340');
+        logo.setAttribute('height', '440');  
+        membership.textContent = `${member.membership_level}`;
+        information.textContent = `${member.other_information}`;
+        card.appendChild(companyName); //fill in the blank
+        card.appendChild(address);
+        card.appendChild(phone);
+        card.appendChild(website);
+        card.appendChild(logo); //fill in the blank
+        card.appendChild(membership);
+        card.appendChild(information);
+        cards.appendChild(card);
+        });
+}
+// "name": "ABC Corporation",
+// "address": "123 Main Street, Cityville, USA",
+// "phone": "+1 (123) 456-7890",
+// "website": "https://www.abccorp.com",
+// "image": "chamber/images/ABC Corporation.jpg",
+// "membership_level": "Gold",
+// "other_information": "Leading provider of innovative solutions for the tech industry."

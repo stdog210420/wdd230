@@ -313,6 +313,46 @@ button{
   align-items: center;
   width: 100%;
 }
+
+.cards {
+  padding: 10px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 30px #333;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  color: var(--accent1-color);
+}
+
+.cards > section {
+  margin: 0.25rem;
+  padding: 0.35rem;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section > p {
+  margin: 0 auto 10px;
+  padding: 1px;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+
+}
+.cards > img {
+  margin: 10px;
+  width: auto;
+	max-width: 340px;
+  border-radius: 3px; /* 可选：添加圆角 */
+  box-shadow: 0 0 30px #000;
+  height: 440px;
+  display: block;
+
+}
+li > img {
+  width: auto;
+  height: 440px;
+}
 footer{
   margin:auto;
   grid-column: 1/4;
