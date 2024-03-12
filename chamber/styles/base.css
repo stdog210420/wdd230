@@ -403,7 +403,6 @@ section > p {
   word-wrap: break-word; /* 允许文本在单词内换行 */
   max-width: 340px;
   text-align: center;
-
 }
 .cards > section > img {
   width: 100%;
@@ -411,9 +410,8 @@ section > p {
 	align-items: center;
   justify-content: center;
   height: auto;
-
 }
-#member{
+#member {
   padding-top: 10px;
   font-weight: 700;
 }
