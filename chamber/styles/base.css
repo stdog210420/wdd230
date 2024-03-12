@@ -79,7 +79,6 @@ nav {
   line-height: 1rem;
   text-align: center;
   font-size: 1.2em;
-
   list-style-type: none;
   align-items: center;
 }
@@ -332,15 +331,16 @@ button{
 
 .grid section > * {
 	margin: 0.1rem;
+  
 }
 
-.grid h3 {
-	font-family: "Caveat", cursive;
+.grid #company {
+	font-family: var(--paragraph-font);
 }
 
 .list {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 .list section {
@@ -352,15 +352,20 @@ button{
 
 .list section > * {
 	margin: 0 1rem;
+  width: 100%;
 }
 
 .list section img {
 	display: none; /* smaller viewports only */
 }
+.list section a {
+  margin: 0;
+  justify-content: center;
+}
 
-.list section h3 {
-	font-size: 1rem;
-	font-family: Roboto, Helvetica, sans-serif;
+.list section #company {
+	font-size: 1.5em;
+  font-family: var(--heading-font);
 }
 
 .list section:nth-child(even) {
@@ -368,13 +373,11 @@ button{
 }
 
 .cards {
-  padding: 10px;
   grid-column: 1/4;
-  grid-row: 2/3;
+  padding: 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   color: var(--accent1-color);
-
   justify-content: center;
 }
 #company {
@@ -396,18 +399,16 @@ section > p {
   font-size: 1rem;
   text-align: center;
   letter-spacing: 1px;
-
 }
 .cards > section > a {
   padding: 10px;
-  word-wrap: break-word; /* 允许文本在单词内换行 */
+  word-wrap: break-word;
   max-width: 340px;
   text-align: center;
 }
 .cards > section > img {
   width: 100%;
   padding: 10px;
-	align-items: center;
   justify-content: center;
   height: auto;
 }
