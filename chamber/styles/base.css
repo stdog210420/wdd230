@@ -313,13 +313,66 @@ button{
   width: 100%;
 }
 
+.menu {
+	margin: 1rem auto;
+	padding: 0.5rem;
+	text-align: center;
+  grid-column: 1/4;
+  justify-content: center;
+  
+}
+
+.menu button {
+  background-color: var(--secondary-color);
+  border: 1px solid #fff;
+  border-radius: 20px;
+	padding: 1rem;
+	font-weight: 700;
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.grid h3 {
+	font-family: "Caveat", cursive;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+.list section h3 {
+	font-size: 1rem;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.list section:nth-child(even) {
+	background-color: var(--accent2-color);
+}
+
 .cards {
   padding: 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   color: var(--accent1-color);
   grid-column: 1/4;
-  align-items: center;
   justify-content: center;
 }
 #company {
