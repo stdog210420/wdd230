@@ -20,14 +20,15 @@ const displayMembers = (members) => {
         //create a section element and store it in a variable named card using createElement(),
         let card= document.createElement("section");  
         //create an h2 element and store it in a variable named "companyName",
-        let companyName = document.createElement("h4");
+        let companyName = document.createElement("p");
         let address = document.createElement("p");  
         let phone = document.createElement("p");  
         let website = document.createElement("a");
         let logo = document.createElement("img"); 
         let membership = document.createElement("p");  
         let information = document.createElement("p");  
-        companyName.textContent = `${member.name}`; // fill in the blank
+        companyName.textContent = `${member.name}`; 
+        companyName.setAttribute('id','company')
         address.textContent = `${member.address}`;
         phone.textContent = `${member.phone}`;
         website.href= member.website;

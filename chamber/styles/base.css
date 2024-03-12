@@ -144,10 +144,9 @@ h1, h2, h3, h4, h5, h6,.navigation a{
   font-family: var(--heading-font);
   font-size: 1.5em;
   font-weight: bolder;
-}
-/* h1, h4, h5, h6,.navigation a{
   color: var(--accent2-color);
-} */
+}
+
 h2, h3{
   color: var(--accent1-color);
   background-color: #fff;
@@ -319,11 +318,16 @@ button{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   color: var(--accent1-color);
-  grid-template-columns: 1/4;
+  grid-column: 1/4;
+  align-items: center;
+  justify-content: center;
 }
-.cards > section > h4 {
+#company {
   text-align: center;
   margin: 10px;
+  font-family: var(--heading-font);
+  font-size: 1.5em;
+  font-weight: bolder;
 }
 .cards > section {
   background-color: #fff;
@@ -341,7 +345,14 @@ section > p {
   font-size: 1rem;
   text-align: center;
   letter-spacing: 1px;
+
+}
+.cards > section > a {
+  padding: 10px;
   word-wrap: break-word; /* 允许文本在单词内换行 */
+  max-width: 340px;
+  text-align: center;
+
 }
 .cards > section > img {
   width: 100%;

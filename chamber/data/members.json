@@ -38,16 +38,6 @@
       "other_information": "Pioneering the future with cutting-edge technology and digital solutions."
     },    
     {
-      "name": "Global Tech Solutions",
-      "address": "101 Maple Drive, Cityborough, USA",
-      "phone": "+1 (456) 789-0123",
-      "website": "https://www.globalsolutionsinc.com",
-      "image": "https://stdog210420.github.io/wdd230/chamber/images/global-solution.webp",
-      "membership_level": "Gold",
-      "other_information": "Provider of comprehensive business solutions for enterprises worldwide."
-    },
-
-    {
       "name": "Nature's Bounty Organics",
       "address": "303 Pine Street, Greentown, USA",
       "phone": "+1 (678) 901-2345",
@@ -64,6 +54,15 @@
       "image": "https://stdog210420.github.io/wdd230/chamber/images/sunshine-group.webp",
       "membership_level": "Gold",
       "other_information": "Delivering smiles with quality products and exceptional service."
+    },
+    {
+      "name": "Global Tech Solutions",
+      "address": "101 Maple Drive, Cityborough, USA",
+      "phone": "+1 (456) 789-0123",
+      "website": "https://www.globalsolutionsinc.com",
+      "image": "https://stdog210420.github.io/wdd230/chamber/images/global-solution.webp",
+      "membership_level": "Gold",
+      "other_information": "Provider of comprehensive business solutions for enterprises worldwide."
     }
   ]
 }

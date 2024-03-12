@@ -108,6 +108,9 @@
 		width: 100%;
 		max-width: 400px;
 	  }
+	.cards{
+		grid-column: 1/span 3;
+	}
 
 	.cards > section{
 		display: flex;
