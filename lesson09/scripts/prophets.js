@@ -11,7 +11,7 @@ const cards = document.querySelector('#cards');
         const data  = await response.json();
         //Add a console.table() expression method to check the data response at this point in the console window.
         displayProphets(data.prophets); // note that we reference the prophets array of the JSON data object, not just the object
-        console.table(data.prophets);// temporary testing of data retreival
+        // console.table(data.prophets);// temporary testing of data retreival
     }   
 
     getProphetData();
