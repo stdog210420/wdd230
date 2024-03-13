@@ -199,7 +199,9 @@ p{
     grid-template-columns: auto 1fr auto;
     grid-template-rows:  auto 1fr auto;    
 }
+
 .discover{
+  grid-column: 2/3;
   margin-top: 0;
   color:var(--accent2-color); 
   font-size: 2rem;
@@ -438,14 +440,14 @@ footer{
   width: 100%;
 
 }
-footer p, #name{
+footer p, #footer-name{
   font-size: 1em;
   text-decoration: none;
 }
 footer p{
   color: var(--primary-color);
 }
-#name{
+#footer-name{
   color:var(--secondary-color);
 }
 
