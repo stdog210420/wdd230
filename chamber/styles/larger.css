@@ -92,6 +92,8 @@
 		width: 100%;
 		max-width: 400px;
 	  }
+	#victors{
+	grid-column: 2/3;}
 
 	#footer-grid{
 		padding-top: 30px;
