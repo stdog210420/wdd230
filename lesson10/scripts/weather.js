@@ -27,11 +27,22 @@ async function apiFetch(){
 apiFetch();
 
 function displayResults(data){
-    currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+    // Format temperature with zero decimal places
+    const temperature = data.main.temp.toFixed(0);
+    currentTemp.innerHTML = `${temperature}&deg;F`;
     const iconsrc = "https://openweathermap.org/img/wn/04d@2x.png";
-    let desc = data.weather[0].description;
+    // let desc = data.weather[0].description;
+
+    //Since the data can return more than one "weather event", display all the events versus just the first one
+    data.weather.forEach(weather => {
+    // Capitalize the first letter of each word in the weather description        
+        let desc = data.weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
+        const weatherDesc = document.createElement("p");
+        weatherDesc.textContent = desc;
+        captionDesc.appendChild(weatherDesc);
+    });
     weatherIcon.setAttribute("src", iconsrc);
     weatherIcon.setAttribute("alt", desc);
-    captionDesc.textContent=`${desc}`;
+    // captionDesc.textContent=`${desc}`;
     // console.log(desc);
 }
