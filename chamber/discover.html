@@ -41,7 +41,7 @@
                 <picture >
                     <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
                     <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp">
-                    <img id="hero-img" src="images/hero-larger.webp" alt="It's group chating with each other." width="1200" height="800">
+                    <img id="hero-img" src="images/hero-large.webp" alt="It's group chating with each other." width="1200" height="772">
                 </picture>
                 <!-- <img id="hero-img" src="images/hero.webp" alt="The Tainan Automation Machinery and Smart Manufacturing Exhibition"> -->
             </div>
@@ -54,47 +54,43 @@
             </section>
         </div>
 
-        <div class="pictures">
-            <picture class="discover">
-                <label for="demographics">Demographics:</label>
-                <!-- <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
-                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp"> -->
-                <img class="information" src="images/demographic.webp" alt="It's group chating with each other." width="1697" height="730">
+        <div id="pictures">
+            <picture id="demographics">
+                <div id="victors">
+                    <p><span>Visitors: </span><span id="visit-count"></span></p>
+                </div>
+                <h2>Demographics</h2>
+                <source media="(max-width: 400px)" class="information" srcset="images/demographic-small.webp">
+                <img class="information" src="images/demographic-large.webp" alt="It's group chating with each other." width="800" height="342">
             </picture>
-            <picture class="discover">
-                <label for="statistical-data">Statistical Data:</label>
-                <!-- <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
-                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp"> -->
-                <img class="information" src="images/cpi.webp" alt="It's group chating with each other." width="992" height="452">
+            <picture id="statistical-data">
+                <h2>Statistical Data</h2>
+                <source media="(max-width: 400px)" class="information" srcset="images/cpi-small.webp">
+                <img class="information" src="images/cpi-large.webp" alt="It's group chating with each other." width="800" height="437">
             </picture>
-            <picture class="discover">
-                <label for="demographics">Calendar:</label>
-                <!-- <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
-                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp"> -->
-                <img class="information" src="images/calendar2.webp" alt="It's group chating with each other." width="1183" height="868">
+            <picture id="demographics">
+                <h2>Calendar</h2>
+                <source media="(max-width: 400px)" class="information" srcset="images/calendar-small.webp">
+                <img class="information" src="images/calendar-large.webp" alt="It's group chating with each other." width="800" height="584">
             </picture>
-            <picture class="discover">
-                <label for="attraction1">Event:</label>
-                <!-- <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
-                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp"> -->
-                <img class="information" src="images/event2.webp" alt="It's group chating with each other." width="555" height="785">
+            <picture id="discover-event">
+                <h2>Event</h2>
+                <source media="(max-width: 400px)" class="hero-imgs" srcset="images/event2-small.webp">
+                <img class="information" src="images/event2-large.webp" alt="It's group chating with each other." width="555" height="785">
             </picture>
-            <picture class="discover">
-                <label for="attraction2">Attraction:</label>
-                <!-- <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
-                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp"> -->
-                <img class="information" src="images/attraction.webp" alt="It's group chating with each other." width="1000" height="667">
+            <picture id="attraction1">
+                <h2>Attraction</h2>
+                <source media="(max-width: 400px)" class="hero-imgs" srcset="images/attraction-small.webp">
+                <img class="information" src="images/attraction-large.webp" alt="It's group chating with each other." width="800" height="667">
             </picture>
-            <picture class="discover">
-                <label for="attraction3">Attraction:</label>
-                <!-- <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
-                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp"> -->
-                <img class="information" src="images/attraction2.webp" alt="It's group chating with each other." width="550" height="363">
+            <picture id="attraction2">
+                <h2>Attraction</h2>
+                <source media="(max-width: 400px)" class="hero-imgs" srcset="images/attraction2-small.webp">
+                <img class="information" src="images/attraction2-large.webp" alt="It's group chating with each other." width="550" height="363">
             </picture>
+
         </div>
-        <div class="victors">
-            <p><span>Visitors: </span><span id="visit-count"></span></p>
-        </div>
+
         </main>
         <footer>
             <div id="footer-grid">
@@ -112,6 +108,7 @@
     </div>
     <script src="scripts/getdates.js"></script>
     <script src="scripts/hamburger.js"></script>
+    <script src="scripts/pagevisit.js"></script>
     <script src="scripts/mode.js"></script>
 </body>
 </html>

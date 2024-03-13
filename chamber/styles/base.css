@@ -275,28 +275,20 @@ button{
 #spot-message{
   padding-bottom:10px;
 }
-.pictures{
-  margin: 0 auto;
-  grid-column: 1/2;
-  grid-row: 3/4;
-  width: 100%;  
-  justify-content: center;
+#demographics > h2, #demographics > h2, #attraction1 > h2{
+  padding: 1rem;
+}
+#statistical-data > h2, #discover-event > h2, #attraction2  > h2{
+  padding: 1rem;
+}
+
+#victors p{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+#pictures img{
   align-items: center;
-  text-align: center;
-}
-.discover label
-{
-  padding: 20px;
-}
-.victors{
-  margin-left: 20px;
-  grid-column: 1/2;
-  grid-row: 4/5;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.pictures img{
   width: 100%;  
   }
 .benefits{

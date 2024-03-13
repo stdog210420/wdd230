@@ -73,15 +73,22 @@
 		font-size: 1.5rem;
 	}
 
-	.pictures{
+	#pictures{
+		margin: 1rem;
 		display: grid;
-		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 2fr 2fr;
+		gap: 1rem;
+		text-align: center;
+		padding: 1rem;
 	  }
-	.pictures img{
+	  #demographics, #demographics, #attraction1{
 		grid-column: 1/2;
+	  }
+	  #statistical-data, #discover-event, #attraction2{
+		grid-column: 2/3;
+	  }
 
-	}
-	.victors{
+	#victors{
 	grid-column: 3/4;
 
 	}
