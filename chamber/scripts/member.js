@@ -20,7 +20,7 @@ const displayMembers = (members) => {
         //create a section element and store it in a variable named card using createElement(),
         let card= document.createElement("section");  
         //create an h2 element and store it in a variable named "companyName",
-        let companyName = document.createElement("p");
+        let companyName = document.createElement("h2");
         let address = document.createElement("p");  
         let phone = document.createElement("p");  
         let website = document.createElement("a");
@@ -33,6 +33,7 @@ const displayMembers = (members) => {
         phone.textContent = `${member.phone}`;
         website.href= member.website;
         website.textContent= member.website;
+        website.setAttribute('id','url')
         logo.setAttribute('src', member.image);
         logo.setAttribute('alt', `Logo of ${member.name}`); // fill in the blank
         logo.setAttribute('loading', 'lazy');
