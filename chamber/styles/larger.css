@@ -73,25 +73,7 @@
 		font-size: 1.5rem;
 	}
 
-	#pictures{
-		margin: 1rem;
-		display: grid;
-		grid-template-columns: 2fr 2fr;
-		gap: 1rem;
-		text-align: center;
-		padding: 1rem;
-	  }
-	  #demographics, #demographics, #attraction1{
-		grid-column: 1/2;
-	  }
-	  #statistical-data, #discover-event, #attraction2{
-		grid-column: 2/3;
-	  }
 
-	#victors{
-	grid-column: 3/4;
-
-	}
 	.level h2{
 		font-size: 1.5rem;
 	}

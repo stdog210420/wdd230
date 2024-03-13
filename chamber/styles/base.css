@@ -275,16 +275,90 @@ button{
 #spot-message{
   padding-bottom:10px;
 }
-#demographics > h2, #demographics > h2, #attraction1 > h2{
+#pictures{
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 2fr auto;
+  grid-template-rows: repeat(6, auto); 
+  row-gap: 1rem;
+  text-align: center;
+  padding: 1rem;
+  }
+#demographics, #calendar, #attraction1, #statistical-data, #discover-event, #attraction2{
+  grid-column: 1/2;
+  margin: 0 ;
+}
+#demographics > h2, #calendar > h2, #attraction1 > h2, #statistical-data > h2, #discover-event > h2, #attraction2  > h2{
   padding: 1rem;
 }
-#statistical-data > h2, #discover-event > h2, #attraction2  > h2{
+#static-title{
+  font-size: 1.5rem;
+}
+.static-description-1, .static-description-2, .static-description-3{
   padding: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  overflow-wrap: break-word; 
+  line-height: 1.5; 
 }
 
-#victors p{
+#demographics,.static-description-1{
+  margin: 0;
+  grid-row: 1/2;
+}
+
+#visit-count:hover{
+  text-shadow:  0 0 20px #fff;
+}
+
+#visit-count:hover::before{
+  content:"🎉";
+  font-size: 1.5rem;
+}
+#victors h2{
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 15px;
+}
+.static-description-2, #calendar{
+  margin: 0;
+  grid-row: 2/3;
+  
+}
+.static-description-1::before{
+  content:"🗺️ "
+}
+.static-description-2 li {
+  list-style-type: none;
+  justify-content: center;
+}
+
+.static-description-3, #attraction1{
+  margin: 0;
+  grid-row: 3/4;
+}
+
+.static-description-3 > a{
+  color:#fff;
+  text-decoration: none;
+}
+.static-description-3 > a:hover, .static-description-3 > a:hover::before{
+  font-weight: 700;
+  content: "🏢";
+  color:var(--accent2-color);
+}
+#victors{
+  grid-column: 3/4;
+  grid-row: 1/5;
+  margin: 0 1.5rem;
+  max-width: 400px;
+}
+
+#visit-count{
   font-size: 1.5rem;
   font-weight: 700;
+  margin-top: 0; /* 確保文字與左邊區塊的頂部對齊 */
 }
 #pictures img{
   align-items: center;
