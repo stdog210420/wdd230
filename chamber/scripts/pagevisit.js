@@ -4,8 +4,8 @@ const visitsDisplay = document.querySelector("#visit-count");
 let numVisits = Number(window.localStorage.getItem("numVisits-ls")) ;
 
 // Get the current date
-// const currentDate = new Date().toDateString();
-const currentDate = new Date(2024, 2, 16);
+const currentDate = new Date().toDateString();
+// const currentDate = new Date(2024, 2, 16);
 // Get the last visit date from localStorage
 const lastVisitDate = localStorage.getItem('lastVisitDate');
 
