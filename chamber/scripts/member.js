@@ -33,7 +33,6 @@ const displayMembers = (members) => {
         phone.textContent = `${member.phone}`;
         website.href= member.website;
         website.textContent= member.website;
-        website.setAttribute('id','url')
         logo.setAttribute('src', member.image);
         logo.setAttribute('alt', `Logo of ${member.name}`); // fill in the blank
         logo.setAttribute('loading', 'lazy');

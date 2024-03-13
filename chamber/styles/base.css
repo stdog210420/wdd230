@@ -321,64 +321,69 @@ main{
 	padding: 0.5rem;
 	text-align: center;
   justify-content: center;
+  font-family: var(--heading-font);
   
 }
 
 .menu button {
   background-color: var(--secondary-color);
   border: 1px solid #fff;
-  border-radius: 20px;
 	padding: 1rem;
 	font-weight: 700;
+  color: var(--accent1-color);
+  border-radius: 50px;
 }
 
 .grid section > * {
-	margin: 0.1rem;
+	/* margin: 0.1rem; */
   text-align: center;
 }
 
 .grid section  {
   text-align: center;
+  padding: 10px;
 }
 
-.grid #company {
+.grid section #company {
 	font-family: var(--paragraph-font);
 }
 
 .list {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 
 .list section {
 	margin: 0;
   grid-column: 2/3;
-  display: block;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
 	padding: 0.25rem;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.list section > * {
+.list > section > * {
 	margin: 0 1rem;
 }
 
-.list section img {
+.list > section > img {
 	display: none; /* smaller viewports only */
 }
 
-.list section #company {
-  margin: 0;
-  padding: 10px;
-	font-size: 1.5em;
+.list> section > #company {
+	font-size: 1em;
+  font-weight: 100;
   font-family: var(--heading-font);
   background-color: none;
 }
 
-.list section:nth-child(even) {
+.list > section:nth-child(even) {
 	background-color: var(--accent2-color);
 }
 
-.list section:nth-child(even) #company{
+.list > section:nth-child(even) #company{
 	background-color: var(--accent2-color);
 }
 
@@ -403,7 +408,9 @@ main{
   background-color: #fff;
   box-shadow: 0 0 20px #232826;
   margin: 0.25rem;
-  padding: 0.35rem;
+  /* padding: 0.35rem; */
+  text-align: center;
+  padding: 10px;
 }
 section > p {
   margin: 0 auto 10px;
@@ -412,11 +419,7 @@ section > p {
   text-align: center;
   letter-spacing: 1px;
 }
-.cards > section > #url {
-  padding: 10px;
-  word-wrap: break-word;
-  text-align: center;
-}
+
 .cards > section > img {
   width: 100%;
   padding: 10px;
