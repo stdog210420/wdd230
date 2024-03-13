@@ -79,7 +79,7 @@
 	  }
 	.pictures img{
 		grid-column: 1/2;
-		width:auto-fit; 
+
 	}
 	.victors{
 	grid-column: 3/4;
