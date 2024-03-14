@@ -45,25 +45,25 @@
     apiFetch();
 
     function displayResults(data){
-      let temp = data.main.temp.toFixed(0);
+      const temp = data.main.temp.toFixed(0);
       temperature = Math.floor((temp-35)*5/9);
       degree.innerHTML = `${temperature}&deg;C`;
-      let humid = data.main.humidity.toFixed(0);
+      const humid = data.main.humidity.toFixed(0);
       humidElement.innerHTML = `${humid}RH`;
-      let wind = data.wind.speed.toFixed(0);
+      const wind = data.wind.speed.toFixed(0);
       windSpeed.innerHTML = `${wind}(mph)`;
-      let icon = data.weather[0].icon;
-      let iconsrc =`https://openweathermap.org/img/wn/${icon}@2x.png`;
+      const icon = data.weather[0].icon;
+      const iconsrc =`https://openweathermap.org/img/wn/${icon}@2x.png`;
       // const iconsrc = "https://openweathermap.org/img/wn/04n@2x.png";
       data.weather.forEach(weather => {
         // Capitalize the first letter of each word in the weather description        
-            let desc = data.weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
+            const desc = data.weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
             const weatherDesc = document.createElement("p");
             weatherDesc.textContent = desc;
             captionDesc.appendChild(weatherDesc);
+            weatherIcon.setAttribute("src", iconsrc);
+            weatherIcon.setAttribute("alt", desc);
         });        
-      weatherIcon.setAttribute("src", iconsrc);
-      weatherIcon.setAttribute("alt", desc);
     }
 
   function calculateWindChill() {
