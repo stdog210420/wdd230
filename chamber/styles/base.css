@@ -54,21 +54,17 @@ body {
   top: 0; /* 與視窗頂部對齊 */
   left: 0; /* 與視窗左側對齊 */
   width: 100%; /* 橫幅寬度佔滿視窗 */
-  background-color: #f0f0f0; /* 橫幅背景顏色 */
-  padding: 10px; /* 添加內邊距 */
+  padding: 0 5px;/* 添加內邊距 */
   z-index: 9999; /* 將橫幅放在其他內容的上方 */
 }
 #banner {
-  margin-top: 0;
   grid-column: 1/4;
   background-color: #cb1d2b;
   color: #fff;
-  padding: 0 5px;
   text-align: center;
 }
 
 #banner p {
-  margin: 0;
   font-size: 1rem;
 }
 #closeBanner{

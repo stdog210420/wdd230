@@ -31,7 +31,7 @@
         const response = await fetch(url);
         if (response.ok) {
           const data = await response.json();
-          console.log(data);
+          // console.log(data);
           displayResults(data);           
         }
         else{
@@ -89,7 +89,7 @@
       const responseForcast = await fetch(urlForcast);
       if (responseForcast.ok) {
         const dataForcast = await responseForcast.json();
-        console.log(dataForcast);
+        // console.log(dataForcast);
         displayForcastResults(dataForcast);           
       }
       else{
@@ -140,7 +140,7 @@
     iconDay3.setAttribute("alt", desc3);
 
     const dateStr = dataForcast.list[0].dt_txt;
-    console.log(dateStr); 
+    // console.log(dateStr); 
     const date = new Date(dateStr);
     const weekday = weekdays[date.getDay()];
     weekDay.textContent = weekday;
