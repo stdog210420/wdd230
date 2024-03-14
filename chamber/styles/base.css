@@ -57,6 +57,7 @@ body {
   padding: 0 5px;/* 添加內邊距 */
   z-index: 9999; /* 將橫幅放在其他內容的上方 */
 }
+
 #banner {
   grid-column: 1/4;
   background-color: #cb1d2b;
