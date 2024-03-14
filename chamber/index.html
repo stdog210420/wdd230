@@ -37,6 +37,10 @@
             </div>
         </header>
         <div id="hero">
+            <div id="banner" class="banner">
+                <p><span>Join us for the chamber of commerce meet and greet on Wednesday at 7:00 p.m.</span>
+                <button id="closeBanner">❌</button></p>
+            </div>
             <div id="hero-box">
                 <picture >
                     <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
@@ -53,7 +57,6 @@
                 </div>
             </section>
         </div>
-
         <main class="home-grid">
             <section class="big-event">
                 <div class="event">
@@ -67,26 +70,47 @@
                 </div>              
             </section>
             <div class="weather">
-                <h5>Current Weather</h5>
+                <div>
+                    <h4>Current Weather</h4>
+                    <hr>
+                    <p id="district"><img src="images/tw-flag.webp" alt="Taiwan flag"> Tainan, Taiwan</p>
+                    <!-- <input type="number" id="temperature" required> -->
+                    <figure id="current-weather">
+                        <p class="weekday" id="weekDay"></p>
+                        <p id="degree"></p>
+                        <img id="weather-icon" src="" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                    <p><span id="wind"></span><span id="humid"></span>
+                    <span id="windChillResult"></span>
+                    <button type="button" onclick="calculateWindChill()">Calculate</button>
+                    </p>
+                </div>
+                <h5>Forcast 3 Days</h5>
                 <hr>
-                <span id="degree"><label for="temperature">Temperature (°C): </label>
-                    <input type="number" id="temperature" required>
-                </span>
-                <br><br>
-                <span id="wind"><label for="windSpeed">Wind Speed (mph): </label>
-                    <input type="number" id="windSpeed" required>
-                </span>
-                <br><br>
-                <span id="humid"><label for="humidity">Humidity (%): </label>
-                    <input type="number" id="humidity" required>
-                </span>
-                <br><br>
-                <P id="windChillResult">WindChill: </P>
-                <button type="button" onclick="calculateWindChill()">Calculate</button>
-                <br><br>
+                <div id="forcast-3-days">
+                    <figure>
+                        <p class="weekday" id="weekDay1"></p>
+                        <p id="tempDay1"></p>
+                        <img id="iconDay1" src="" alt="">
+                        <figcaption id="descDay1"></figcaption>
+                    </figure>
+                    <figure>
+                        <p class="weekday" id="weekDay2"></p>
+                        <p id="tempDay2"></p>
+                        <img id="iconDay2" src="" alt="">
+                        <figcaption id="descDay2"></figcaption>                        
+                    </figure>
+                    <figure>
+                        <p class="weekday" id="weekDay3"></p>
+                        <p id="tempDay3"></p>
+                        <img id="iconDay3" src="" alt="">
+                        <figcaption id="descDay3"></figcaption>                        
+                    </figure>
+                </div>
             </div>
             <section class="spotlight">
-                <h6>Member Spotlights</h6>
+                <h4>Member Spotlights</h4>
                 <hr>
                 <p id="spot-message">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                    Animi molestias quo provident accusantium facere nemo possimus incidunt a blanditiis? 
@@ -110,6 +134,7 @@
     <script src="scripts/getdates.js"></script>
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/windchill.js"></script>
+    <script src="scripts/banner.js"></script>
     <script src="scripts/mode.js"></script>
 </body>
 </html>

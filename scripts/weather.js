@@ -1,7 +1,9 @@
 const currentTemp = document.querySelector("#weather-info");
 const weatherIcon = document.querySelector("#weather-icon");
 const captionDesc= document.querySelector("figcaption");
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=23.31&lon=120.31&units=imperial&appid=fed24b2b6ba40b500276cd58d10febd4';
+const lat = 23.31;
+const lon = 120.31;
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=fed24b2b6ba40b500276cd58d10febd4`;
 
 
 async function apiFetch(){
@@ -9,7 +11,7 @@ async function apiFetch(){
         const response = await fetch(url);
         if (response.ok){
             const data = await response.json();
-            console.log(data);
+            // console.log(data);
             displayResults(data);
         }
         else{
@@ -27,7 +29,8 @@ function displayResults (data){
     const temp = data.main.temp.toFixed(0);
     temperature = Math.floor((temp-35)*5/9);
     currentTemp.innerHTML = `${temperature}&deg;C`;
-    const iconsrc = "https://openweathermap.org/img/wn/04n@2x.png";
+    const icon = data.weather[0].icon;
+    const iconsrc =`https://openweathermap.org/img/wn/${icon}@2x.png`;
         data.weather.forEach(weather => {
         // Capitalize the first letter of each word in the weather description        
             let desc = data.weather[0].description.replace(/\b\w/g, char => char.toUpperCase());

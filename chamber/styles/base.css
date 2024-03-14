@@ -49,6 +49,33 @@ body {
 	padding: 5px 0;
   z-index: -2;
 }
+.banner {
+  position: fixed; /* 將橫幅固定在視窗中 */
+  top: 0; /* 與視窗頂部對齊 */
+  left: 0; /* 與視窗左側對齊 */
+  width: 100%; /* 橫幅寬度佔滿視窗 */
+  background-color: #f0f0f0; /* 橫幅背景顏色 */
+  padding: 10px; /* 添加內邊距 */
+  z-index: 9999; /* 將橫幅放在其他內容的上方 */
+}
+#banner {
+  margin-top: 0;
+  grid-column: 1/4;
+  background-color: #cb1d2b;
+  color: #fff;
+  padding: 0 5px;
+  text-align: center;
+}
+
+#banner p {
+  margin: 0;
+  font-size: 1rem;
+}
+#closeBanner{
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+}
 header {
   grid-column: 1/4;
   grid-row: 1/2;
@@ -216,6 +243,9 @@ hr {
   width: 80%; /* 寬度為父元素寬度的一半 */
   margin: 0 auto; /* 使用 margin 屬性將水平線置於父元素的正中央 */
 }
+h4, h5{
+  padding: 1rem;
+}
 .big-event{
   grid-column: 2/3;
   grid-row: 1/2 ;
@@ -223,7 +253,7 @@ hr {
   box-shadow: 0 0 10px var(--secondary-color);  
 }
 #degree::before{
-  content:"🌤️";
+  /* content:"🌤️"; */
   font-size: 2em; /* 將 emoji 大小放大為原始大小的兩倍 */
 }
 #wind::before{
@@ -246,9 +276,20 @@ button{
 }
 
 .event-img{
-  box-shadow: 0 0 10px var(--secondary-color);  
-  width: 50%;
+  width: 100%;
+  padding: 2rem;
 }
+
+figure img{
+  width: auto;
+} 
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .big-event, .weather, .spotlight{
   padding-top: 10px;
   gap: 10px;
@@ -257,11 +298,37 @@ button{
 	margin-bottom:5px;
 	border-radius: 15px;
 }
+ .weekday{
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+#district{
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+#district > img{
+  width: 10%;
+  align-items: center;
+}
 .weather{
   grid-column: 2/3;
   grid-row: 2/3 ;
   /* border: 1px solid #333; */
   box-shadow: 0 0 10px var(--secondary-color);  
+}
+#current-weather{
+  display: flex;
+  flex-direction: row;
+}
+
+#forcast-3-days{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .spotlight{
   justify-content: center;
