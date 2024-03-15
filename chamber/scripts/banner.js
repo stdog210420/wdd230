@@ -9,8 +9,11 @@ document.addEventListener("DOMContentLoaded", function(){
         // Close the banner when the close button is clicked
         banner.style.display = "block";
     }
+    else{
+        banner.style.display = "none";
+    }
 
-    // banner.style.display = "none";
+
     closeBannerBtn.addEventListener("click", function(){
         banner.style.display = "none";
         
