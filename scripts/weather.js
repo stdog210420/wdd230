@@ -1,5 +1,5 @@
+const card = document.querySelector(".card");
 const currentTemp = document.querySelector("#weather-info");
-const weatherIcon = document.querySelector("#weather-icon");
 const captionDesc= document.querySelector("figcaption");
 const lat = 23.31;
 const lon = 120.31;
@@ -37,7 +37,11 @@ function displayResults (data){
             const weatherDesc = document.createElement("p");
             weatherDesc.textContent = desc;
             captionDesc.appendChild(weatherDesc);
-        });        
+        });
+    card.createElement("Image");
+    Image.setAttribute("id","weather-icon");        
     weatherIcon.setAttribute("src", iconsrc);
     weatherIcon.setAttribute("alt", desc);
+    
+
 }
