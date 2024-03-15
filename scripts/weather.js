@@ -30,7 +30,7 @@ function displayResults (data){
     temperature = Math.floor((temp-35)*5/9);
     currentTemp.innerHTML = `${temperature}&deg;C`;
     const icon = data.weather[0].icon;
-    console.log(icon);
+    // console.log(icon);
     const iconsrc =`https://openweathermap.org/img/wn/${icon}@2x.png`;
 
     // Capitalize the first letter of each word in the weather description        
