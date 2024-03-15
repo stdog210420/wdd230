@@ -12,12 +12,12 @@
     const weekDay = document.querySelector("#weekDay");
     const urlForcast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=fed24b2b6ba40b500276cd58d10febd4`;
     const tempDay1 = document.querySelector("#tempDay1");
-    const iconDay1 = document.querySelector("#iconDay1");
     const descDay1 = document.querySelector("#descDay1");
     const tempDay2 = document.querySelector("#tempDay2");
-    const iconDay2 = document.querySelector("#iconDay2");
     const descDay2 = document.querySelector("#descDay2");
     const tempDay3 = document.querySelector("#tempDay3");
+    const iconDay1 = document.querySelector("#iconDay1");
+    const iconDay2 = document.querySelector("#iconDay2");
     const iconDay3 = document.querySelector("#iconDay3");
     const descDay3 = document.querySelector("#descDay3");
     const weekDay1 = document.querySelector("#weekDay1");

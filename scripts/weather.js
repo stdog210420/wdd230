@@ -1,4 +1,4 @@
-const card = document.querySelector(".card");
+const weatherIcon = document.querySelector("#weather-icon");  
 const currentTemp = document.querySelector("#weather-info");
 const captionDesc= document.querySelector("figcaption");
 const lat = 23.31;
@@ -30,18 +30,19 @@ function displayResults (data){
     temperature = Math.floor((temp-35)*5/9);
     currentTemp.innerHTML = `${temperature}&deg;C`;
     const icon = data.weather[0].icon;
+    console.log(icon);
     const iconsrc =`https://openweathermap.org/img/wn/${icon}@2x.png`;
-        data.weather.forEach(weather => {
-        // Capitalize the first letter of each word in the weather description        
-            let desc = data.weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
-            const weatherDesc = document.createElement("p");
-            weatherDesc.textContent = desc;
-            captionDesc.appendChild(weatherDesc);
-        });
-    card.createElement("Image");
-    Image.setAttribute("id","weather-icon");        
-    weatherIcon.setAttribute("src", iconsrc);
-    weatherIcon.setAttribute("alt", desc);
-    
+
+    // Capitalize the first letter of each word in the weather description        
+    data.weather.forEach(weather => {
+        const desc = weather.description.replace(/\b\w/g, char => char.toUpperCase());
+        const weatherDesc = document.createElement("p");
+        weatherDesc.textContent = desc;
+        captionDesc.appendChild(weatherDesc);
+        weatherIcon.setAttribute("src", iconsrc);
+        weatherIcon.setAttribute("alt", desc);
+        }) 
+
+
 
 }
