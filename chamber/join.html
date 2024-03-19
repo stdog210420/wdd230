@@ -36,71 +36,75 @@
                 🕶️
             </div>
         </header>
-        <div class="benefits">
-            <div id="membership">
-                <h2>Membership Level</h2>
+        <main>
+            <div class="join">
+                <div class="benefits">
+                    <div id="membership">
+                        <h2>Membership Level</h2>
+                    </div>
+                    <div class="level">
+                    <h2 class="level-title">NP (No Privilege) Membership </h2>
+                    <ul>
+                        <li>Access to basic features of the platform.</li>
+                        <li>Limited access to member-only content.</li>
+                        <li>No discounts or special offers.</li>
+                    </ul>
+                    </div>          
+                    <div class="level">
+                    <h2 class="level-title">Bronze Membership </h2>
+                    <ul>
+                        <li>Access to exclusive member-only events.</li>
+                        <li>Monthly newsletter subscription with updates and tips.</li>
+                        <li>Limited discounts on selected training programs.</li>
+                        <li>Basic advertising options with standard placements.</li>
+                    </ul>
+                    </div>
+                    <div class="level">
+                        <h2 class="level-title">Silver Membership </h2>
+                        <ul>
+                        <li>All benefits of Bronze Membership.</li>
+                        <li>Increased discounts on training programs.</li>
+                        <li>Priority access to special events and workshops.</li>
+                        <li>Enhanced advertising options with better visibility.</li>
+                        </ul>
+                    </div>
+                    <div class="level">
+                        <h2 class="level-title">Gold Membership </h2>
+                        <ul>
+                        <li>All benefits of Silver Membership.</li>
+                        <li>VIP access to all events and workshops.</li>
+                        <li>Higher discounts on training programs.</li>
+                        <li>Premium advertising options with prime placements on the home page.</li>
+                        <li>Exclusive access to premium content and resources.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="formarea">
+                    <form method="get" action="thankyou.html" class="form">
+                        <fieldset>
+                            <legend>Application Information</legend>
+                            <label>First Name* <input type="text" name="fname" id="fname" required></label>
+                            <label>Last Name* <input type="text" name="lname" id="lname" required></label>
+                            <label>Title/Position* <input type="text" name="position" id="position" pattern="[a-zA-Z -]{7,}" placeholder="Please enter at least seven characters."  title="Please enter at least seven characters consisting of alphabets, hyphens, and spaces only" required></label>
+                            <label>Email* <input type="email" name="email" id="email" placeholder="lin23013@byui.edu" required></label>
+                            <label>Phone <input type="tel" name="phone" placeholder="+886-1234-5678" required></label>
+                            <label>Business/Organization's name <input type="text" name="organization" id="organization" required></label>
+                            <label>Membership Level 
+                                <select name="membership">
+                                    <option value="np">NP Membership</option>
+                                    <option value="bronze">Bronze Membership</option>
+                                    <option value="silver">Silver Membership</option>
+                                    <option value="gold">Gold Membership</option>
+                                </select>
+                            </label>
+                            <label>Business/Organization's Description <textarea name="description" id="description" rows="4" cols="50"></textarea></label>                
+                            <input type="hidden" name="timestamp" id="timestamp">
+                        </fieldset>
+                        <input type="submit" value="Subscribe">
+                    </form> 
+                </div>
             </div>
-            <div class="level">
-              <h2>NP (No Privilege) Membership </h2>
-              <ul>
-                <li>Access to basic features of the platform.</li>
-                <li>Limited access to member-only content.</li>
-                <li>No discounts or special offers.</li>
-              </ul>
-            </div>          
-            <div class="level">
-              <h2>Bronze Membership </h2>
-              <ul>
-                <li>Access to exclusive member-only events.</li>
-                <li>Monthly newsletter subscription with updates and tips.</li>
-                <li>Limited discounts on selected training programs.</li>
-                <li>Basic advertising options with standard placements.</li>
-              </ul>
-            </div>
-            <div class="level">
-                <h2>Silver Membership </h2>
-                <ul>
-                  <li>All benefits of Bronze Membership.</li>
-                  <li>Increased discounts on training programs.</li>
-                  <li>Priority access to special events and workshops.</li>
-                  <li>Enhanced advertising options with better visibility.</li>
-                </ul>
-            </div>
-            <div class="level">
-                <h2>Gold Membership </h2>
-                <ul>
-                  <li>All benefits of Silver Membership.</li>
-                  <li>VIP access to all events and workshops.</li>
-                  <li>Higher discounts on training programs.</li>
-                  <li>Premium advertising options with prime placements on the home page.</li>
-                  <li>Exclusive access to premium content and resources.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="formarea">
-            <form method="get" action="thankyou.html" class="form">
-                <fieldset>
-                    <legend>Application Information</legend>
-                    <label>First Name* <input type="text" name="fname" id="fname" required></label>
-                    <label>Last Name* <input type="text" name="lname" id="lname" required></label>
-                    <label>Title/Position* <input type="text" name="position" id="position" pattern="[a-zA-Z -]{7,}" placeholder="Please enter at least seven characters."  title="Please enter at least seven characters consisting of alphabets, hyphens, and spaces only" required></label>
-                    <label>Email* <input type="email" name="email" id="email" placeholder="lin23013@byui.edu" required></label>
-                    <label>Phone <input type="tel" name="phone" placeholder="+886-1234-5678" required></label>
-                    <label>Business/Organization's name <input type="text" name="organization" id="organization" required></label>
-                    <label>Membership Level 
-                        <select name="membership">
-                            <option value="np">NP Membership</option>
-                            <option value="bronze">Bronze Membership</option>
-                            <option value="silver">Silver Membership</option>
-                            <option value="gold">Gold Membership</option>
-                        </select>
-                    </label>
-                    <label>Business/Organization's Description <textarea name="description" id="description" rows="4" cols="50"></textarea></label>                
-                    <input type="hidden" name="timestamp" id="timestamp">
-                </fieldset>
-                <input type="submit" value="Subscribe">
-            </form> 
-        </div>
+        </main>
         <footer>
             <div id="footer-grid">
                 <div class="footer-logo">

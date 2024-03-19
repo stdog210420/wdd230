@@ -82,18 +82,49 @@
 		grid-column: 1/span 2;
 		grid-row: 2/3;
 		width: 100%;
-	  }
-	  .formarea{
-		margin-right: 20px;
-		justify-content: center;
-		align-items: center;
-		grid-column: 3/4;
-		grid-row:2/3;
+	}
+	.formarea{
+	margin-right: 20px;
+	justify-content: center;
+	align-items: center;
+	grid-column: 3/4;
+	grid-row:2/3;
+	width: 100%;
+	max-width: 400px;
+	}
+
+	.information{
+		grid-column: 1/2;
+
+	}
+	.static-description-2 li {
+		padding-left: 1rem;
+	}	  
+
+	.pictures{
+		margin: 1rem;
+	}
+	.information{
+		grid-column: 1/2;
 		width: 100%;
-		max-width: 400px;
+		padding: 0 1rem;
+	}
+
+	.attraction img, .attraction2 img{
+		width: 100%;
+		height:auto;
+
 	  }
-	#victors{
-	grid-column: 2/3;}
+
+	
+	#visitors{
+		grid-column: 2/3;
+		margin: 0;
+		max-width: 400px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
 	#footer-grid{
 		grid-column: 1/4;
