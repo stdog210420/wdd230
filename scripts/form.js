@@ -1,7 +1,9 @@
 const kp1 = document.querySelector("#keyphrase");
 const kp2 = document.querySelector("#keyphrase2");
+const eMail = document.querySelector("#email");
 const message1 = document.querySelector("#message1");
 const message2 = document.querySelector("#message2");
+const message3 = document.querySelector("#message3");
 kp1.addEventListener("input", function(){
 	const kp1_value = kp1.value.trim();
 	const kp1_pattern = /^[a-zA-Z0-9]{8,}$/;
@@ -22,7 +24,6 @@ kp1.addEventListener("input", function(){
 	}
 });
 
-
 kp2.addEventListener("focusout", checkSame);
 
 // This should be refactored.
@@ -34,11 +35,32 @@ function checkSame() {
 		kp2.value = "";
 		kp2.focus();
 	} else {
-		message.style.display = "none";
+		message2.style.display = "none";
 		kp2.style.backgroundColor = "#fff";
 		kp2.style.color = "#000";
 	}
 }
+
+eMail.addEventListener("input", function(){
+	const eMail_value = eMail.value.trim();//trim() 方法用于删除字符串的开头和结尾处的空格
+	const eMail_pattern = /^[a-zA-Z0-9._%+-]+@byui\.edu$/;
+	if (eMail_pattern.test(eMail_value)){
+		eMail.style.backgroundColor = "#fff";
+		eMail.style.color = "#000";
+		message3.style.display = "none";
+	}
+	else{
+		message3.textContent = "❗Please enter yout BYUI email address.";
+		message3.style.visibility = "show";
+		eMail.style.backgroundColor = "#fff0f3";
+		eMail_value= "";
+		eMail.focus();
+	}
+	return eMail_value;
+});
+
+
+
 const rangevalue = document.getElementById("rangevalue");
 const range = document.getElementById("range-rating");
 
