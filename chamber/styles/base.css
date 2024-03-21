@@ -814,10 +814,11 @@ nav a {
     display: block;
   }
   #mode {
-    margin-top: 1rem;
-    position:absolute;
-    top: 1rem;
-    right: 2rem;
+    /* margin-top: 1rem; */
+    /* position:absolute; */
+    padding:0.5rem;
+    top: 0.5rem;
+    right: 0.5rem;
     cursor: pointer;
   }
 
