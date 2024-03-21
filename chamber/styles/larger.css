@@ -22,6 +22,15 @@
 		display: flex;
 		justify-content: space-around;
 	}
+
+	#mode{
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		font-size: 3rem;
+		cursor: pointer;
+		/* font-size: 2em; */
+	}
 	#menu {
 	display: none; /* hide hamburger button */
 	}
