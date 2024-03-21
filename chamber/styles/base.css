@@ -822,7 +822,8 @@ nav a {
     display: block;
   }
   #mode {
-    padding: .5rem 1.5rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
     position:absolute;
     font-size: 2rem;
     top: 0.5rem;
