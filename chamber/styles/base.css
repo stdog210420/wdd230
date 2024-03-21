@@ -10,13 +10,21 @@
   --text-color: #FEECED; /* 默认文字颜色 */
   /* change the values below to your chosen font(s) */
   --heading-font: "Montserrat", "Lato", Helvetica;
-  --paragraph-font: "Open Sans", Helvetica, sans-serif;}
+  --paragraph-font: "Open Sans", Helvetica, sans-serif;
+}
 
-  .light {
-    --background-color: #fff; /* 暗模式下的背景颜色 */
-    --text-color: #3C0211; /* 暗模式下的文字颜色 */
-
+/* 亮模式下的背景和文字颜色 */
+/* .dark #mode{
+  background-color: #fff;
+  color: var(--accent1-color);
+  nav a:link, nav a:visited {
+    color: var(--accent1-color);
   }
+  nav a:hover{
+    color: var(--primary-color);
+  }
+} */
+  
 *{
   margin: 0;
   padding: 0;
@@ -41,12 +49,13 @@
 }
 body {
   overflow-wrap: break-word;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-size: 20px;
 }
 
+
 .content {
-  color:var(--accent2-color);
   font-family: var(--paragraph-font);
 	display: grid;
 	grid-template-columns: auto 1fr auto;
@@ -105,7 +114,6 @@ header > h1 {
 	/* font-size: 2em; */
 }
 nav {
-  /* background-color: var(--accent2-color); */
   line-height: 1rem;
   text-align: center;
   font-size: 1.2em;
@@ -118,8 +126,10 @@ nav a {
   text-align: center;
   text-decoration: none;
 }
+
 nav a:link, nav a:visited {
   color:var(--accent2-color);
+
 }
 
 nav a:hover{
@@ -173,7 +183,7 @@ h1, h2, h3, h4, h5, h6,.navigation a{
   font-family: var(--heading-font);
   font-size: 1.5rem;
   font-weight: bolder;
-  /* color: var(--accent2-color); */
+
 }
 
 .home-title{
@@ -230,19 +240,8 @@ p{
     grid-template-rows:  auto 1fr auto;    
 }
 
-.discover{
-  grid-column: 2/3;
-  margin-top: 0;
-  color:var(--accent2-color); 
-  font-size: 2rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  /* padding: 20px; */
-}
-
 hr {
-  color:var(--accent2-color); 
+  /* color:var(--accent2-color);  */
   width: 80%; /* 寬度為父元素寬度的一半 */
   margin: 0 auto; /* 使用 margin 屬性將水平線置於父元素的正中央 */
 }
@@ -293,7 +292,7 @@ figure {
   justify-content: center;
 }
 
-.big-event, .weather, .spotlight{
+.big-event, .weather, #spotlight{
   padding-top: 10px;
   gap: 10px;
 	border: 1px solid var(--secondary-color);
@@ -333,17 +332,67 @@ figure {
   align-items: center;
   justify-content: center;
 }
-.spotlight{
-  justify-content: center;
-  align-items: center;
+
+#spotlight  > *{
   text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#spotlight{
+  /* justify-content: center;
+  align-items: center; */
+  text-align: center;
+  padding: 1rem;
   grid-column: 2/3;
   grid-row: 3/4 ;
   /* border: 1px solid #333; */
-  box-shadow: 0 0 10px var(--secondary-color);  
+  box-shadow: 0 0 10px var(--secondary-color);
+  display: grid;  
+  grid-template-columns: 1fr 1fr 1fr;
+
 }
-#spot-message{
-  padding-bottom:10px;
+#spotlight > h4{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin: 0;
+}
+#spotlight >hr{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: 3rem;
+}
+.spot-light{
+  align-items: center;
+  justify-content: center;
+  grid-row: 3/4;
+  padding-top: 10px;
+  gap: 10px;
+	border: 1px solid var(--secondary-color);
+	box-shadow: 0 0 10px var(--secondary-color);
+	margin-bottom:5px;
+	border-radius: 15px; 
+  background-color: #fff;
+  color: var(--accent1-color);
+}
+.spot-img{
+  padding: 1rem;
+  width:100%;
+  max-width:340px ;
+  height: auto;
+  max-height: 254px;
+}
+
+.spot-title{
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+	text-shadow: 0 0 10px #f3b4b7;
+  letter-spacing: 2px;
+}
+
+.spot-message{
+  padding-bottom:20px;
+  font-size: 1.2rem;
 }
 
 #pictures{
@@ -372,7 +421,7 @@ figure {
 
 .information-title{
   padding: 1rem;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   font-size: 1.5rem;
 }
 
@@ -396,7 +445,7 @@ figure {
   margin-top: 2rem;
   padding: 1rem;
   border-radius: 15px;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
 }
 
 .information-title:hover{
@@ -503,11 +552,11 @@ main{
 }
 
 .menu button {
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
   border: 1px solid #fff;
 	padding: 1rem;
 	font-weight: 700;
-  color: var(--accent1-color);
+  /* color: var(--accent1-color); */
   border-radius: 50px;
 }
 
@@ -660,7 +709,7 @@ footer p{
   padding-left: 10px;
   font-size: 2rem;
   text-shadow: 0 0 10px #fcf300;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
 
 }
 #membership h2::after{
