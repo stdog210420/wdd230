@@ -37,6 +37,7 @@ const displayMembers = (members) => {
         logo.setAttribute('alt', `Logo of ${member.name}`); // fill in the blank
         logo.setAttribute('loading', 'lazy');
         logo.setAttribute('width', '340');
+        logo.setAttribute('height', '252');
         membership.textContent = `${member.membership_level}`;
         membership.setAttribute('id','member')
         information.textContent = `${member.other_information}`;
