@@ -23,16 +23,8 @@
 		justify-content: space-around;
 	}
 
-	#mode{
-		position: absolute;
-		top: 1rem;
-		right: 1rem;
-		font-size: 3rem;
-		cursor: pointer;
-		/* font-size: 2em; */
-	}
 	#menu {
-	display: none; /* hide hamburger button */
+		display: none; /* hide hamburger button */
 	}
     nav a{
         width:fit-content;
@@ -49,6 +41,10 @@
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 		gap:10px;
+	}
+
+	#hero-msg{
+		margin-top: 1rem;
 	}
 	.big-event{
 		grid-column: 1/2;

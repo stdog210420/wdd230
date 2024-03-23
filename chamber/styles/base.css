@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   /* change the values below to your colors from your palette */
@@ -9,22 +9,10 @@
   --background-color: #1F4736; /* 默认背景颜色 */
   --text-color: #FEECED; /* 默认文字颜色 */
   /* change the values below to your chosen font(s) */
-  --heading-font: "Montserrat", "Lato", Helvetica;
+  --heading-font: "Montserrat", Helvetica;
   --paragraph-font: "Open Sans", Helvetica, sans-serif;
 }
 
-/* 亮模式下的背景和文字颜色 */
-/* .dark #mode{
-  background-color: #fff;
-  color: var(--accent1-color);
-  nav a:link, nav a:visited {
-    color: var(--accent1-color);
-  }
-  nav a:hover{
-    color: var(--primary-color);
-  }
-} */
-  
 *{
   margin: 0;
   padding: 0;
@@ -95,7 +83,7 @@ header {
 	box-shadow: 0 0 10px var(--primary-color);
   align-items: center;
   justify-content: center;
-  padding: 25px 50px;
+  padding: 1rem 2rem;
 
 }
 
@@ -106,21 +94,16 @@ header > h1 {
 }
 
 #mode {
-	position: absolute;
-  font-size: 3rem;
-	cursor: pointer;
-	/* font-size: 2em; */
+  padding: .5rem .75rem;
+  margin-right: 1rem;
+  position:absolute;
+  font-size: 2rem;
+  top: 1rem;
+  right:1rem;
+  border: 0;
+  cursor: pointer;
 }
 
-/* #menu {
-  text-decoration: none;
-  padding: .5rem .75rem;
-  border: 0;
-  display: block;
-  position: absolute;
-  top: 0.5rem; 
-  right: 0.5rem; 
-} */
 nav {
   line-height: 1rem;
   text-align: center;
@@ -160,8 +143,7 @@ nav a:hover{
 }
 
 #hero {
-	width: 100%;
-	/* margin: 0.5rem; */
+	/* width: 100%; */
   grid-column: 1/4;
   grid-row: 2/3; 
   display: grid;
@@ -178,14 +160,15 @@ nav a:hover{
   grid-row: 1/2;
   display:flex;
   flex-direction: column;
-  margin-top: 50px;
+  /* margin-top: 0.5rem; */
   align-items: center;
 }
 #hero-img {
-  margin-top: -50px;
+  margin-top: -2rem;
   grid-column: 1/2;
-  max-width :100%;
-  max-height: 100%;
+  width: 100%;
+  max-width :auto;
+  height: auto;
 }
 h1, h2, h3, h4, h5, h6,.navigation a{
   font-family: var(--heading-font);
@@ -285,10 +268,17 @@ button{
 	box-shadow: 0 0 10px var(--secondary-color);
 }
 
+.event{
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 1rem;
+}
+
 .event-img{
   width: 100%;
-  padding: 2rem;
+  height: auto;
 }
+
 
 figure img{
   width: auto;
@@ -355,42 +345,38 @@ figure {
   grid-row: 3/4 ;
   /* border: 1px solid #333; */
   box-shadow: 0 0 10px var(--secondary-color);
+}
+
+#spotcards{
   display: grid;  
   grid-template-columns: 1fr 1fr 1fr;
-
+  gap: 0.5rem;
 }
 #spotlight > h4{
-  grid-column: 2/3;
-  grid-row: 1/2;
   margin: 0;
+  text-align: center;
 }
-#spotlight >hr{
-  grid-column: 2/3;
-  grid-row: 1/2;
-  margin-top: 3rem;
-}
+
 .spot-light{
   align-items: center;
   justify-content: center;
   grid-row: 3/4;
-  padding-top: 10px;
-  gap: 10px;
 	border: 1px solid var(--secondary-color);
 	box-shadow: 0 0 10px var(--secondary-color);
-	margin-bottom:5px;
 	border-radius: 15px; 
   background-color: #fff;
   color: var(--accent1-color);
+  display: grid;  
+  grid-template-rows: auto 1fr auto;
 }
 .spot-img{
-  padding: 1rem;
   width:100%;
-  max-width:340px ;
+  /* max-width:auto ; */
   height: auto;
-  max-height: 254px;
 }
 
 .spot-title{
+  margin-top: 1rem;
   font-family: "Archivo", sans-serif;
   font-weight: 700;
   font-size: 2rem;
@@ -399,7 +385,7 @@ figure {
 }
 
 .spot-message{
-  padding-bottom:20px;
+  margin-bottom:1rem;
   font-size: 1.2rem;
 }
 
@@ -820,30 +806,24 @@ nav a {
   }
   header, .list{
     display: block;
+    position: relative;
   }
-  #mode {
-    padding: 1rem 2rem;
-    margin-top: 1rem;
-    position:absolute;
-    font-size: 2rem;
-    top: 0.5rem;
-    right:1rem;
-    cursor: pointer;
+
+  #menu {
+      text-decoration: none;
+      padding: .5rem .75rem;
+      margin-left: 1rem;
+      border: 0;
+      display: block;
+      position: absolute;/*將menu定位為絕對位置*/
+      top: 1rem;
+      right: 0.5rem; 
   }
 
 
   nav{
     gap: 0;
     display: block; 
-  }
-  #menu {
-      text-decoration: none;
-      padding: .5rem .75rem;
-      border: 0;
-      display: block;
-      position: absolute;/*將menu定位為絕對位置*/
-      top: 0.5rem; /*頂部距離為0 */
-      right: 0.5rem; /*右側距離為0 */
   }
 
   #menu::before {
@@ -854,7 +834,7 @@ nav a {
       content: "❤️";
   }
   #hero-msg{
-    margin-top: -40px;
+    margin-top: -1rem;
   }
   #menu.open {
       display: block; /* 添加 .open 類時顯示 */
@@ -862,6 +842,15 @@ nav a {
 
   nav.open a {
       display: block;
+  }
+
+
+  .spot-title{
+    padding: 1px;
+    font-size: 1rem;
+  }
+  .spot-message{
+    font-size: 0.9rem;
   }
   .information{
     max-width: 600px;
