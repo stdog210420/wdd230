@@ -656,12 +656,13 @@ footer{
   grid-column: 1/4;
   grid-row: 4/5;
   width: 100%;
-
-}
-footer p, #footer-name{
   font-size: 1em;
   text-decoration: none;
 }
+/* footer p, #footer-name{
+  font-size: 1em;
+  text-decoration: none;
+} */
 footer p{
   color: var(--primary-color);
 }
