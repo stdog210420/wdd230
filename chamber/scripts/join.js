@@ -6,9 +6,11 @@ const currentTimestamp = Date.now();
 // Set the value of the hidden input field to the current date/time
 timestampField.value = currentTimestamp;
 
-const position = document.querySelector("#position");
+let position = document.querySelector("#position");
 // Add an event listener to listen for input events
-position.addEventListener('input', function() {
+position.addEventListener("focusout", checkVaild);
+
+function checkVaild(){
     // Get the field value
     const position_value = position.value.trim();
     // Define a regular expression pattern
@@ -18,17 +20,21 @@ position.addEventListener('input', function() {
         // If the value matches the pattern, it's valid
 		position.style.backgroundColor = "#fff";
 		position.style.color = "#000";
+        console.log("vaild");
     } else {
         // If the value doesn't match the pattern, it's invalid
 		position.style.backgroundColor = "#fff0f3";
 		position.value = "";
 		position.focus();
+        console.log("❗Please revise.");
     }
-});
+};
 
 const eMail = document.querySelector("#email");
-eMail.addEventListener("input", function(){
-	const eMail_value = eMail.value.trim();//trim() 方法用于删除字符串的开头和结尾处的空格
+eMail.addEventListener("focusout", checkEmail)
+
+function checkEmail(){
+	let eMail_value = eMail.value.trim();//trim() 方法用于删除字符串的开头和结尾处的空格
 	const eMail_pattern = /^[a-zA-Z0-9._%+-]+@byui\.edu$/;
 	if (eMail_pattern.test(eMail_value)){
 		eMail.style.backgroundColor = "#fff";
@@ -36,13 +42,11 @@ eMail.addEventListener("input", function(){
 	}
 	else{
 		eMail.style.backgroundColor = "#fff0f3";
+		eMail.value= "";
         eMail.focus();
-		eMail_value= "";
-
+        console.log("❗Please revise.");
 	}
-});
-
-
+};
 
 
 // 获取输入字段元素

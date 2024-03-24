@@ -33,7 +33,7 @@ const displaySilverGold = (members) => {
         logo.setAttribute('alt', `Logo of ${member.name}`); // fill in the blank
         logo.setAttribute('loading', 'lazy');
         logo.setAttribute('width', '340');
-        logo.setAttribute('height', '254');
+        logo.setAttribute('height', '252');
         membership.textContent = `${member.membership_level}`;
         card.appendChild(companyName); //fill in the blank
         card.appendChild(logo); //fill in the blank

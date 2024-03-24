@@ -350,6 +350,7 @@ figure {
 #spotcards{
   display: grid;  
   grid-template-columns: 1fr 1fr 1fr;
+  width: auto;
   gap: 0.5rem;
 }
 #spotlight > h4{
@@ -382,6 +383,9 @@ figure {
   font-size: 2rem;
 	text-shadow: 0 0 10px #f3b4b7;
   letter-spacing: 2px;
+  width: 100%;
+  max-width: 340px;
+  height: 106px;
 }
 
 .spot-message{
@@ -778,9 +782,16 @@ footer p{
   margin-top: 10px;
   background-color: #fff;
   text-align: center;
-  font-size: 2rem;
+
   padding: 10px;
-  
+  color:var(--primary-color);
+}
+
+#thank > h1, #heart{
+  font-size: 2rem;
+}
+#thankfooter{
+  font-size: 1rem;
 }
 
 #heart {
