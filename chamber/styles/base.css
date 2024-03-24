@@ -389,6 +389,11 @@ figure {
   font-size: 1.2rem;
 }
 
+.spot-message::before{
+  font-size: 1.2rem;
+  content:"🪙";
+}
+
 #pictures{
   margin: 1rem;
   display: grid;
@@ -851,6 +856,7 @@ nav a {
     padding: 1px;
     font-size: 1rem;
   }
+
   .spot-message{
     font-size: 0.9rem;
   }
