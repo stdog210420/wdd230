@@ -26,6 +26,7 @@ const displaySilverGold = (members) => {
         companyName.setAttribute('class','spot-title'); 
         let logo = document.createElement("img"); 
         let membership = document.createElement("p");  
+        membership.setAttribute('class','spot-message'); 
         companyName.textContent = `${member.name}`; 
         logo.setAttribute('class', 'spot-img');
         logo.setAttribute('src', member.image);
@@ -34,9 +35,8 @@ const displaySilverGold = (members) => {
         logo.setAttribute('width', '340');
         logo.setAttribute('height', '254');
         membership.textContent = `${member.membership_level}`;
-        membership.setAttribute('class','spot-message')
-        card.appendChild(logo); //fill in the blank
         card.appendChild(companyName); //fill in the blank
+        card.appendChild(logo); //fill in the blank
         card.appendChild(membership);
         spotcards.appendChild(card);
       });
