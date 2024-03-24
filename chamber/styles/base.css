@@ -167,7 +167,6 @@ nav a:hover{
   margin-top: -2rem;
   grid-column: 1/2;
   width: 100%;
-  max-width :auto;
   height: auto;
 }
 h1, h2, h3, h4, h5, h6,.navigation a{
