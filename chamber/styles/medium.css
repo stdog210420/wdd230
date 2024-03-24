@@ -163,6 +163,9 @@
 		flex-direction: column;
 		align-items: center;
 	}
+	.card-msg{
+		margin-left: 2rem;
+	  }
 	#footer-grid{
 		grid-column: 1/4;
 		padding-top: 30px;
