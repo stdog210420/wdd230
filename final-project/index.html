@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Phoebe Lin">
+    <meta name="description" content="This page is a home page of scooter~ a fictitious 🛵 motor scooter rental company.">
+    <title>~Scoots~ a home page of a fictitious 🛵 motor scooter rental company</title>
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="This page is a home page of ~Scoots~, a fictitious 🛵 motor scooter rental company located on the island of Cozumel off the coast of Mexico in the western Caribbean Sea.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.imgur.com/m03WEIl.jpg">
+    <meta property="og:url" content="https://stdog210420.github.io/wdd230/">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body class="dark">
+    <div class="content">
+        <header>
+                <a class="logo_link" href="index.html">
+                    <img class="logo" src="images/scoots.webp" alt="The Logo of ~Scoots~" ></a>
+                    
+                <nav class="navigation">
+                    <a class="home" href="index.html" >Home</a>
+                    <a class="rentals" href="rentals.html">Rentals</a>
+                    <a class="reservations" href="reservations.html">Reservations</a>
+                    <a class="contact" href="contact.html">Contact </a>
+                </nav>
+                <img class="fb" src="images/facebook.webp" alt="It's a facebook link." width="100" height="100">
+                <img class="linkedin" src="images/linkedin.webp" alt="It's a linkedin link." width="100" height="100">
+                <h1>Welcome come to Scoots </h1>
+
+            <button id="menu"></button>
+            <div id="mode">
+                🏝️
+            </div>
+        </header>
+        <div id="hero">
+            <div id="banner" class="banner">
+                <p><span>Join us for the chamber of commerce meet and greet on Wednesday at 7:00 p.m.</span>
+                <button id="closeBanner">❌</button></p>
+            </div>
+            <div id="hero-box">
+                <picture>
+                    <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
+                    <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp">
+                    <img id="hero-img" src="images/hero-large.webp" alt="It's group chating with each other." width="1200" height="800">
+                </picture>
+            </div>
+            <section id="hero-msg">
+                <h2 class="home-title">Let's find treasure.</h2>
+                <h3 class="home-title">Welcome to Tainan Food Machinery Industry Chamber</h3>
+                <div class="button-box">
+                    <a class="book" href="join.html">Join Now</a>
+                </div>
+            </section>
+        </div>
+        <main class="home-grid">
+            <section class="big-event">
+                <h4>FOODTECH TAIPEI & BIO/PHARMATECH TAIWAN</h4>
+                <hr>
+                <div class="event">
+                    <p class="card-msg">🗓️Date：2024/06/26-2024/06/29</p>
+                    <p class="card-msg">🚩Venue：Taipei Nangang Exhibition Center, Hall 1 (TaiNEX 1)</p>  
+                    <p class="card-msg">📈Industry：Machinery,Medical & Biology,Food & Agriculture & Fishery</p>    
+                    <p class="card-msg">🌏Website：<a href="https://www.foodtech.com.tw/en/index.html">https://www.foodtech.com.tw/en/index.html</a></p>
+                    <p class="card-msg">📧Email：	foodtech@taitra.org.tw</p>  
+                    <picture>
+                        <source media="(max-width: 300px)" class="event-img" srcset="images/event-small.webp">
+                        <source media="(max-width: 900px)" class="event-img" srcset="images/event-medium.webp">
+                        <img class="event-img" src="images/event.webp" alt="The Tainan Automation Machinery and Smart Manufacturing Exhibition" width="1200" height="432">
+                    </picture>
+                </div>              
+            </section>
+            <div class="weather">
+                <div>
+                    <h4>Current Weather</h4>
+                    <hr>
+                    <p id="district"><img src="images/mexico-flag.webp" alt="Mexico flag.webp"> Cozumel, Quintana Roo, Mexico</p>
+                    <!-- <input type="number" id="temperature" required> -->
+                    <figure id="current-weather">
+                        <p class="weekday" id="weekDay"></p>
+                        <p><span id="degree"></span><span id="humid"></span></p>
+                        <img id="weather-icon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+                        <figcaption></figcaption>
+                    </figure>
+                </div>
+                <h5>Forcast 3 Days</h5>
+                <hr>
+                <div id="forcast-3-days">
+                    <figure>
+                        <p class="weekday" id="weekDay1"></p>
+                        <p id="tempDay1"></p>
+                        <img id="iconDay1" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+                        <figcaption id="descDay1"></figcaption>
+                    </figure>
+                    <figure>
+                        <p class="weekday" id="weekDay2"></p>
+                        <p id="tempDay2"></p>
+                        <img id="iconDay2" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+                        <figcaption id="descDay2"></figcaption>                        
+                    </figure>
+                    <figure>
+                        <p class="weekday" id="weekDay3"></p>
+                        <p id="tempDay3"></p>
+                        <img id="iconDay3" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+                        <figcaption id="descDay3"></figcaption>                        
+                    </figure>
+                </div>
+            </div>
+            <section id="spotlight">
+                <h4>Member Spotlights</h4>
+                <hr>
+                <div id="spotcards">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="footer-grid">
+                <div class="footer-logo">
+                    <a  href="index.html"><img class="logo" src="images/scoots.webp" alt="The Logo of ~Scooter~" ></a>
+                    <p class="footer-logo"><span class="strong">~Scooter~</span></p>
+                    <p class="footer-logo">1a avenida sur local 55 entre rafael E.Melgar y 5ta avenida parque Benito Juárez, Centro, 77600 Cozumel, Q.R., Mexico.</p>
+                </div>
+                <div class="footer-message">
+                    <p  class="footer-message">info@tainanfoodmachinery.com.tw</p>
+                    <p  class="footer-message">(+668)123456798</p>
+                    <p  class="footer-message">🚩Location Map</p>
+                </div>
+            </div>
+            <div class="footerline">
+                <p id="footer-name"><span>&copy;<span id="year"></span><span> ~scooter~ </span> |</span><span class="strong">Phoeb Lin |</span><span>WDD 230 Project|</span><span id="lastModified">Last Modified</span></p>
+            </div>
+        </footer>
+    </div>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/banner.js"></script>
+    <script src="scripts/mode.js"></script>
+</body>
+</html>
