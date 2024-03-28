@@ -29,11 +29,10 @@
                     <a class="rentals" href="rentals.html">Rentals</a>
                     <a class="reservations" href="reservations.html">Reservations</a>
                     <a class="contact" href="contact.html">Contact </a>
+                    <h1>Welcome come to Scoots </h1>
                 </nav>
                 <img class="fb" src="images/facebook.webp" alt="It's a facebook link." width="100" height="100">
                 <img class="linkedin" src="images/linkedin.webp" alt="It's a linkedin link." width="100" height="100">
-                <h1>Welcome come to Scoots </h1>
-
             <button id="menu"></button>
             <div id="mode">
                 🏝️
@@ -44,38 +43,87 @@
                 <p><span>Join us for the chamber of commerce meet and greet on Wednesday at 7:00 p.m.</span>
                 <button id="closeBanner">❌</button></p>
             </div>
-            <div id="hero-box">
-                <picture>
-                    <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
-                    <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp">
-                    <img id="hero-img" src="images/hero-large.webp" alt="It's group chating with each other." width="1200" height="800">
-                </picture>
+            <picture class="hero-box">
+                <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
+                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp">
+                <img src="images/hero-large.webp" alt="It's group chating with each other." width="1200" height="800">
+            </picture>
+            <div id="hero-msg">
+                <a class="book" href="contact.html">Make a Rental Reservation</a>
             </div>
-            <section id="hero-msg">
-                <h2 class="home-title">Let's find treasure.</h2>
-                <h3 class="home-title">Welcome to Tainan Food Machinery Industry Chamber</h3>
-                <div class="button-box">
-                    <a class="book" href="join.html">Join Now</a>
-                </div>
-            </section>
         </div>
         <main class="home-grid">
-            <section class="big-event">
-                <h4>FOODTECH TAIPEI & BIO/PHARMATECH TAIWAN</h4>
-                <hr>
-                <div class="event">
-                    <p class="card-msg">🗓️Date：2024/06/26-2024/06/29</p>
-                    <p class="card-msg">🚩Venue：Taipei Nangang Exhibition Center, Hall 1 (TaiNEX 1)</p>  
-                    <p class="card-msg">📈Industry：Machinery,Medical & Biology,Food & Agriculture & Fishery</p>    
-                    <p class="card-msg">🌏Website：<a href="https://www.foodtech.com.tw/en/index.html">https://www.foodtech.com.tw/en/index.html</a></p>
-                    <p class="card-msg">📧Email：	foodtech@taitra.org.tw</p>  
-                    <picture>
-                        <source media="(max-width: 300px)" class="event-img" srcset="images/event-small.webp">
-                        <source media="(max-width: 900px)" class="event-img" srcset="images/event-medium.webp">
-                        <img class="event-img" src="images/event.webp" alt="The Tainan Automation Machinery and Smart Manufacturing Exhibition" width="1200" height="432">
-                    </picture>
-                </div>              
-            </section>
+            <table class="table">
+                <caption>Rental Information</caption>
+                <thead>
+                    <tr>
+                        <th class="card-msg" colspan="6" scope="colgroup">Max Rental Pricing</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2"></th>
+                        <th colspan="2" class="title">Reservation</th>
+                        <th colspan="2" class="title">Walk-in</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="title">Rental Type</td>
+                        <td class="title">Max. Persons</td>
+                        <td class="title">Half Day(3 hrs)</td>          
+                        <td class="title">Full Day</td>
+                        <td class="title">Half Day(3 hrs)</td>                       
+                        <td class="title">Full Day</td>
+                    </tr>
+                    <tr>
+                        <td class="title">~Honda Metro Scooter</td>
+                        <td>1</td>
+                        <td>$20</td>
+                        <td>$30</td>
+                        <td>$25</td>
+                        <td>$35</td>
+                    </tr>
+                    <tr>
+                        <td class="title">~Honda Dio Scooter</td>
+                        <td>2</td>
+                        <td>$30</td>
+                        <td>$40</td>
+                        <td>$35</td>
+                        <td>$45</td>
+                    </tr>
+                    <tr>
+                        <td class="title">~Honda PCX150 Scooter</td>
+                        <td>2</td>
+                        <td>$40</td>
+                        <td>$50</td>
+                        <td>$45</td>
+                        <td>$55</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Honda Pioneer ATV</td>
+                        <td>4</td>
+                        <td>$50</td>
+                        <td>$70</td>
+                        <td>$60</td>
+                        <td>$80</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Jeep Wrangler- 4 door with a/c</td>
+                        <td>5</td>
+                        <td>$70</td>
+                        <td>$100</td>
+                        <td>$85</td>
+                        <td>$125</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Jeep Wrangler- 2 door</td> 
+                        <td>4</td>
+                        <td>$60</td>
+                        <td>$85</td>
+                        <td>$70</td>
+                        <td>$90</td>
+                    </tr>
+                </tbody>
+            </table>             
             <div class="weather">
                 <div>
                     <h4>Current Weather</h4>
@@ -121,10 +169,10 @@
         </main>
         <footer>
             <div id="footer-grid">
-                <div class="footer-logo">
-                    <a  href="index.html"><img class="logo" src="images/scoots.webp" alt="The Logo of ~Scooter~" ></a>
-                    <p class="footer-logo"><span class="strong">~Scooter~</span></p>
-                    <p class="footer-logo">1a avenida sur local 55 entre rafael E.Melgar y 5ta avenida parque Benito Juárez, Centro, 77600 Cozumel, Q.R., Mexico.</p>
+                <div class="footerlogo">
+                    <a  href="index.html"><img id="footer-logo" src="images/scoots.webp" alt="The Logo of ~Scooter~" ></a>
+                    <p id="footer-logo"><span class="strong">~Scooter~</span></p>
+                    <p id="footer-logo">1a avenida sur local 55 entre rafael E.Melgar y 5ta avenida parque Benito Juárez, Centro, 77600 Cozumel, Q.R., Mexico.</p>
                 </div>
                 <div class="footer-message">
                     <p  class="footer-message">info@tainanfoodmachinery.com.tw</p>
@@ -142,5 +190,6 @@
     <script src="scripts/weather.js"></script>
     <script src="scripts/banner.js"></script>
     <script src="scripts/mode.js"></script>
+    <script src="visualeffect.js"></script>
 </body>
 </html>
