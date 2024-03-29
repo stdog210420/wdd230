@@ -790,7 +790,8 @@ footer p{
 #footer-grid{
   margin: 0 10px 0 10px;
   padding-top: 30px;
-
+  background-color: #fff;
+  box-shadow: 0 0 10px var(--secondary-color); 
 }
 /* thank you page ***********************************/
 #thank, #thankfooter{
