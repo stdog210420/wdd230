@@ -29,10 +29,10 @@
                     <a class="rentals" href="rentals.html">Rentals</a>
                     <a class="reservations" href="reservations.html">Reservations</a>
                     <a class="contact" href="contact.html">Contact </a>
-                    <h1>Welcome come to Scoots </h1>
+                    <h1>Welcome to Scoots </h1>
                 </nav>
-                <img class="fb" src="images/facebook.webp" alt="It's a facebook link." width="100" height="100">
-                <img class="linkedin" src="images/linkedin.webp" alt="It's a linkedin link." width="100" height="100">
+                <a href="https://www.facebook.com/?locale=zh_TW"><img class="fb" src="images/facebook.webp" alt="It's a facebook link." width="100" height="100"></a>
+                <a href="https://www.linkedin.com/"><img class="linkedin" src="images/linkedin.webp" alt="It's a linkedin link." width="100" height="100"></a>
             <button id="menu"></button>
             <div id="mode">
                 🏝️
@@ -40,93 +40,78 @@
         </header>
         <div id="hero">
             <div id="banner" class="banner">
-                <p><span>Join us for the chamber of commerce meet and greet on Wednesday at 7:00 p.m.</span>
+                <p><span>Today's highest temperature soared to <span class="maxdegree"></span>, please remember to apply sunscreen and stay hydrated.</span>
                 <button id="closeBanner">❌</button></p>
             </div>
-            <picture class="hero-box">
-                <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
-                <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp">
-                <img src="images/hero-large.webp" alt="It's group chating with each other." width="1200" height="800">
-            </picture>
+            <div class="hero-box">
+                <picture>
+                    <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
+                    <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp">
+                    <img src="images/hero-large.webp" alt="It's group chating with each other." width="1200" height="800">
+                </picture>
+            </div>
             <div id="hero-msg">
                 <a class="book" href="contact.html">Make a Rental Reservation</a>
             </div>
         </div>
         <main class="home-grid">
-            <table class="table">
-                <caption>Rental Information</caption>
-                <thead>
-                    <tr>
-                        <th class="card-msg" colspan="6" scope="colgroup">Max Rental Pricing</th>
-                    </tr>
-                    <tr>
-                        <th colspan="2"></th>
-                        <th colspan="2" class="title">Reservation</th>
-                        <th colspan="2" class="title">Walk-in</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="title">Rental Type</td>
-                        <td class="title">Max. Persons</td>
-                        <td class="title">Half Day(3 hrs)</td>          
-                        <td class="title">Full Day</td>
-                        <td class="title">Half Day(3 hrs)</td>                       
-                        <td class="title">Full Day</td>
-                    </tr>
-                    <tr>
-                        <td class="title">~Honda Metro Scooter</td>
-                        <td>1</td>
-                        <td>$20</td>
-                        <td>$30</td>
-                        <td>$25</td>
-                        <td>$35</td>
-                    </tr>
-                    <tr>
-                        <td class="title">~Honda Dio Scooter</td>
-                        <td>2</td>
-                        <td>$30</td>
-                        <td>$40</td>
-                        <td>$35</td>
-                        <td>$45</td>
-                    </tr>
-                    <tr>
-                        <td class="title">~Honda PCX150 Scooter</td>
-                        <td>2</td>
-                        <td>$40</td>
-                        <td>$50</td>
-                        <td>$45</td>
-                        <td>$55</td>
-                    </tr>
-                    <tr>
-                        <td class="title">Honda Pioneer ATV</td>
-                        <td>4</td>
-                        <td>$50</td>
-                        <td>$70</td>
-                        <td>$60</td>
-                        <td>$80</td>
-                    </tr>
-                    <tr>
-                        <td class="title">Jeep Wrangler- 4 door with a/c</td>
-                        <td>5</td>
-                        <td>$70</td>
-                        <td>$100</td>
-                        <td>$85</td>
-                        <td>$125</td>
-                    </tr>
-                    <tr>
-                        <td class="title">Jeep Wrangler- 2 door</td> 
-                        <td>4</td>
-                        <td>$60</td>
-                        <td>$85</td>
-                        <td>$70</td>
-                        <td>$90</td>
-                    </tr>
-                </tbody>
-            </table>             
+            <section class="Rental">
+                <div class="types-rental">
+                    <h2>Types of Rentals</h2>
+                    <hr>                     
+                </div>
+                <div class="scooters">
+                    <h3 class="dio">Honda Motor Scooters</h3>
+                    <p><span class="rental-icon">Honda Metropolitan (49cc) :</span></p>
+                    <div class="humanline">
+                        <p class="human"> person</p>
+                        <p> half-day <span class="money">$20-$25</span></p>
+                        <p> full-day <span class="money">$30-$35</span></p>                     
+                    </div>
+                    <p><span class="rental-icon">Honda Dio (110cc) :</span></p>
+                    <div class="humanline">
+                        <p class="human2"> persons</p>
+                        <p> half-day <span class="money">$30-$35</span></p>
+                        <p> full-day <span class="money">$40-$45</span></p>
+                    </div>
+                    <p><span class="rental-icon">Honda PCX150 (149cc) :</span></p>
+                    <div class="humanline">
+                        <p class="human2"> persons</p>
+                        <p> half-day <span class="money">$40-$45</span></p>
+                        <p> full-day <span class="money">$50-$55</span></p>
+                    </div>
+                </div>
+                <div class="scooters">
+                    <h3 class="pioneer">Side-by-Side ATVs</h3>
+                    <p><span class="rental-icon">Honda Pioneer 1000 :</span></p>
+                    <div class="humanline">
+                        <p class="human4"> persons</p>
+                        <p> half-day <span class="money">$50-$60</span></p>
+                        <p> full-day <span class="money">$70-$80</span></p>  
+                    </div>                  
+                </div>
+                <div class="scooters">
+                    <h3 class="door-4">Jeeps</h3>
+                    <p><span class="rental-icon">Jeep Wrangler - 4 door with A/C :</span></p>
+                    <div class="humanline">
+                        <p class="human5"> persons</p>
+                        <p> half-day <span class="money">$70-$85</span></p>
+                        <p> full-day <span class="money">$100-$125</span></p>
+                    </div>
+                    <p><span class="rental-icon">Jeep Wrangler - 2 door - open air - manuel :</span></p>
+                    <div class="humanline">
+                        <p class="human4"> persons</p>
+                        <p> half-day <span class="money">$60-$70</span></p>
+                        <p> full-day <span class="money">$85-$90</span></p>  
+                    </div>  
+                </div>
+                <div class="rental-img">
+                    <img src="images/car.jpg" alt="The rental car"  width="728" height="480">
+                </div>
+            </section>
             <div class="weather">
                 <div>
-                    <h4>Current Weather</h4>
+                    <h2>Current Weather</h2>
                     <hr>
                     <p id="district"><img src="images/mexico-flag.webp" alt="Mexico flag.webp"> Cozumel, Quintana Roo, Mexico</p>
                     <!-- <input type="number" id="temperature" required> -->
@@ -137,7 +122,7 @@
                         <figcaption></figcaption>
                     </figure>
                 </div>
-                <h5>Forcast 3 Days</h5>
+                <h3>Forcast 3 Days</h3>
                 <hr>
                 <div id="forcast-3-days">
                     <figure>
@@ -160,28 +145,22 @@
                     </figure>
                 </div>
             </div>
-            <section id="spotlight">
-                <h4>Member Spotlights</h4>
-                <hr>
-                <div id="spotcards">
-                </div>
-            </section>
         </main>
         <footer>
             <div id="footer-grid">
                 <div class="footerlogo">
-                    <a  href="index.html"><img id="footer-logo" src="images/scoots.webp" alt="The Logo of ~Scooter~" ></a>
-                    <p id="footer-logo"><span class="strong">~Scooter~</span></p>
-                    <p id="footer-logo">1a avenida sur local 55 entre rafael E.Melgar y 5ta avenida parque Benito Juárez, Centro, 77600 Cozumel, Q.R., Mexico.</p>
+                    <a href="index.html"><img src="images/scoots.webp" alt="The Logo of ~Scooter~"></a>
+                    <p>1a avenida sur local 55 entre rafael E.Melgar y 5ta avenida parque Benito Juárez, Centro, 77600 Cozumel, Q.R., Mexico.</p>
                 </div>
                 <div class="footer-message">
-                    <p  class="footer-message">info@tainanfoodmachinery.com.tw</p>
-                    <p  class="footer-message">(+668)123456798</p>
-                    <p  class="footer-message">🚩Location Map</p>
+                    <p><span class="strong">~Scooter~</span></p>
+                    <p class="footer-message">info@tainanfoodmachinery.com.tw</p>
+                    <p class="footer-message">(+668)123456798</p>
+                    <p class="footer-message">🚩Location Map</p>
                 </div>
-            </div>
-            <div class="footerline">
-                <p id="footer-name"><span>&copy;<span id="year"></span><span> ~scooter~ </span> |</span><span class="strong">Phoeb Lin |</span><span>WDD 230 Project|</span><span id="lastModified">Last Modified</span></p>
+                <div class="footerline">
+                    <p id="footer-name"><span>&copy;<span id="year"></span><span> ~scooter~ </span> |</span><span class="strong">Phoeb Lin |</span><span>WDD 230 Project|</span><span id="lastModified">Last Modified</span></p>
+                </div>
             </div>
         </footer>
     </div>

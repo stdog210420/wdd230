@@ -2,6 +2,7 @@
     // const temperature = parseFloat(document.getElementById('temperature').value);
     // const windSpeed = parseFloat(document.getElementById('windSpeed').value);
     const degree = document.getElementById('degree');
+    const maxdegree = document.querySelector(".maxdegree");
     const weatherIcon = document.querySelector("#weather-icon");
     const captionDesc= document.querySelector("figcaption");
     const humidElement = document.getElementById('humid');
@@ -30,7 +31,7 @@
         const response = await fetch(url);
         if (response.ok) {
           const data = await response.json();
-          // console.log(data);
+          console.log(data);
           displayResults(data);           
         }
         else{
@@ -45,8 +46,11 @@
 
     function displayResults(data){
       const temp = data.main.temp.toFixed(0);
+      const maxtemp = data.main.temp_max.toFixed(0);
       temperature = Math.floor((temp-35)*5/9);
+      maxTemperature= Math.floor((maxtemp-35)*5/9);
       degree.innerHTML = `${temperature}&deg;C`;
+      maxdegree.innerHTML = `${maxTemperature}&deg;C`;
       const humid = data.main.humidity.toFixed(0);
       humidElement.innerHTML = `${humid}RH`;
       const wind = data.wind.speed.toFixed(0);

@@ -83,14 +83,14 @@
                     <form method="get" action="thankyou.html" class="form">
                         <fieldset>
                             <legend>Application Information</legend>
-                            <label>First Name*</label><input type="text" name="fname" id="fname" required>
-                            <label>Last Name* </label><input type="text" name="lname" id="lname" required>
-                            <label>Title/Position*</label><input type="text" name="position" id="position" pattern="\s[a-zA-Z0-9]{7,}" required placeholder="Please enter at least seven characters."  title="Please enter at least seven characters consisting of alphabets, hyphens, and spaces only">                   
-                            <label>Email*</label><input type="email" name="email" id="email" required placeholder="xxx1234@byui.edu" title="❗Please enter yout BYUI email address.">
+                            <label for="fname">First Name*</label><input type="text" name="fname" id="fname" required>
+                            <label for="lname">Last Name* </label><input type="text" name="lname" id="lname" required>
+                            <label for="position">Title/Position*</label><input type="text" name="position" id="position" pattern="\s[a-zA-Z0-9]{7,}" required placeholder="Please enter at least seven characters."  title="Please enter at least seven characters consisting of alphabets, hyphens, and spaces only">                   
+                            <label for="email">Email*</label><input type="email" name="email" id="email" required placeholder="xxx1234@byui.edu" title="❗Please enter yout BYUI email address.">
                             <!-- <label>Email*</label><input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu" required placeholder="xxx1234@byui.edu" title="❗Please enter yout BYUI email address."> -->
-                            <label>Phone</label><input type="tel" name="phone"  id="phone" placeholder="+886-1234-5678" required>
-                            <label>Business/Organization's name</label><input type="text" name="organization" id="organization" required>
-                            <label>Membership Level 
+                            <label for="phone">Phone</label><input type="tel" name="phone"  id="phone" placeholder="+886-1234-5678" required>
+                            <label for="organization">Business/Organization's name</label><input type="text" name="organization" id="organization" required>
+                            <label for="membership">Membership Level 
                                 <select name="membership">
                                     <option value="np">NP Membership</option>
                                     <option value="bronze">Bronze Membership</option>
@@ -98,7 +98,7 @@
                                     <option value="gold">Gold Membership</option>
                                 </select>
                             </label>
-                            <label>Business/Organization's Description <textarea name="description" id="description" rows="4" cols="50"></textarea></label>                
+                            <label for="description">Business/Organization's Description <textarea name="description" id="description" rows="4" cols="50"></textarea></label>                
                             <input type="hidden" name="timestamp" id="timestamp">
                         </fieldset>
                         <input type="submit" value="Subscribe">
