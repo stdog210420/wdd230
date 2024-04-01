@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Phoebe Lin">
+    <meta name="description" content="This page is a home page of scooter~ a fictitious 🛵 motor scooter rental company.">
+    <title>~Scoots~ a home page of a fictitious 🛵 motor scooter rental company</title>
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="This page is a home page of ~Scoots~, a fictitious 🛵 motor scooter rental company located on the island of Cozumel off the coast of Mexico in the western Caribbean Sea.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.imgur.com/m03WEIl.jpg">
+    <meta property="og:url" content="https://stdog210420.github.io/wdd230/">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body class="dark">
+    <div class="content">
+        <header>
+                <a class="logo_link" href="index.html">
+                    <img class="logo" src="images/scoots.webp" alt="The Logo of ~Scoots~" ></a>
+                    
+                <nav class="navigation">
+                    <a class="home" href="index.html" >Home</a>
+                    <a class="rentals" href="rentals.html">Rentals</a>
+                    <a class="reservations" href="reservations.html">Reservations</a>
+                    <a class="contact" href="contact.html">Contact </a>
+                    <h1>Welcome to Scoots </h1>
+                </nav>
+                <a href="https://www.facebook.com/?locale=zh_TW"><img class="fb" src="images/facebook.webp" alt="It's a facebook link." width="100" height="100"></a>
+                <a href="https://www.linkedin.com/"><img class="linkedin" src="images/linkedin.webp" alt="It's a linkedin link." width="100" height="100"></a>
+            <button id="menu"></button>
+            <div id="mode">
+                🏝️
+            </div>
+        </header>
+        <main class="home-grid">
+            <section class="agreement">
+                <h2>Rental Services and Agreements</h2>
+                <ul>
+                    <li>A $50 security deposit is required to confirm reservations.</li>
+                    <li>A valid drivers license is required in hand at the time of rental.</li>
+                    <li>No one under the age of 12 years of age are allowed to ride on the scooters.</li>
+                    <li>Fuel charge is not included.</li>
+                    <li>Unlimited mileage.</li>
+                    <li>Liability insurance is included.</li>
+                    <li>Damage insurance is available for purchase.</li>
+                    <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
+                    <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or venmo.</li>
+                    <li>Rentals may be returned to either physical location.</li>
+                </ul>
+            </section>
+            <section class="formarea">
+                <form method="get" action="thankyou.html" class="form">
+                    <fieldset>
+                        <legend>Application Information</legend>
+                        <label for="date">Date*</label><input type="date" name="date" id="date" required placeholder="2024/04/01">
+                        <label for="period">Period* 
+                            <select id="period" name="period">
+                                <option value="none">Select period</option>
+                                <option value="half-day">Half day (3 hours)</option>
+                                <option value="full-day">Full day</option>
+                                <option value="multiple-days">Multiple days</option>
+                              </select>
+                        </label>
+                        <label for="types">Types of Rentals*
+                            <select name="types">
+                                <option value="none">Select rental type</option>
+                                <option value="metro">Honda Metropolitan (49cc)</option>
+                                <option value="dio">Honda Dio (110cc)</option>
+                                <option value="pcx150">Honda PCX150 (149cc)</option>
+                                <option value="pioneer">Honda Pioneer 1000</option>
+                                <option value="door4">Jeep Wrangler - 4 door with A/C</option>
+                                <option value="door2">Jeep Wrangler - 2 door - open air - manuel</option>
+                            </select>
+                        </label>
+                        <label for="number">Number*</label><input type="number" id="number" name="number" min="1" max="10" value="1">
+                        <label for="phone">Phone*</label><input type="tel" name="phone"  id="phone" pattern="^\+886-\d{3}-\d{3}-\d{3}$" placeholder="+886-1234-5678" required>
+                        <label for="fname">Name*</label><input type="text" name="fname" id="fname" required>
+                        <label for="email">Email*</label><input type="email" name="email" id="email" required placeholder="xxx1234@byui.edu" title="❗Please enter yout BYUI email address.">
+                        <label for="country">Home state or country*</label>
+                        <select name="country">
+                            <option id="country" value="Alabama" @click="orderBy('name'),ASC *= -1">Alabama</option>
+                        </select>
+                        <label for="description">Business/Organization's Description <textarea name="description" id="description" rows="4" cols="50"></textarea></label>                
+                        <input type="hidden" name="timestamp" id="timestamp">
+                    </fieldset>
+                    <input type="submit" value="Subscribe">
+                </form> 
+            </section>
+        </div>
+        </main>                  
+        <footer>
+            <div id="footer-grid">
+                <div class="footerlogo">
+                    <a  href="index.html"><img id="footer-logo" src="images/scoots.webp" alt="The Logo of ~Scooter~" ></a>
+                    <p id="footer-logo"><span class="strong">~Scooter~</span></p>
+                    <p id="footer-logo">1a avenida sur local 55 entre rafael E.Melgar y 5ta avenida parque Benito Juárez, Centro, 77600 Cozumel, Q.R., Mexico.</p>
+                </div>
+                <div class="footer-message">
+                    <p  class="footer-message">info@tainanfoodmachinery.com.tw</p>
+                    <p  class="footer-message">(+668)123456798</p>
+                    <p  class="footer-message">🚩Location Map</p>
+                </div>
+            </div>
+            <div class="footerline">
+                <p id="footer-name"><span>&copy;<span id="year"></span><span> ~scooter~ </span> |</span><span class="strong">Phoeb Lin |</span><span>WDD 230 Project|</span><span id="lastModified">Last Modified</span></p>
+            </div>
+        </footer>
+    </div>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/mode.js"></script>
+    <script src="scripts/form.js"></script>
+</body>
+</html>  
