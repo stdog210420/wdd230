@@ -1,11 +1,14 @@
     // Get input values
     // const temperature = parseFloat(document.getElementById('temperature').value);
     // const windSpeed = parseFloat(document.getElementById('windSpeed').value);
-    const degree = document.getElementById('degree');
+    const today =document.getElementById("today");
+    const tomorrow = document.getElementById("tomorrow");
+    const degree = document.getElementById("degree");
     const maxdegree = document.querySelector(".maxdegree");
     const weatherIcon = document.querySelector("#weather-icon");
-    const captionDesc= document.querySelector("figcaption");
-    const humidElement = document.getElementById('humid');
+    const descDay= document.querySelector("#descDay");
+    const humidElement = document.getElementById("humid");
+    const humidElement1 = document.getElementById("humid1");
     const lat = 20.425;
     const lon = -87.028;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=fed24b2b6ba40b500276cd58d10febd4`;
@@ -13,16 +16,8 @@
     const urlForcast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=fed24b2b6ba40b500276cd58d10febd4`;
     const tempDay1 = document.querySelector("#tempDay1");
     const descDay1 = document.querySelector("#descDay1");
-    const tempDay2 = document.querySelector("#tempDay2");
-    const descDay2 = document.querySelector("#descDay2");
-    const tempDay3 = document.querySelector("#tempDay3");
     const iconDay1 = document.querySelector("#iconDay1");
-    const iconDay2 = document.querySelector("#iconDay2");
-    const iconDay3 = document.querySelector("#iconDay3");
-    const descDay3 = document.querySelector("#descDay3");
     const weekDay1 = document.querySelector("#weekDay1");
-    const weekDay2 = document.querySelector("#weekDay2");
-    const weekDay3 = document.querySelector("#weekDay3");
     // built weekdays strings
     const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -31,7 +26,7 @@
         const response = await fetch(url);
         if (response.ok) {
           const data = await response.json();
-          console.log(data);
+          // console.log(data);
           displayResults(data);           
         }
         else{
@@ -51,10 +46,15 @@
       maxTemperature= Math.floor((maxtemp-35)*5/9);
       degree.innerHTML = `${temperature}&deg;C`;
       maxdegree.innerHTML = `${maxTemperature}&deg;C`;
+      const caution = document.querySelector(".caution")
+      if (maxTemperature > 27){
+        caution.innerHTML= `hot, please apply sunscreen and stay hydrated.`;
+      }
+      else{
+        caution.innerHTML= `a little cold, please bring a light jacket.`;
+      }
       const humid = data.main.humidity.toFixed(0);
       humidElement.innerHTML = `${humid}RH`;
-      const wind = data.wind.speed.toFixed(0);
-      windSpeed.innerHTML = `${wind}(mph)`;
       const icon = data.weather[0].icon;
       const iconsrc =`https://openweathermap.org/img/wn/${icon}@2x.png`;
       // const iconsrc = "https://openweathermap.org/img/wn/04n@2x.png";
@@ -63,7 +63,8 @@
             const desc = data.weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
             const weatherDesc = document.createElement("p");
             weatherDesc.textContent = desc;
-            captionDesc.appendChild(weatherDesc);
+            console.log(desc);
+            descDay.appendChild(weatherDesc);
             weatherIcon.setAttribute("src", iconsrc);
             weatherIcon.setAttribute("alt", desc);
         });        
@@ -74,7 +75,7 @@
       const responseForcast = await fetch(urlForcast);
       if (responseForcast.ok) {
         const dataForcast = await responseForcast.json();
-        // console.log(dataForcast);
+        console.log(dataForcast);
         displayForcastResults(dataForcast);           
       }
       else{
@@ -88,63 +89,51 @@
   forcastApiFetch()
 
   function displayForcastResults(dataForcast){
-    const forcastTemp1 = dataForcast.list[8].main.temp.toFixed(0);
-    const forcastTempC1 = Math.floor((forcastTemp1-35)*5/9);
-    tempDay1.innerHTML = `${forcastTempC1}&deg;C`;
-    const forcastTemp2 = dataForcast.list[16].main.temp.toFixed(0);
-    const forcastTempC2 = Math.floor((forcastTemp2-35)*5/9);
-    tempDay2.innerHTML = `${forcastTempC2}&deg;C`;
-    const forcastTemp3 = dataForcast.list[24].main.temp.toFixed(0);
-    const forcastTempC3 = Math.floor((forcastTemp3-35)*5/9);
-    tempDay3.innerHTML = `${forcastTempC3}&deg;C`;
-    const icon1 = dataForcast.list[8].weather[0].icon;
-    const iconsrc1 =`https://openweathermap.org/img/wn/${icon1}@2x.png`;
-    const icon2 = dataForcast.list[16].weather[0].icon;
-    const iconsrc2 =`https://openweathermap.org/img/wn/${icon2}@2x.png`;
-    const icon3 = dataForcast.list[24].weather[0].icon;
-    const iconsrc3 =`https://openweathermap.org/img/wn/${icon3}@2x.png`;
-
-// Capitalize the first letter of each word in the weather description        
-    const desc1 = dataForcast.list[8].weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
-    const weatherDesc1 = document.createElement("p");
-    weatherDesc1.textContent = desc1;
-    descDay1.appendChild(weatherDesc1);
-    const desc2 = dataForcast.list[16].weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
-    const weatherDesc2 = document.createElement("p");
-    weatherDesc2.textContent = desc2;
-    descDay2.appendChild(weatherDesc2);
-    const desc3 = dataForcast.list[24].weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
-    const weatherDesc3 = document.createElement("p");
-    weatherDesc3.textContent = desc3;
-    descDay3.appendChild(weatherDesc3);
-    iconDay1.setAttribute("src", iconsrc1);
-    iconDay1.setAttribute("alt", desc1);
-    iconDay2.setAttribute("src", iconsrc2);
-    iconDay2.setAttribute("alt", desc2);
-    iconDay3.setAttribute("src", iconsrc3);
-    iconDay3.setAttribute("alt", desc3);
-
+    const todayDate = dataForcast.list[0].dt_txt;
+    const dateObject = new Date(todayDate);
+    // 提取年、月、日
+    const year = dateObject.getFullYear();
+    const month = String(dateObject.getMonth() + 1).padStart(2, '0'); // 月份需補零
+    const day = String(dateObject.getDate()).padStart(2, '0'); // 日需補零    
+    // 格式化日期為所需格式
+    const formattedDate = `${year}/${month}/${day}`;
+    today.innerHTML = formattedDate;
     const dateStr = dataForcast.list[0].dt_txt;
     // console.log(dateStr); 
     const date = new Date(dateStr);
     const weekday = weekdays[date.getDay()];
     weekDay.textContent = weekday;
 
-    const dateStr1 = dataForcast.list[8].dt_txt;
+    const tomorrowDate = dataForcast.list[9].dt_txt;
+    const dateObject1 = new Date(tomorrowDate);
+    // 提取年、月、日
+    const year1 = dateObject1.getFullYear();
+    const month1 = String(dateObject1.getMonth() + 1).padStart(2, '0'); // 月份需補零
+    const day1 = String(dateObject1.getDate()).padStart(2, '0'); // 日需補零    
+    // 格式化日期為所需格式
+    const formattedDate1 = `${year1}/${month1}/${day1}`;
+    tomorrow.innerHTML = formattedDate1;
+    const dateStr1 = dataForcast.list[9].dt_txt;
     const date1 = new Date(dateStr1);
     const weekday1 = weekdays[date1.getDay()];
     weekDay1.textContent = weekday1;
-    const dateStr2 = dataForcast.list[16].dt_txt;
-    const date2 = new Date(dateStr2);
-    const weekday2 = weekdays[date2.getDay()];
-    weekDay2.textContent = weekday2;
-    const dateStr3 = dataForcast.list[24].dt_txt;
-    const date3 = new Date(dateStr3);
-    const weekday3 = weekdays[date3.getDay()];
-    weekDay3.textContent = weekday3;
-    // get date and formate
-    // const day1 = date1.getDate();
-    // const formattedDate1 = `${weekday1}`;
+
+    const forcastTemp1 = dataForcast.list[9].main.temp.toFixed(0);
+    const forcastTempC1 = Math.floor((forcastTemp1-35)*5/9);
+    tempDay1.innerHTML = `${forcastTempC1}&deg;C`;
+    const humid1 = dataForcast.list[9].main.humidity;
+    humidElement1.innerHTML= `${humid1}RH`;;
+    const icon1 = dataForcast.list[9].weather[0].icon;
+    const iconsrc1 =`https://openweathermap.org/img/wn/${icon1}@2x.png`;
+
+// Capitalize the first letter of each word in the weather description        
+    const desc1 = dataForcast.list[9].weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
+    const weatherDesc1 = document.createElement("p");
+    weatherDesc1.textContent = desc1;
+    descDay1.appendChild(weatherDesc1);
+    iconDay1.setAttribute("src", iconsrc1);
+    iconDay1.setAttribute("alt", desc1);
+
 }
 
 

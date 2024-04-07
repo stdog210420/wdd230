@@ -40,7 +40,7 @@
         </header>
         <div id="hero">
             <div id="banner" class="banner">
-                <p><span>Today's highest temperature soared to <span class="maxdegree"></span>, please remember to apply sunscreen and stay hydrated.</span>
+                <p><span>Today's highest temperature soared to <span class="maxdegree"></span>, <span class="caution"></span></span>
                 <button id="closeBanner">❌</button></p>
             </div>
             <div class="hero-box">
@@ -109,43 +109,31 @@
                     <img src="images/car.jpg" alt="The rental car"  width="728" height="480">
                 </div>
             </section>
-            <div class="weather">
+            <section class="weather">
+                <h3 id="district"><img src="images/mexico-flag.webp" alt="Mexico flag.webp"> Cozumel, Quintana Roo, Mexico</h3>
                 <div>
                     <h2>Current Weather</h2>
                     <hr>
-                    <p id="district"><img src="images/mexico-flag.webp" alt="Mexico flag.webp"> Cozumel, Quintana Roo, Mexico</p>
-                    <!-- <input type="number" id="temperature" required> -->
                     <figure id="current-weather">
                         <p class="weekday" id="today"></p>
                         <p class="weekday" id="weekDay"></p>
                         <p><span id="degree"></span><span id="humid"></span></p>
                         <img id="weather-icon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
-                        <figcaption></figcaption>
+                        <figcaption id="descDay"></figcaption>
                     </figure>
                 </div>
-                <h3>Forcast 3 Days</h3>
-                <hr>
-                <div id="forcast-3-days">
-                    <figure>
-                        <p class="weekday" id="weekDay1"></p>
-                        <p id="tempDay1"></p>
-                        <img id="iconDay1" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
-                        <figcaption id="descDay1"></figcaption>
-                    </figure>
-                    <figure>
-                        <p class="weekday" id="weekDay2"></p>
-                        <p id="tempDay2"></p>
-                        <img id="iconDay2" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
-                        <figcaption id="descDay2"></figcaption>                        
-                    </figure>
-                    <figure>
-                        <p class="weekday" id="weekDay3"></p>
-                        <p id="tempDay3"></p>
-                        <img id="iconDay3" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
-                        <figcaption id="descDay3"></figcaption>                        
+                <div>
+                    <h2>Next Day</h2>
+                    <hr>
+                    <figure id="forcast-day">
+                            <p class="weekday" id="tomorrow"></p>
+                            <p class="weekday" id="weekDay1"></p>
+                            <p><span id="tempDay1"></span><span id="humid1"></span></p>
+                            <img id="iconDay1" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+                            <figcaption id="descDay1"></figcaption>              
                     </figure>
                 </div>
-            </div>
+            </section>
         </main>
         <footer>
             <div id="footer-grid">
@@ -154,7 +142,6 @@
                     <p>1a avenida sur local 55 entre rafael E.Melgar y 5ta avenida parque Benito Juárez, Centro, 77600 Cozumel, Q.R., Mexico.</p>
                 </div>
                 <div class="footer-message">
-                    <p><span class="strong">~Scooter~</span></p>
                     <p class="footer-message">info@tainanfoodmachinery.com.tw</p>
                     <p class="footer-message">(+668)123456798</p>
                     <p class="footer-message">🚩Location Map</p>
@@ -170,6 +157,6 @@
     <script src="scripts/weather.js"></script>
     <script src="scripts/banner.js"></script>
     <script src="scripts/mode.js"></script>
-    <script src="visualeffect.js"></script>
+    <script src="scripts/visualeffect.js"></script>
 </body>
 </html>

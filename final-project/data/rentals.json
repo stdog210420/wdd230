@@ -16,7 +16,7 @@
          }]
     },
     {
-        "Vehicle": "Honda Dio Scooter",
+        "vehicle": "Honda Dio Scooter",
         "Max Persons": 2,
         "Rental Types": 
         [{
@@ -31,7 +31,7 @@
         }]
     },
     {
-        "Vehicle": "Honda PCX150 Scooter",
+        "vehicle": "Honda PCX150 Scooter",
         "Max Persons": 2,
         "Rental Types": 
         [{
@@ -45,7 +45,7 @@
         }]
     },
     {
-        "Vehicle": "Honda Pioneer ATV",
+        "vehicle": "Honda Pioneer ATV",
         "Max Persons": 4,
         "Rental Types": 
         [{
@@ -59,7 +59,7 @@
           }]
     },
     {
-        "Vehicle": "Jeep Wrangler - 4 door with a/c",
+        "vehicle": "Jeep Wrangler - 4 door with a/c",
         "Max Persons": 5,
         "Rental Types":   
         [{       
@@ -74,7 +74,7 @@
         }] 
     },
     {
-        "Vehicle": "Jeep Wrangler - 2 door",
+        "vehicle": "Jeep Wrangler - 2 door",
         "Max Persons": 4,
         "Rental Types": 
         [{

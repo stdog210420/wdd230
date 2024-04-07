@@ -1,0 +1,155 @@
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #1F4736  ;
+    --secondary-color: #E7EFE7  ;
+    --accent1-color: #3C0211;
+    --accent2-color: #FEECED;
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Montserrat", "Lato", Helvetica;
+    --paragraph-font: "Open Sans", Helvetica, sans-serif;
+
+  }
+/* Desktop Views ****************************/
+@media screen and (min-width: 1025px) {
+	body {
+		font-size: 17px;
+	}
+	header {
+		display: flex;
+		justify-content: space-around;
+	}
+	nav {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	#menu {
+		display: none; /* hide hamburger button */
+	}
+    nav a{
+        width:fit-content;
+    }
+    nav a:not(#menu),
+    nav.open a:not(#menu){
+        display: block;
+        width: fit-content;
+    }
+
+	.home-grid{
+		padding: 10px;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap:10px;
+	}
+
+	#hero-msg{
+		margin-top: 1rem;
+	}
+	.big-event{
+		grid-column: 1/2;
+		grid-row: 1/2 ;
+	}
+	img{
+		width:100%;
+	}
+	.weather{
+		grid-column: 2/3;
+		grid-row: 1/2 ;
+	}
+	#spotlight{
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		grid-column: 1/span 2;
+		grid-row: 2/3 ;
+	}
+	#spot-message{
+		grid-column: 1/ span 2;
+	}
+	main h2{
+		margin: 0 auto;
+		padding: 1rem 0;
+		text-align: center;
+		justify-content: center;
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+
+
+	.level h2{
+		font-size: 1.5rem;
+	}
+	.benefits{
+		margin-left: 20px;
+		grid-column: 1/span 2;
+		grid-row: 2/3;
+		width: 100%;
+	}
+	.formarea{
+	margin-right: 20px;
+	justify-content: center;
+	align-items: center;
+	grid-column: 3/4;
+	grid-row:2/3;
+	width: 100%;
+	max-width: 400px;
+	}
+
+	.information{
+		grid-column: 1/2;
+
+	}
+	.static-description-2 li {
+		padding-left: 1rem;
+	}	  
+
+	.pictures{
+		margin: 1rem;
+	}
+	.information{
+		grid-column: 1/2;
+		width: 100%;
+		padding: 0 1rem;
+	}
+
+	.attraction img, .attraction2 img{
+		width: 100%;
+		height:auto;
+
+	  }
+
+	
+	#visitors{
+		grid-column: 2/3;
+		margin: 0;
+		max-width: 400px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.card-msg{
+		margin-left: 2rem;
+	  }
+
+	#footer-grid{
+		grid-column: 1/4;
+		padding-top: 30px;
+		font-family: var(--paragraph-font);
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		list-style: none;
+		font-size: 17px;
+		text-decoration: none;
+		background-color: #fff;
+	  }
+
+	.footer-logo img{
+		grid-column: 1/2;
+		padding-bottom: 10px;
+	}
+	
+	#footer-message{
+	  grid-column: 2/3;
+	}
+}

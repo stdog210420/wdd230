@@ -1,48 +1,46 @@
 
-const linksURL = "https://stdog210420.github.io/wdd230/final-project/data/rentals.json";
+// const url = "https://stdog210420.github.io/wdd230/final-project/data/rentals.json";
+const url = "/final-project/data/rentals.json";
 
-const cards = document.querySelector('.card');
-const linkList = document.createElement("ul");
-async function getLinks() {
-    const response = await fetch(linksURL); 
-    const data  = await response.json();
-    console.log(data);
-    displayLinks(data.lessons); 
-
-}   
+const table = document.querySelector('.table');
+async function getLinks(){
+    try{
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+        displayResults(data);           
+      }
+      else{
+        throw Error (await response.text());
+      }
+    }
+    catch (error){
+      console.log(error);        
+    }
+  }  
 
 getLinks();
 
-const linkComponent = ({url, title}) => {
-    const linkElement = document.createElement("a");
-    linkElement.setAttribute("href", url)
-    if (url.includes("codepen")) {
-        linkElement.href = url;
-    } else {
-        linkElement.href = baseURL + url;
-    }
-    linkElement.textContent = title  ;
-    return linkElement;
-}        
-const lessonsComponent = ({lesson, links}) =>{
-    const linksClass = links.map(link => linkComponent(link));
-    const linkItems = document.createElement("li");  
-    linkItems.textContent = `Week ${lesson}: `;
-    linksClass.forEach((link, index, array) =>{
-        linkItems.appendChild(link);
-        if (index != array.length -1){
-            const separator = document.createTextNode("|");
-            linkItems.appendChild(separator);
-        }
-    })
-    return linkItems;
+function displayResults(data) {    
+    // 獲取 vehicles 屬性
+    // 遍歷每輛車輛
+    data.vehicles.forEach(vehicle => {
+        let vehicleName = vehicle.vehicle;
+        // console.log(vehicleName);
+        // 遍歷每個租賃類型
+        vehicle['Rental Types'].forEach(rentalType => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="carName">${vehicleName}</td>
+                <td>${vehicle['Max Persons']}</td>
+                <td>${rentalType['Half Day (3 hrs)']['Reservation']}</td>
+                <td>${rentalType['Full Day']['Reservation']}</td>
+                <td>${rentalType['Half Day (3 hrs)']['Walk-In']}</td>
+                <td>${rentalType['Full Day']['Walk-In']}</td>
+            `;
+            table.appendChild(row);
+        });
+    });
 }
-function displayLinks(weeks){
-    weeks.forEach( lesson => {
-        const lessonElement = lessonsComponent(lesson);
-        linkList.appendChild(lessonElement);
-    });    
-}
-
-cards.appendChild(linkList); 
 
