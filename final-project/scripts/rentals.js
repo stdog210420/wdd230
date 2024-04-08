@@ -1,6 +1,6 @@
 
-// const url = "https://stdog210420.github.io/wdd230/final-project/data/rentals.json";
-const url = "/final-project/data/rentals.json";
+const url = "https://stdog210420.github.io/wdd230/final-project/data/rentals.json";
+// const url = "/final-project/data/rentals.json";
 
 const table = document.querySelector('.table');
 async function getLinks(){
