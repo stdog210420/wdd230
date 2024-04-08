@@ -1,54 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color:   #192A51;
+  --secondary-color: #fff  ;
+  --accent1-color: #9E0059;
+  --accent2-color: #4E5340;
+  --background-color: #fff; /* 默认背景颜色 */
+  --text-color: #192A51; /* 默认文字颜色 */
+  --heading-font: "Montserrat", Helvetica;
+  --paragraph-font: "Open Sans", Helvetica, sans-serif;
+}
 /* Tablet Views ******************************/
 
 @media screen and ((min-width: 671px) and (max-width: 1024px)) {
 
 	body{
-		font-size: 15px;
+		font-size: 17px;
 	}
 	#menu {
 		display: none; /* hide hamburger button */
 	}
-	.home-grid{
-		padding: 10px;
-		width: 100%;
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		gap:10px;
+	header{
+		display: block;
+		position: relative;
+	  }
+	  
+	.fb, .linkedin{
+		max-width: 10%;
+		position: absolute;
+		top: 8rem;
 	}
+	.fb{
+		right:10rem;
+	}
+	.linkedin{
+		right:3rem;
+	}
+
 	.logo{
 		width: 20%;
 	}
-	.fb, .linkedin{
-		width: 10%;    
+
+	.navigation{
+		gap: 0;
+		display: block; 
+	  }
+	.Rental, .scooters{
+		display: block;
+
+	}
+	.humanline{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.rental-img{
+		display: block;
+		max-width: auto;
+		height:auto;
 	  }
 	.weather{
-		grid-column: 2/3;
-		grid-row: 1/2 ;
+		display: block;
 	}
-	main h2{
+	.map{
 		margin: 0 auto;
-		padding: 1rem 0;
-		text-align: center;
-		justify-content: center;
-		font-weight: bold;
-		font-size: 1.5rem;
-	}
-	.benefits{
-		margin-left: 20px;
-		grid-column: 1/span 2;
-		grid-row: 3/4;
-		width: 100%;
-	  }
-	  .formarea{
-		margin-right: 20px;
-		justify-content: center;
+		display: flex;
+		flex-direction: column;
 		align-items: center;
-		grid-column: 3/4;
-		grid-row: 3/4;
-		width: 100%;
-		max-width: 400px;
-	  }
+		justify-content: center;
+	}
+
 	#footer-grid{
 		padding-top: 30px;
 		font-family: var(--paragraph-font);
@@ -57,7 +80,7 @@
 		list-style: none;
 		font-size: 17px;
 		text-decoration: none;
-		}
+	}
 
 	#footer-logo img{
 	grid-column: 1/2;
@@ -74,7 +97,7 @@
 	nav{
 		gap: 0;
 		display: block; 
-		}
+	}
 	#menu {
 		text-decoration: none;
 		padding: .5rem .75rem;

@@ -1,28 +1,22 @@
-:root {
-    /* change the values below to your colors from your palette */
-    --primary-color: #1F4736  ;
-    --secondary-color: #E7EFE7  ;
-    --accent1-color: #3C0211;
-    --accent2-color: #FEECED;
-    /* change the values below to your chosen font(s) */
-    --heading-font: "Montserrat", "Lato", Helvetica;
-    --paragraph-font: "Open Sans", Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
-  }
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color:   #192A51;
+  --secondary-color: #fff  ;
+  --accent1-color: #9E0059;
+  --accent2-color: #4E5340;
+  --background-color: #fff; /* 默认背景颜色 */
+  --text-color: #192A51; /* 默认文字颜色 */
+  --heading-font: "Montserrat", Helvetica;
+  --paragraph-font: "Open Sans", Helvetica, sans-serif;
+}
 /* Desktop Views ****************************/
 @media screen and (min-width: 1025px) {
 	body {
-		font-size: 17px;
+		font-size: 20px;
 	}
-	header {
-		display: flex;
-		justify-content: space-around;
-	}
-	nav {
-		display: flex;
-		justify-content: space-around;
-	}
-
+	
 	#menu {
 		display: none; /* hide hamburger button */
 	}
@@ -35,103 +29,24 @@
         width: fit-content;
     }
 
-	.home-grid{
-		padding: 10px;
-		width: 100%;
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		gap:10px;
-	}
-
 	#hero-msg{
 		margin-top: 1rem;
 	}
-	.big-event{
-		grid-column: 1/2;
-		grid-row: 1/2 ;
-	}
-	img{
-		width:100%;
-	}
-	.weather{
-		grid-column: 2/3;
-		grid-row: 1/2 ;
-	}
-	#spotlight{
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		grid-column: 1/span 2;
-		grid-row: 2/3 ;
-	}
-	#spot-message{
-		grid-column: 1/ span 2;
-	}
-	main h2{
-		margin: 0 auto;
-		padding: 1rem 0;
-		text-align: center;
-		justify-content: center;
-		font-weight: bold;
-		font-size: 1.5rem;
-	}
-
-
-	.level h2{
-		font-size: 1.5rem;
-	}
-	.benefits{
-		margin-left: 20px;
-		grid-column: 1/span 2;
+	.Rental{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto 1fr auto;
+	  }
+	#current-weather,  #forcast-day{
 		grid-row: 2/3;
-		width: 100%;
-	}
-	.formarea{
-	margin-right: 20px;
-	justify-content: center;
-	align-items: center;
-	grid-column: 3/4;
-	grid-row:2/3;
-	width: 100%;
-	max-width: 400px;
-	}
-
-	.information{
-		grid-column: 1/2;
-
-	}
-	.static-description-2 li {
-		padding-left: 1rem;
-	}	  
-
-	.pictures{
-		margin: 1rem;
-	}
-	.information{
-		grid-column: 1/2;
-		width: 100%;
-		padding: 0 1rem;
-	}
-
-	.attraction img, .attraction2 img{
-		width: 100%;
-		height:auto;
-
 	  }
-
-	
-	#visitors{
-		grid-column: 2/3;
-		margin: 0;
-		max-width: 400px;
+	  .map{
+		margin: 0 auto;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		align-items: center;
-	}
-	.card-msg{
-		margin-left: 2rem;
+		justify-content: center;
 	  }
-
 	#footer-grid{
 		grid-column: 1/4;
 		padding-top: 30px;
