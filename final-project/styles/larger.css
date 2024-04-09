@@ -47,7 +47,7 @@
 		align-items: center;
 		justify-content: center;
 	  }
-	#footer-grid{
+	/* #footer-grid{
 		grid-column: 1/4;
 		padding-top: 30px;
 		font-family: var(--paragraph-font);
@@ -56,7 +56,6 @@
 		list-style: none;
 		font-size: 17px;
 		text-decoration: none;
-		background-color: #fff;
 	  }
 
 	.footer-logo img{
@@ -66,5 +65,5 @@
 	
 	#footer-message{
 	  grid-column: 2/3;
-	}
+	} */
 }
