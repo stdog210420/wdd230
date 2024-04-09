@@ -1,25 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
-
-:root {
-  /* change the values below to your colors from your palette */
-  --primary-color:   #192A51;
-  --secondary-color: #fff  ;
-  --accent1-color: #9E0059;
-  --accent2-color: #4E5340;
-  --background-color: #fff; /* 默认背景颜色 */
-  --text-color: #192A51; /* 默认文字颜色 */
-  --heading-font: "Montserrat", Helvetica;
-  --paragraph-font: "Open Sans", Helvetica, sans-serif;
-}
 /* Tablet Views ******************************/
 
 @media screen and ((min-width: 671px) and (max-width: 1024px)) {
 
 	body{
 		font-size: 17px;
-	}
-	#menu {
-		display: none; /* hide hamburger button */
 	}
 	header{
 		display: block;
@@ -29,7 +13,7 @@
 	.fb, .linkedin{
 		max-width: 10%;
 		position: absolute;
-		top: 8rem;
+		top: 5rem;
 	}
 	.fb{
 		right:10rem;
@@ -37,11 +21,54 @@
 	.linkedin{
 		right:3rem;
 	}
+	#menu {
+		text-decoration: none;
+		padding: .5rem .75rem;
+		border: 0;
+		display: block;
+		position: absolute;/*將menu定位為絕對位置*/
+		top: 1rem; /*頂部距離為0 */
+		right: 1rem; /*右側距離為0 */
+	}
+
+	nav{
+		gap: 0;
+		display: block; 
+	}
+
+		
+	#menu::before {
+		content: "☰";
+	}
+
+	#menu.open::before {
+		content: "🌸";
+	}
+	#hero-msg{
+	margin-top: 0.5rem;
+	}
+	#menu.open {
+		display: block; /* 添加 .open 類時顯示 */
+	}
+
+	nav.open a {
+		display: block;
+	}
+
+	/* .card-msg{
+		margin-left: 2rem;
+	  } */
 
 	.logo{
 		width: 20%;
 	}
-
+	#hero-msg{
+		position: sticky;
+		padding: 0.25rem;
+		height: auto;
+		width: 100%;
+		bottom:0.25rem;
+	}
 	.navigation{
 		gap: 0;
 		display: block; 
@@ -71,83 +98,9 @@
 		align-items: center;
 		justify-content: center;
 	}
-
 	#footer-grid{
-		padding-top: 30px;
-		font-family: var(--paragraph-font);
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		list-style: none;
-		font-size: 17px;
-		text-decoration: none;
-	}
-
-	#footer-logo img{
-	grid-column: 1/2;
-	padding-bottom: 10px;
-	}
-	
-	#footer-message{
-	  display: flex;
-	  flex-direction: column;
-	}
-	header{
 		display: block;
 	  }
-	nav{
-		gap: 0;
-		display: block; 
-	}
-	#menu {
-		text-decoration: none;
-		padding: .5rem .75rem;
-		border: 0;
-		display: block;
-		position: absolute;/*將menu定位為絕對位置*/
-		top: 1rem; /*頂部距離為0 */
-		right: 1rem; /*右側距離為0 */
-	}
-		
-	#menu::before {
-		content: "☰";
-	}
-
-	#menu.open::before {
-		content: "🌸";
-	}
-	#hero-msg{
-	margin-top: 0.5rem;
-	}
-	#menu.open {
-		display: block; /* 添加 .open 類時顯示 */
-	}
-
-	nav.open a {
-		display: block;
-	}
-
-	.card-msg{
-		margin-left: 2rem;
-	  }
-	#footer-grid{
-		grid-column: 1/4;
-		padding-top: 30px;
-		font-family: var(--paragraph-font);
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		list-style: none;
-		font-size: 17px;
-		text-decoration: none;
-		}
-
-	.footer-logo img{
-		grid-column: 1/2;
-		padding-bottom: 10px;
-	}
-
-	#footer-message{
-		grid-column: 2/3;
-	}
 	
 }
 

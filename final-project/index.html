@@ -45,8 +45,8 @@
             </div>
             <div class="hero-box">
                 <picture>
-                    <source media="(max-width: 300px)" class="hero-imgs" srcset="images/hero-small.webp">
-                    <source media="(max-width: 900px)" class="hero-imgs" srcset="images/hero-medium.webp">
+                    <source media="(max-width: 300px)" srcset="images/hero-small.webp">
+                    <source media="(max-width: 900px)" srcset="images/hero-medium.webp">
                     <img src="images/hero-large.webp" alt="It's group chating with each other." width="1200" height="500">
                 </picture>
             </div>
@@ -106,7 +106,11 @@
                     </div>  
                 </div>
                 <div class="rental-img">
-                    <img src="images/car.jpg" alt="The rental car"  width="728" height="480">
+                    <picture>
+                        <source media="(max-width: 300px)" srcset="images/car-small.webp">
+                        <source media="(max-width: 500px)" srcset="images/car-medium.webp">
+                        <img src="images/car.webp" alt="The rental car"  width="728" height="480">
+                    </picture>
                 </div>
             </section>
             <section class="weather">

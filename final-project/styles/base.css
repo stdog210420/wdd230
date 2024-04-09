@@ -131,7 +131,7 @@ header{
 h1, h2, h3, h4, h5, h6{
   font-family: var(--heading-font);
   font-weight: bolder;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 p{
@@ -212,27 +212,39 @@ p{
   grid-column: 1/4;
   grid-row: 2/3; 
   height: 500px;
-  width: auto;
 }
+
 .hero-box{
   position: absolute;
   width: 100%;
   z-index: -2;
-  /* top: 300; */
 }
+
 .hero-box img {
   height: auto;
-  width: auto;
-}
-#hero a{
-  font-size: 1.5rem;
-  text-align: center;
+  width: 100%;
 
 }
+
 #hero-msg{
+  position: absolute;
   padding: 1rem;
   height: auto;
   width: 100%;
+  bottom:0.5rem;
+
+}
+
+#hero-msg a{
+  font-size:1.5rem;
+
+}
+
+#hero-msg a:hover::before{
+  font-size:2rem;
+  content: "➡️";
+  padding-left: 1rem;
+
 }
 .book{
   font-family: var(--heading-font);
@@ -251,16 +263,7 @@ p{
   right: 0; */
   z-index: 1;
 }
-#hero-msg a{
-  font-size:2rem;
-}
 
-#hero-msg a:hover::before{
-  font-size:2rem;
-  content: "➡️";
-  padding-left: 1rem;
-
-}
 /* #hero-msg a:hover::after
   font-size:2rem;
   content: "📝";
@@ -278,7 +281,7 @@ p{
 
 .home-grid{
     grid-column: 2/3;
-    grid-row: 4/5;
+    grid-row: 3/4;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -513,7 +516,7 @@ iframe{
 footer{
   margin:auto;
   grid-column: 1/4;
-  grid-row: 5/6;
+  grid-row: 4/5;
   width: 100%;
   height: auto;
   font-size: 1rem;
@@ -526,13 +529,6 @@ footer{
   align-items: center;
   justify-content: center;
 }
-
-/* #footer-grid{
-  margin: 0 10px 0 10px;
-  padding-top: 30px;
-  background-color: #fff;
-  box-shadow: 0 0 10px var(--secondary-color); 
-} */
 
 .footerlogo{
   grid-column: 1/2;
@@ -584,7 +580,7 @@ footer{
   list-style-type: none;
 }
 
-.agreement ul li::marker{
+.agreement li::marker{
   content: "📍";
 }
 
@@ -592,7 +588,7 @@ footer{
   line-height: 1.5; 
   letter-spacing: 2px;
   margin: 0 auto; /* 在頁面中水平置中 */
-  padding: 20px; /* 設置內邊距 */
+  padding: 1rem; /* 設置內邊距 */
   justify-content: center;
   align-items: center;
   width: 100%; /* 設置表單寬度 */
@@ -624,7 +620,7 @@ footer{
   text-align: center;
   color: var(--primary-color);
   /* padding: 0.5rem; */
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .form label {
@@ -731,16 +727,40 @@ fieldset{
 @media screen and (max-width: 670px){
   body, .content {
     font-size: 13px;
+    display: block;
   }
   header{
     display: block;
-    position: relative;
   }
+
+  .banner{
+    display: block;
+    width: fit-content;
+  }
+  .logo{
+    width: 20%;
+  }
+  .hero-box img {
+    display: block;
+    height: auto;
+    width: 100%;
   
+  }
+  #hero-msg{
+    position: sticky;
+    padding: 0.25rem;
+    height: auto;
+    width: 100%;
+    bottom:0.25rem;
+}
+  #hero-msg a{
+    font-size: 1rem; 
+  }
   .fb, .linkedin{
     max-width: 5%;
     position: absolute;
-    top: 10rem;
+    top: 5rem;
+    right:1rem;
   }
   .fb{
     right:10rem;
@@ -774,9 +794,12 @@ fieldset{
   #menu.open::before {
       content: "🌸";
   }
-  #hero-msg{
-    margin-top: -1rem;
+  #hero {
+    grid-column: 1/4;
+    grid-row: 2/3; 
+    height: 200px;
   }
+
   #menu.open {
       display: block; /* 添加 .open 類時顯示 */
   }
@@ -797,16 +820,30 @@ fieldset{
   .rental-img{
     display: block;
     width: auto;
-    height:auto;
+    height:100%;
+  }
+  .rental-icon{
+    font-size: 1rem;
+    overflow-wrap: break-word;
   }
   .weather{
-    display: block;
+    display: flex;
+    flex-direction: column;
+
   }
   .map{
     display: flex;
     flex-direction: column;
     align-items: center;
 		justify-content: center;
+  }
+
+  .agreement ul li{
+    /* max-width: 300px; */
+    align-items:self-start;
+  }
+  #footer-grid{
+    display: block;
   }
 
 }
