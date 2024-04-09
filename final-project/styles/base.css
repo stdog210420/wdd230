@@ -210,8 +210,9 @@ p{
 
 #hero {
   grid-column: 1/4;
-  grid-row: 2/4; 
+  grid-row: 2/3; 
   height: 500px;
+  width: auto;
 }
 .hero-box{
   position: absolute;
