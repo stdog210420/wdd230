@@ -42,7 +42,6 @@ header{
   grid-template-rows: auto 1fr;
   align-items: center;
   justify-content: center;
-  /* background-color: #fff; */
 }
 .logo_link  {
   grid-column: 1/2;
@@ -54,7 +53,7 @@ header{
 .logo{
   height: auto;
   display: block;
-  margin: 0.5rem;
+  margin: 0.25rem;
 }
 .navigation{
   margin-top: 2rem;	
@@ -81,7 +80,6 @@ header{
   width: 100%;
   max-width: 60%;
   height: auto;
-  background-color: var(--background-color);
 }
 .fb{
   grid-column: 3/4;
@@ -212,11 +210,11 @@ p{
 
 #hero {
   grid-column: 1/4;
-  grid-row: 2/3; 
+  grid-row: 2/4; 
   height: 500px;
 }
 .hero-box{
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: -2;
   /* top: 300; */
@@ -224,7 +222,6 @@ p{
 .hero-box img {
   height: auto;
   width: 100%;
-
 }
 #hero a{
   font-size: 1.5rem;
@@ -289,7 +286,7 @@ p{
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows:  auto 1fr auto;    
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
 }
 
 hr {
@@ -529,6 +526,13 @@ footer{
   justify-content: center;
 }
 
+/* #footer-grid{
+  margin: 0 10px 0 10px;
+  padding-top: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px var(--secondary-color); 
+} */
+
 .footerlogo{
   grid-column: 1/2;
   grid-row: 1/2;
@@ -695,13 +699,7 @@ fieldset{
 }
 
 
-#footer-grid{
-  margin: 0 10px 0 10px;
-  padding-top: 30px;
-  background-color: #fff;
-  box-shadow: 0 0 10px var(--secondary-color); 
 
-}
 /* thank you page ***********************************/
 #heart{
   font-size: 1.5rem;
