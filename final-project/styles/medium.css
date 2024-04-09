@@ -58,7 +58,7 @@
 	}
 	.rental-img{
 		display: block;
-		max-width: auto;
+		width: auto;
 		height:auto;
 	  }
 	.weather{
