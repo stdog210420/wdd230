@@ -879,7 +879,6 @@ fieldset{
     margin: 1rem;
     padding:0.5rem;
     justify-content: space-between;
-    align-items: left;
     overflow-wrap: break-word; 
   }
 
