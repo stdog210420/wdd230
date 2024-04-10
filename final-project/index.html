@@ -115,28 +115,36 @@
             </section>
             <section class="weather">
                 <h3 id="district"><img src="images/mexico-flag.webp" alt="Mexico flag.webp"> Cozumel, Quintana Roo, Mexico</h3>
-                <div>
+                <section>
                     <h2>Current Weather</h2>
                     <hr>
-                    <figure id="current-weather">
-                        <p class="weekday" id="today"></p>
-                        <p class="weekday" id="weekDay"></p>
-                        <p><span id="degree"></span><span id="humid"></span></p>
-                        <img id="weather-icon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
-                        <figcaption id="descDay"></figcaption>
+                    <figure>
+                        <div id="current-weather">
+                            <p class="weekday" id="today"></p>
+                            <p class="weekday" id="weekDay"></p>
+                        </div>
+                        <div id="current-weather">
+                            <p><span id="degree"></span><span id="humid"></span></p>
+                            <img id="weather-icon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+                            <figcaption id="descDay"></figcaption>
+                        </div>
                     </figure>
-                </div>
-                <div>
+                </section>
+                <section>
                     <h2>Next Day</h2>
                     <hr>
-                    <figure id="forcast-day">
+                    <figure>
+                        <div id="forcast-day">
                             <p class="weekday" id="tomorrow"></p>
                             <p class="weekday" id="weekDay1"></p>
+                        </div>
+                        <div id="forcast-day">
                             <p><span id="tempDay1"></span><span id="humid1"></span></p>
                             <img id="iconDay1" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
-                            <figcaption id="descDay1"></figcaption>              
+                            <figcaption id="descDay1"></figcaption>   
+                        </div>     
                     </figure>
-                </div>
+                </section>
             </section>
         </main>
         <footer>

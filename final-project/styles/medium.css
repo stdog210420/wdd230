@@ -83,11 +83,6 @@
 		align-items: center;
 		justify-content: center;
 	}
-	.rental-img{
-		display: block;
-		width: auto;
-		height:auto;
-	  }
 	.weather{
 		display: block;
 	}
