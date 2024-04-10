@@ -89,7 +89,7 @@
   forcastApiFetch()
 
   function displayForcastResults(dataForcast){
-    const todayDate = dataForcast.list[0].dt_txt;
+    const todayDate = dataForcast.list[2].dt_txt;
     const dateObject = new Date(todayDate);
     // 提取年、月、日
     const year = dateObject.getFullYear();
@@ -98,14 +98,16 @@
     // 格式化日期為所需格式
     const formattedDate = `${year}/${month}/${day}`;
     today.innerHTML = formattedDate;
-    const dateStr = dataForcast.list[0].dt_txt;
+    const dateStr = dataForcast.list[2].dt_txt;
     // console.log(dateStr); 
     const date = new Date(dateStr);
+    console.log(date);
     const weekday = weekdays[date.getDay()];
     weekDay.textContent = weekday;
 
-    const tomorrowDate = dataForcast.list[9].dt_txt;
+    const tomorrowDate = dataForcast.list[15].dt_txt;
     const dateObject1 = new Date(tomorrowDate);
+    console.log(dateObject1);
     // 提取年、月、日
     const year1 = dateObject1.getFullYear();
     const month1 = String(dateObject1.getMonth() + 1).padStart(2, '0'); // 月份需補零
@@ -113,21 +115,21 @@
     // 格式化日期為所需格式
     const formattedDate1 = `${year1}/${month1}/${day1}`;
     tomorrow.innerHTML = formattedDate1;
-    const dateStr1 = dataForcast.list[9].dt_txt;
+    const dateStr1 = dataForcast.list[15].dt_txt;
     const date1 = new Date(dateStr1);
     const weekday1 = weekdays[date1.getDay()];
     weekDay1.textContent = weekday1;
 
-    const forcastTemp1 = dataForcast.list[9].main.temp.toFixed(0);
+    const forcastTemp1 = dataForcast.list[15].main.temp.toFixed(0);
     const forcastTempC1 = Math.floor((forcastTemp1-35)*5/9);
     tempDay1.innerHTML = `${forcastTempC1}&deg;C`;
-    const humid1 = dataForcast.list[9].main.humidity;
+    const humid1 = dataForcast.list[15].main.humidity;
     humidElement1.innerHTML= `${humid1}RH`;;
-    const icon1 = dataForcast.list[9].weather[0].icon;
+    const icon1 = dataForcast.list[15].weather[0].icon;
     const iconsrc1 =`https://openweathermap.org/img/wn/${icon1}@2x.png`;
 
 // Capitalize the first letter of each word in the weather description        
-    const desc1 = dataForcast.list[9].weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
+    const desc1 = dataForcast.list[15].weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
     const weatherDesc1 = document.createElement("p");
     weatherDesc1.textContent = desc1;
     descDay1.appendChild(weatherDesc1);
