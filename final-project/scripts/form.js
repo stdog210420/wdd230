@@ -1,12 +1,12 @@
 const country = document.getElementById("country");
 const url = `https://restcountries.com/v3.1/all?fields=name`;
 // 儲存日期和數量到本地存儲
-localStorage.setItem('dateValue', document.getElementById('date').value);
-localStorage.setItem('quantityValue', document.getElementById('quantity').value);
+// localStorage.setItem('dateValue', document.getElementById('date').value);
+// localStorage.setItem('quantityValue', document.getElementById('quantity').value);
 
 // 從本地存儲中讀取日期和數量
-const dateValue = localStorage.getItem('dateValue');
-const quantityValue = localStorage.getItem('quantityValue');
+// const dateValue = localStorage.getItem('dateValue');
+// const quantityValue = localStorage.getItem('quantityValue');
 
 async function apiFetch(){
     try{
@@ -88,7 +88,7 @@ function checkVaild(){
 };
 
 
-const date2 = document.getElementById("date2");
-const quantity2 = document.getElementById("quantity2");
-date2.innerHTML = dateValue;
-quantity2.innerHTML = quantityValue;
+// const date2 = document.getElementById("date2");
+// const quantity2 = document.getElementById("quantity2");
+// date2.innerHTML = dateValue;
+// quantity2.innerHTML = quantityValue;

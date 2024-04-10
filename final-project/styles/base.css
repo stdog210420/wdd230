@@ -121,9 +121,6 @@ header{
   cursor: pointer;
 }
 
-#mode:hover{
-  transform: scale(1.1);
-}
 .menu {
   grid-column: 5/6;
 	margin: 1rem auto;
@@ -223,7 +220,7 @@ p{
 #hero {
   grid-column: 1/4;
   grid-row: 2/3; 
-  height: 500px;
+  height: 580px;
 }
 
 .hero-box{
@@ -235,7 +232,7 @@ p{
 .hero-box img {
   height: auto;
   width: 100%;
-
+  opacity: 0.6;
 }
 
 #hero-msg{
@@ -338,7 +335,9 @@ hr {
 }
 .rental-img img{
   box-shadow: 0 0 15px #4d4d4d;
-  border-radius: 15px;  
+  border-radius: 15px; 
+  width: 100%; 
+  height: auto;
 
 }
 .rental-img:hover{
@@ -527,7 +526,7 @@ figure {
 }
 
 
-.map{
+.map2{
   grid-column: 2/3;
   margin: 0 auto;
   display: flex;
@@ -664,7 +663,7 @@ footer{
 }
 fieldset{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
 }
 .contact2{
   display: block;
@@ -758,14 +757,19 @@ fieldset{
     margin: 0 auto;
   }
 
-  header{
+  header, .home-grid{
+    margin: 0;
+    padding:0;
     display: block;
 
+  }
+  .navigation h1:hover{
+    transform: none;
   }
   .fb{
     width: 5%;
     height: auto;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     position: absolute;
     top:1rem;
     right: 1rem;
@@ -777,9 +781,10 @@ fieldset{
     top:1rem;
     right: 0.5rem; 
   }
-  .banner{
+  .banner, .closeBanner{
     display: block;
-
+    width:auto;
+  
   }
 
   #hero-msg{
@@ -804,10 +809,6 @@ fieldset{
       position: absolute;
       right: 0.5rem; 
   }
-  /* nav{
-    display: none;  
-  } */
-
   .navigation{
     gap: 0;
     display: block; 
@@ -843,43 +844,73 @@ fieldset{
     align-items: center;
     justify-content: center;
   }
-  /* .rental-img{
-    display: block;
-    width: auto;
-    height:100%;
-  } */
   .rental-icon{
     font-size: 1rem;
     overflow-wrap: break-word;
   }
+
   .weather{
     display: flex;
     flex-direction: column;
 
   }
-  .map{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .map2{
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		justify-content: center;
+	}
+
+	.map {
+		align-items: center;
+		justify-content: center;
+		display: block;
+    margin-bottom: 1rem;
+
+	  }	
+  .map iframe{
+    
+    width: auto;
+		max-width: 100%;
+		height: auto;
   }
 
-  .agreement h2{
-    text-align: center;
-  }
-  
   .agreement{
-    margin: auto;
-    text-align: center;
-    overflow-wrap: break-word;
+    display: block;
+    margin: 1rem;
+    padding:0.5rem;
+    justify-content: space-between;
+    align-items: left;
+    overflow-wrap: break-word; 
   }
+
+  .formarea, .formarea2{
+    display: block;
+  }
+
+  .formarea{
+    margin: 0;
+    padding: 0;
+  }
+  .form fieldset
+  {
+    margin: 0;
+    padding: 0;
+  }
+  .border{
+    padding: 0.5rem;
+  }
+
+  .form input[type="submit"]
+  {
+    display: block;
+  }
+
   .form legend {
     font-size: 1.5rem;
   }
 
-  .table{
-    display: block;
-  }
   #footer-grid{
     display: block;
   }

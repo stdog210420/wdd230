@@ -2,98 +2,147 @@
 
 @media screen and ((min-width: 671px) and (max-width: 1024px)) {
 
-	body{
+	body, .content {
 		font-size: 17px;
-	}
-	header{
 		display: block;
-		position: relative;
+		margin: 0 auto;
 	  }
-	  
-	.fb, .linkedin{
-		max-width: 10%;
+	
+	  header, .home-grid{
+		margin: 0;
+		padding:0;
+		display: block;
+	
+	  }
+	  .navigation h1:hover{
+		transform: none;
+	  }
+	  .fb{
+		width: 5%;
+		height: auto;
+		margin-right: 3rem;
 		position: absolute;
-		top: 5rem;
-	}
-	.fb{
-		right:10rem;
-	}
-	.linkedin{
-		right:3rem;
-	}
-	#menu {
-		text-decoration: none;
-		padding: .5rem .75rem;
-		border: 0;
+		top:1rem;
+		right: 1rem;
+	  }
+	  .linkedin{
+		width: 5%;
+		height: auto;
+		position: absolute;
+		top:1rem;
+		right: 0.5rem; 
+	  }
+	  .banner, .closeBanner{
 		display: block;
-		position: absolute;/*將menu定位為絕對位置*/
-		top: 1rem; /*頂部距離為0 */
-		right: 1rem; /*右側距離為0 */
-	}
-
-	nav{
-		gap: 0;
-		display: block; 
-	}
-
-		
-	#menu::before {
-		content: "☰";
-	}
-
-	#menu.open::before {
-		content: "🌸";
-	}
-	#hero-msg{
-	margin-top: 0.5rem;
-	}
-	#menu.open {
-		display: block; /* 添加 .open 類時顯示 */
-	}
-
-	nav.open a {
-		display: block;
-	}
-
-	/* .card-msg{
-		margin-left: 2rem;
-	  } */
-
-	.logo{
-		width: 20%;
-	}
-	#hero-msg{
+		width:auto;
+	  
+	  }
+	
+	  #hero-msg{
 		position: sticky;
+		/* display: block; */
 		padding: 0.25rem;
 		height: auto;
 		width: 100%;
 		bottom:0.25rem;
 	}
-	.navigation{
+	  #hero-msg a{
+		font-size: 1rem; 
+	  }
+	
+	  #menu {
+		  grid-column: 6/7;
+		  text-decoration: none;
+		  padding: .5rem .75rem;
+		  width: 2rem;
+		  border: 0;
+		  display: block;
+		  position: absolute;
+		  right: 0.5rem; 
+	  }
+	  .navigation{
 		gap: 0;
 		display: block; 
 	  }
-	.Rental, .scooters{
-		display: block;
+	
+	  #menu::before {
+		  content: "☰";
+	  }
+	
+	  #menu.open::before {
+		  content: "🌸";
+	  }
+	  #hero { 
+		height: 420px;
+		width: auto;
+		max-width: 100%;
+	  }
+	
+	  #menu.open {
+		  display: block; /* 添加 .open 類時顯示 */
+	  }
+	
+	  nav.open a {
+		  display: block;
+	  }
 
-	}
-	.humanline{
+	  .humanline{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-	}
-	.weather{
+	  }
+	  .rental-icon{
+		font-size: 1rem;
+		overflow-wrap: break-word;
+	  }
+	  .weather{
+		display: flex;
+		flex-direction: column;
+	
+	  }
+	  .agreement{
 		display: block;
-	}
-	.map{
+		margin: 1rem;
+		padding:0.5rem;
+		justify-content: space-between;
+		align-items: left;
+		overflow-wrap: break-word; 
+	  }
+	
+	  .formarea, .formarea2{
+		display: block;
+	  }
+	  .formarea{
+		margin: 0;
+		padding: 0;
+	  }
+	  .form input[type="submit"]
+	  {
+		display: block;
+	  }
+	
+	  .form legend {
+		font-size: 1.5rem;
+	  }
+	  .map2{
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 	}
-	#footer-grid{
+
+	.map {
+		align-items: center;
+		justify-content: center;
+		display: block;
+    	margin-bottom: 1rem;
+
+	  }	
+	
+	
+	  #footer-grid{
 		display: block;
 	  }
 	
