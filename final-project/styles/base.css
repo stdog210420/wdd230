@@ -867,10 +867,8 @@ fieldset{
 		justify-content: center;
 		display: block;
     margin-bottom: 1rem;
-
 	  }	
   .map iframe{
-    
     width: auto;
 		max-width: 100%;
 		height: auto;
