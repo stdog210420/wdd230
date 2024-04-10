@@ -188,9 +188,6 @@ p{
   content: "📬";
 }
 
-
-
-
 .banner {
   position: fixed; /* 將橫幅固定在視窗中 */
   top: 0; /* 與視窗頂部對齊 */
@@ -202,7 +199,7 @@ p{
 
 #banner {
   grid-column: 1/7;
-  background-color: #cb1d2b;
+  background-color: #8c121c;
   color: #fff;
   text-align: center;
 
@@ -868,11 +865,6 @@ fieldset{
 		display: block;
     margin-bottom: 1rem;
 	  }	
-  .map iframe{
-    width: auto;
-		max-width: 100%;
-		height: auto;
-  }
 
   .agreement{
     display: block;
