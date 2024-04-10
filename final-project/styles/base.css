@@ -518,7 +518,7 @@ figure {
 .weather h2:hover{
   transform: scale(1.1);
 }
-#current-weather, #forcast-day{
+.current-weather, .forcast-day{
   display: flex;
   flex-direction: row;
   align-items: center;
