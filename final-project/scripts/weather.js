@@ -89,47 +89,56 @@
   forcastApiFetch()
 
   function displayForcastResults(dataForcast){
-    const todayDate = dataForcast.list[2].dt_txt;
-    const dateObject = new Date(todayDate);
+    // 找到今天的日期
+    const todayDate = new Date();
     // 提取年、月、日
-    const year = dateObject.getFullYear();
-    const month = String(dateObject.getMonth() + 1).padStart(2, '0'); // 月份需補零
-    const day = String(dateObject.getDate()).padStart(2, '0'); // 日需補零    
+    const year = todayDate.getFullYear();
+    const month = String(todayDate.getMonth() + 1).padStart(2, '0'); // 月份需補零
+    const day = String(todayDate.getDate()).padStart(2, '0'); // 日需補零    
     // 格式化日期為所需格式
     const formattedDate = `${year}/${month}/${day}`;
-    today.innerHTML = formattedDate;
-    const dateStr = dataForcast.list[2].dt_txt;
-    // console.log(dateStr); 
-    const date = new Date(dateStr);
-    console.log(date);
-    const weekday = weekdays[date.getDay()];
+    today.innerHTML = formattedDate;  
+    const weekday = weekdays[todayDate.getDay()];
     weekDay.textContent = weekday;
 
-    const tomorrowDate = dataForcast.list[15].dt_txt;
-    const dateObject1 = new Date(tomorrowDate);
-    console.log(dateObject1);
+
+
+    // 計算明天的日期
+    const tomorrowDate = new Date(todayDate);
+    tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+    const tomorrowDateFormate = tomorrowDate.toLocaleDateString('en-CA'); // 格式：YYYY/MM/DD
+  
     // 提取年、月、日
-    const year1 = dateObject1.getFullYear();
-    const month1 = String(dateObject1.getMonth() + 1).padStart(2, '0'); // 月份需補零
-    const day1 = String(dateObject1.getDate()).padStart(2, '0'); // 日需補零    
+    // 確定明天下午15:00的時間
+    const tomorrow15 = new Date(tomorrowDate);
+    tomorrow15.setHours(15, 0, 0, 0); // 設定時間為下午15:00
+
+    // 在天氣資料中尋找明天下午15:00的天氣資料
+    const weatherTomorrow15 = dataForcast.list.find(weather => {
+      const weatherDate = new Date(weather.dt_txt);
+      return weatherDate.toLocaleDateString('en-CA') === tomorrowDateFormate && weatherDate.getHours() === 15;
+    });
+    const year1 = tomorrow15.getFullYear();
+    const month1 = String(tomorrow15.getMonth() + 1).padStart(2, '0'); // 月份需補零
+    const day1 = String(tomorrow15.getDate()).padStart(2, '0'); // 日需補零    
     // 格式化日期為所需格式
     const formattedDate1 = `${year1}/${month1}/${day1}`;
     tomorrow.innerHTML = formattedDate1;
-    const dateStr1 = dataForcast.list[15].dt_txt;
-    const date1 = new Date(dateStr1);
-    const weekday1 = weekdays[date1.getDay()];
+    //擷取明天15:00的日期
+    const weekday1 = weekdays[tomorrowDate.getDay()];
+    //display the weekday of tommorow
     weekDay1.textContent = weekday1;
-
-    const forcastTemp1 = dataForcast.list[15].main.temp.toFixed(0);
+    //擷取明天15:00的天氣資料，如：溫度和濕度
+    const forcastTemp1 = weatherTomorrow15.main.temp.toFixed(0);
     const forcastTempC1 = Math.floor((forcastTemp1-35)*5/9);
     tempDay1.innerHTML = `${forcastTempC1}&deg;C`;
-    const humid1 = dataForcast.list[15].main.humidity;
+    const humid1 = weatherTomorrow15.main.humidity;
     humidElement1.innerHTML= `${humid1}RH`;;
-    const icon1 = dataForcast.list[15].weather[0].icon;
+    const icon1 = weatherTomorrow15.weather[0].icon;
     const iconsrc1 =`https://openweathermap.org/img/wn/${icon1}@2x.png`;
 
-// Capitalize the first letter of each word in the weather description        
-    const desc1 = dataForcast.list[15].weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
+    //擷取明天15:00的天氣描述 Capitalize the first letter of each word in the weather description        
+    const desc1 = weatherTomorrow15.weather[0].description.replace(/\b\w/g, char => char.toUpperCase());
     const weatherDesc1 = document.createElement("p");
     weatherDesc1.textContent = desc1;
     descDay1.appendChild(weatherDesc1);
