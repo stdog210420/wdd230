@@ -54,6 +54,7 @@ header{
   height: auto;
   display: block;
   margin: 0.25rem;
+
 }
 .navigation{
   margin-top: 2rem;	
@@ -551,6 +552,10 @@ footer{
   grid-template-rows: 1fr auto;
   align-items: center;
   justify-content: center;
+  padding-top: 1rem;
+  background-color: #CBDFBD;
+  box-shadow: 0 0 1px rgb(81, 83, 80);
+  border-radius: 8px 8px 0 0; 
 }
 
 .footerlogo{
@@ -579,10 +584,6 @@ footer{
   font-weight: 700;
   font-size: 1.2rem;
 }
-
-/* footer p{
-  color: var(--primary-color);
-} */
 
 .agreement{
   margin: 0 auto 3rem auto ;
@@ -763,6 +764,10 @@ fieldset{
   .navigation h1:hover{
     transform: none;
   }
+  .logo, .footerlogo img{
+    width: 40%;
+    height: auto;
+  }
   .fb{
     width: 5%;
     height: auto;
@@ -899,7 +904,11 @@ fieldset{
   .form legend {
     font-size: 1.5rem;
   }
-
+  table{
+    font-size:1rem;
+    display: block;
+    margin: 0 auto;
+  }
   #footer-grid{
     display: block;
   }
